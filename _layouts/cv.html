@@ -15,14 +15,9 @@
     </div>
   </div>
 </body>
-{% capture file1Exists %}{% file_exists _includes/footer.html %}{% endcapture %}
-{% capture file2Exists %}{% file_exists _includes/footer.md %}{% endcapture %}
-{% if file2Exists=="true" %}
-{% if file1Exists=="true" %}
-{% capture my_include %}{% include footer.md %}{% endcapture %}
-{% include footer.html %}
+{% if site.references %}
+  {% capture my_include %}{% include footer.md %}{% endcapture %}
+  {% include footer.html %}
 {% else %}
-{% else %}
-{% endif %}
 {% endif %}
 </html>
