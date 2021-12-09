@@ -40,131 +40,131 @@ Senior HPC Technologist based in the __Centre for High Performance Computing's (
 ### Non-exhaustive
 <div class="webaddress img-container">
   <figure>
-    <img src="https://i.pinimg.com/originals/28/ec/74/28ec7440a57536eebad2931517aa1cce.png"/>
+    <img src="static/logos/terraform.png"/>
     <figcaption>Terraform</figcaption>
   </figure>
   <figure>
-    <img src="https://logos-download.com/wp-content/uploads/2016/10/Ansible_logo.png"/>
+    <img src="static/logos/ansible.png"/>
     <figcaption>Ansible</figcaption>
   </figure>
   <figure>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Prometheus_software_logo.svg/1200px-Prometheus_software_logo.svg.png"/>
+    <img src="static/logos/prometheus.png"/>
     <figcaption>Prometheus</figcaption>
   </figure>
   <figure>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/768px-Python-logo-notext.svg.png"/>
+    <img src="static/logos/python.png"/>
     <figcaption>Python</figcaption>
   </figure>
   <figure>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Bash_Logo_Colored.svg/1200px-Bash_Logo_Colored.svg.png"/>
+    <img src="static/logos/bash.png"/>
     <figcaption>BASH</figcaption>
   </figure>
   <figure>
-    <img src="https://insidehpc.com/wp-content/uploads/2017/11/openhpc-300x300.jpg"/>
+    <img src="static/logos/openhpc.jpg"/>
     <figcaption>OpenHPC</figcaption>
   </figure>
   <figure>
-    <img src="https://www.drupal.org/files/project-images/Vault_VerticalLogo_FullColor_2_0.png"/>
+    <img src="static/logos/vault.png"/>
     <figcaption>Vault</figcaption>
   </figure>
 </div>
 <div class="webaddress img-container">
   <figure>
-    <img src="https://img.icons8.com/fluent/240/000000/docker.png"/>
+    <img src="static/logos/docker.png"/>
     <figcaption>Docker</figcaption>
   </figure>
   <figure>
-    <img src="https://singularity.hpcng.org/static/logo-e0aba174237dede6b0004b78fbe99b76.png"/>
+    <img src="static/logos/singularity.png"/>
     <figcaption id="singularity">Singularity</figcaption>
   </figure>
   <figure>
-    <img src="https://www.objectif-libre.com/wp-content/uploads/2016/02/kvm-logo-square.png"/>
+    <img src="static/logos/kvm.png"/>
     <figcaption>KVM</figcaption>
   </figure>
   <figure>
-    <img src="https://i.imgur.com/d4arm50.png"/>
+    <img src="static/logos/openstack.png"/>
     <figcaption>OpenStack</figcaption>
   </figure>
   <figure>
-    <img src="https://img.stackshare.io/service/1818/cephglyph_copy_400x400.png"/>
+    <img src="static/logos/ceph.png"/>
     <figcaption>CEPH</figcaption>
   </figure>
   <figure>
-    <img src="https://seeklogo.com/images/C/centos-logo-494F57D973-seeklogo.com.png"/>
+    <img src="static/logos/centos.png"/>
     <figcaption>CentOS</figcaption>
   </figure>
   <figure>
-    <img src="https://seeklogo.com/images/U/ubuntu-logo-8FDEC6A07B-seeklogo.com.png"/>
+    <img src="static/logos/ubuntu.png"/>
     <figcaption>Ubuntu</figcaption>
   </figure>
 </div>
 <div class="webaddress img-container">
   <figure>
-    <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"/>
+    <img src="static/logos/git.png"/>
     <figcaption>Git</figcaption>
   </figure>
   <figure>
-    <img src="https://xcat.org/webcontent/assets/logo.jpeg"/>
+    <img src="static/logos/xcat.jpeg"/>
     <figcaption>xCAT</figcaption>
   </figure>
   <figure>
-    <img src="https://res.cloudinary.com/canonical/image/fetch/https://dashboard.snapcraft.io/site_media/appmedia/2020/02/maas-logo-cropped.png"/>
+    <img src="static/logos/maas.png"/>
     <figcaption>MAAS</figcaption>
   </figure>
   <figure>
-    <img src="https://www.stackhpc.com/images/kolla-logo.png"/>
+    <img src="static/logos/kolla.png"/>
     <figcaption>OpenStack Kolla</figcaption>
   </figure>
   <figure>
-    <img src="https://www.weehooey.com/wp-content/uploads/2019/01/pfsense-logo-e1534531558807.png"/>
+    <img src="static/logos/pfsense.png"/>
     <figcaption>pfSense</figcaption>
   </figure>
   <figure>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Slurm_logo.svg/1200px-Slurm_logo.svg.png"/>
+    <img src="static/logos/slurm.png"/>
     <figcaption>SLURM</figcaption>
   </figure>
   <figure>
-    <img src="https://grafana.com/static/img/about/grafana_logo_swirl_fullcolor.jpg"/>
+    <img src="static/logos/grafana.jpg"/>
     <figcaption>Grafana</figcaption>
   </figure>
 </div>
 <div class="webaddress img-container">
   <figure>
-    <img src="https://www.saashub.com/images/app/service_logos/85/2f589b40de28/large.png?1569879613"/>
+    <img src="static/logos/opennebula.webp"/>
     <figcaption>OpenNebula</figcaption>
   </figure>
   <figure>
-    <img src="https://user-images.githubusercontent.com/18536600/48725469-95c17580-ec2c-11e8-9371-d5599651cf38.png"/>
+    <img src="static/logos/freeipa.png"/>
     <figcaption>FreeIPA</figcaption>
   </figure>
   <figure>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/663px-Jupyter_logo.svg.png"/>
+    <img src="static/logos/jupyter.png"/>
     <figcaption>Jupyter</figcaption>
   </figure>
   <figure>
-    <img src="https://www.pinclipart.com/picdir/big/553-5535032_mongoose-clipart.png"/>
+    <img src="static/logos/htmlsuite.png"/>
     <figcaption>HTML5, CSS & JS</figcaption>
   </figure>
   <figure>
-    <img src="https://i.imgur.com/oDRsfUc.png"/>
+    <img src="static/logos/cwl.png"/>
     <figcaption>Common Workflow Language</figcaption>
   </figure>
   <figure>
-    <img src="https://secrethub.io/img/travis-ci.svg"/>
+    <img src="static/logos/travisci.svg"/>
     <figcaption>Travis-CI</figcaption>
   </figure>
   <figure>
-    <img src="https://user-content.gitlab-static.net/a1440be949dea418494b8735e8d75726ce5682a8/68747470733a2f2f61626f75742e6769746c61622e636f6d2f696d616765732f63692f6769746c61622d63692d63642d6c6f676f5f32782e706e67"/>
+    <img src="static/logos/gitlabci.png"/>
     <figcaption>GitLab CI/CD</figcaption>
   </figure>
 </div>
 <div id="bottom-row" class="webaddress img-container">
   <figure>
-    <img src="https://img.icons8.com/color/480/000000/nginx.png"/>
+    <img src="static/logos/nginx.png"/>
     <figcaption>Nginx</figcaption>
   </figure>
   <figure>
-    <img src="https://letsencrypt.org/images/le-logo-twitter-noalpha.png"/>
+    <img src="static/logos/letsencrypt.png"/>
     <figcaption>Let's Encrypt</figcaption>
   </figure>
 </div>
@@ -377,15 +377,15 @@ Ahmed, A.E., Mpangase, P.T., Panji, S., Baichoo, S., Souilmi, Y., Fadlelmola, F.
 ### Thesis (M.Sc)
 
 `2019`
-__de Beste, E__. (2019). "_Enabling the processing of bioinformatics workflows where data is located through the use of cloud and container technologies_". ([Source.](http://etd.uwc.ac.za/xmlui/handle/11394/6767))
+__de Beste, E__. (2019). "_Enabling the processing of bioinformatics workflows where data is located through the use of cloud and container technologies_". ([Source.](static/education/msc_thesis.pdf))
 
 ### Posters
 
 `2017`
-__de Beste, E__., van Heusden, P., Christoffels, A., Bagula, A. (2017). "_Moving Workfows to Data_". __ISCB Africa ASBCB Conference on Bioinformatics__. ([Source.](https://i.imgur.com/16qZsLa.jpg))
+__de Beste, E__., van Heusden, P., Christoffels, A., Bagula, A. (2017). "_Moving Workfows to Data_". __ISCB Africa ASBCB Conference on Bioinformatics__. ([Source.](/static/education/moving-worflow-to-data_poster.jpg))
 
 `2019`
-__de Beste, E__., Christoffels, A., van Heusden, P. (2019). "_Leveraging Open Source Technologies to Rapidly Deploy Infrastructure with Minimum Human Capacity_". __Centre for High Performance Computing Annual Conference__. ([Source.](https://i.imgur.com/oesZ5g9.jpg))
+__de Beste, E__., Christoffels, A., van Heusden, P. (2019). "_Leveraging Open Source Technologies to Rapidly Deploy Infrastructure with Minimum Human Capacity_". __Centre for High Performance Computing Annual Conference__. ([Source.](/static/education/open-source-HPC-infra.jpeg))
 
 ## Conferences
 
