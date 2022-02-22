@@ -181,6 +181,18 @@ ___NB: Details of projects listed here are reduced in [work experience](#profess
 - __• HPC__ = High Performance Computing
 - __• UWC__ = University of the Western Cape
 
+### HISP OpenStack Deployment Consulting
+`CHPC`
+- __(2019 - 2020)__ HISP and the CHPC entered into an agreement for consulting on OpenStack cloud deployment. 
+- Duties included:
+- • Evaluation of existing hardware infrastructure and suggestion on how to best have it fit an OpenStack design.
+- • Conceptual network design and layout for the OpenStack control plane and cloud network.
+- • Configuration of aspects of network switching equipment: Configuring switchports ports for VLAN access, configuring MLAG on Mellanox switches.
+- • Deployment of MAAS provisioning server and high-available configuration thereof.
+- • Deploying the OpenStack platform using Kolla and Kolla-ansible.
+- • Providing training and documentation to the team during and after the deployment.
+
+
 ### Student Cluster Competition
 `CHPC`
 - __(2020)__ Due to the coronavirus pandemic, the CHPC needed to move their student cluster competition online.
@@ -189,7 +201,6 @@ ___NB: Details of projects listed here are reduced in [work experience](#profess
 - • Preparing content on the learning management system (Canvas).
 - • Assisting students with tutorials.
 - • Tutoring students in "office-hours" sessions.
-
 
 
 ### Ilifu project
@@ -206,7 +217,7 @@ ___NB: Details of projects listed here are reduced in [work experience](#profess
 - • Project details here: [http://www.ilifu.ac.za/](http://www.ilifu.ac.za/).
 
 
-### HISP OpenStack Deployment
+### HISP OpenStack Deployment Training
 `SANBI`
 - __(2019 - 2020)__ HISP and SANBI entered into an agreement for assistance with deploying an OpenStack cluster. 
 - Duties included:
