@@ -183,7 +183,7 @@ ___NB: Details of projects listed here are reduced in [work experience](#profess
 
 ### HISP OpenStack Deployment Consulting
 `CHPC`
-- __(2019 - 2020)__ HISP and the CHPC entered into an agreement for consulting on OpenStack cloud deployment. 
+- __(2022)__ HISP and the CHPC entered into an agreement for consulting on OpenStack cloud deployment. 
 - Duties included:
 - • Evaluation of existing hardware infrastructure and suggestion on how to best have it fit an OpenStack design.
 - • Conceptual network design and layout for the OpenStack control plane and cloud network.
