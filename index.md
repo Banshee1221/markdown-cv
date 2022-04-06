@@ -26,15 +26,19 @@ Senior HPC Technologist based in the __Centre for High Performance Computing's (
 ### Responsibilities
 
 - • __Cloud computing__ research and development, primarily focussing on OpenStack. Manage the OpenStack Research Cloud initiative, which aims to provide a test-bed platform for investigating OpenStack services and developing solutions on-top of OpenStack for the CHPC and CSIR.
+- • Shape development and implementation of the CSIR Public cloud offering policies and assist with technical support.
 - • __Distributed storage__ research and development, primarily focussing on CEPH. Manage and optimise the ACE CEPH cluster and investigate it's ability to serve as a tier 1 filesystem to compete with traditional High Performance Computing (HPC) filesystems.
 - • Contributing to the international __Student Cluster Competition (SCC)__ initiative. The SCC aims to educate young South African tertiary education students in Linux and HPC. Duties include planning the event, educational video content creation, preparing tutorial tasks for students, providing students with cloud computing resources to train on, innovating on assignments and grading and preparing the online education management system.
 - • Infrastructure procurement, management and maintenance, including maintenance of legacy OpenNebula cloud deployment.
+- • Migration of legacy OpenNebula private cloud system to a standardised OpenStack implementation.
 - • Software system __innovations__, which include implementing monitoring and alerting for infrastructure, new hardware and inventory management systems, improvements to knowledge-base and general software stack innovations.
 - • Supporting and training staff with software and infrastructure in the broader CSIR organisation. Duties include, but are not limited to, introducing staff to new concepts in software, assisting with programming and debugging software, training staff on cloud computing paradigms and software containers and more.
 - • Support the South African Development Community (SADC) through the __HPC Ecosystems__ project (donation HPC equipment and training). Duties include liaison with Universities across Africa in order to deliver HPC donation equipment, educating recipients with HPC and Linux administration concepts and skills, contributing to OpenHPC training materials and implementing monitoring and reporting services.
 - • Network configuration and debugging in the ACE Lab data center in order to facilitate new equipment being installed and to standardise network configurations to match upstream CSIR projects.
 - • Automation engineering and bringing infrastructure in the ACE Lab into an infrastructure-as-code approach as to optimise efficiency and advise the broader CSIR on new and better paradigms for hardware and software management.
+- • Introducing containerisation for software development and assist in porting legacy codebase and applications to Docker.
 - • __Training__ of graduate staff. Duties include introducing graduate training staff to various concepts such as cloud computing, networking and HPC and providing hands-on scenarios for them to develop skills.
+- • Supporting various business units with technical expertise on networking, cloud operations, and more.
 
 ## Technology Experience
 ### Non-exhaustive
