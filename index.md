@@ -36,7 +36,8 @@ Senior HPC Technologist based in the __Centre for High Performance Computing's (
 - • Support the South African Development Community (SADC) through the __HPC Ecosystems__ project (donation HPC equipment and training). Duties include liaison with Universities across Africa in order to deliver HPC donation equipment, educating recipients with HPC and Linux administration concepts and skills, contributing to OpenHPC training materials and implementing monitoring and reporting services.
 - • Network configuration and debugging in the ACE Lab data center in order to facilitate new equipment being installed and to standardise network configurations to match upstream CSIR projects.
 - • Automation engineering and bringing infrastructure in the ACE Lab into an infrastructure-as-code approach as to optimise efficiency and advise the broader CSIR on new and better paradigms for hardware and software management.
-- • Introducing containerisation for software development and assist in porting legacy codebase and applications to Docker.
+- • Introducing __containerisation__ for software development and porting legacy codebase and applications to Docker.
+- • Introducing continuous delivery for software development and other __DevOps__ practices.
 - • __Training__ of graduate staff. Duties include introducing graduate training staff to various concepts such as cloud computing, networking and HPC and providing hands-on scenarios for them to develop skills.
 - • Supporting various business units with technical expertise on networking, cloud operations, and more.
 
