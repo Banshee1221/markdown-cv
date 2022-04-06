@@ -23,8 +23,9 @@ _"The right man in the wrong place can make all the difference in the world."_<b
 
 Senior HPC Technologist based in the __Centre for High Performance Computing's (CHPC)__ __Advanced Computer Engineering (ACE)__ Lab with a primary focus on HPC education, cloud computing systems and distributed storage. The CHPC operates under the __National Integrated Cyber Infrastructure System (NICIS)__, which in turn falls under the umbrella of the __Council for Scientific and Industrial Research (CSIR)__ of South Africa.
 
-### Responsibilities
+### Responsi&shy;bilities 
 
+Responsibilities for current role include, but are not limited to:
 - • __Cloud computing__ research and development, primarily focussing on OpenStack. Manage the OpenStack Research Cloud initiative, which aims to provide a test-bed platform for investigating OpenStack services and developing solutions on-top of OpenStack for the CHPC and CSIR.
 - • Shape development and implementation of the CSIR Public cloud offering policies and assist with technical support.
 - • __Distributed storage__ research and development, primarily focussing on CEPH. Manage and optimise the ACE CEPH cluster and investigate it's ability to serve as a tier 1 filesystem to compete with traditional High Performance Computing (HPC) filesystems.
@@ -175,18 +176,12 @@ Senior HPC Technologist based in the __Centre for High Performance Computing's (
 </div>
 
 ## Special Projects
-___NB: Details of projects listed here are reduced in [work experience](#professional-work-experience) section below to remove redundancies.___
-- __• CHPC__ = Centre for High Performance Computing, South Africa
-- __• UCT__ = University of Cape Town
-- __• SANBI__ = South African National Bioinformatics Institute
-- __• HISP__ = Health Information Systems Program
-- __• NICD__ = National Institute for Communicable Diseases
-- __• ICS__ = Internet Communication Services
-- __• NICD__ = National Institute for Communicable Diseases
-- __• HPC__ = High Performance Computing
-- __• UWC__ = University of the Western Cape
+___NB: Details of projects listed here are reduced in [work experience](#professional-work-experience) section below to remove redundancies.___ \\
+__CHPC__ = Centre for High Performance Computing (South Africa) \| __UCT__ = University of Cape Town \| __SANBI__ = South African National Bioinformatics Institute \| __HISP__ = Health Information Systems Program
+\| __NICD__ = National Institute for Communicable Diseases \| __ICS__ = Internet Communication Services
+\| __HPC__ = High Performance Computing \| __UWC__ = University of the Western Cape
 
-### HISP OpenStack Deployment Consulting
+### HISP OpenStack Deploy&shy;ment
 `CHPC`
 - __(2022)__ HISP and the CHPC entered into an agreement for consulting on OpenStack cloud deployment. 
 - Duties included:
@@ -198,7 +193,7 @@ ___NB: Details of projects listed here are reduced in [work experience](#profess
 - • Providing training and documentation to the team during and after the deployment.
 
 
-### Student Cluster Competition
+### Student Cluster Compe&shy;tition
 `CHPC`
 - __(2020)__ Due to the coronavirus pandemic, the CHPC needed to move their student cluster competition online.
 - Duties included:
@@ -222,7 +217,7 @@ ___NB: Details of projects listed here are reduced in [work experience](#profess
 - • Project details here: [http://www.ilifu.ac.za/](http://www.ilifu.ac.za/).
 
 
-### HISP OpenStack Deployment Training
+### HISP OpenStack Deploy&shy;ment Training
 `SANBI`
 - __(2019 - 2020)__ HISP and SANBI entered into an agreement for assistance with deploying an OpenStack cluster. 
 - Duties included:
@@ -231,23 +226,23 @@ ___NB: Details of projects listed here are reduced in [work experience](#profess
 - • Planning the deployment of the OpenStack cloud and training the HISP IT staff on OpenStack deployment and usage.
 - • Running multiple deployment scenarios with the HISP IT team and training them with hands-on deployment of OpenStack in a simulated lab.
 
-### NICD HPC Deployment
+### NICD HPC Deploy&shy;ment
 `SANBI`
 - __(2019 - 2020)__ The NICD requested assistance from SANBI to deploy an HPC software stack.
 - Duties included:
 - • Evaluating and understanding the NICD hardware configuration.
-- • Deploying the HPC stack with SLURM and Singularity containers.
+- • Deploying the HPC stack with Slurm and Singularity containers.
 - • Deploying the Galaxy (bioinformatics) platform on top of the HPC software stack.
 - • Training the IT staff of the NICD in order to maintain and improve the deployed software stack and provide new tools to users via Singularity containers.
 
-### UWC HPC Deployment
+### UWC HPC Deploy&shy;ment
 `SANBI`
 - __(2019 - 2020)__ UWC eResearch contacted SANBI to request help with deploying an HPC cluster.
 - The goal of this project was to allow UWC to be able to offer common resources to researchers and students across departments in a unified research-first offering.
 - Duties included:
 - • Working with the Internet Communication Services (ICS) team to discuss and plan a hardware and software stack as well as the networking configuration for the cluster. This involved the re-use of older existing computer hardware that was donated to the project.
 - • Deploying bare-metal servers using MAAS (highly available) to provision and manage the hardware.
-- • Deploying the cluster software stack (SLURM based) using Ansible.
+- • Deploying the cluster software stack (Slurm based) using Ansible.
 - • Providing support for the cluster software and hardware stacks.
 
 ## Professional Work Experience
@@ -291,8 +286,7 @@ __<u>Systems Developer</u>__ --- _South African National Bioinformatics Institut
 - • Established change management control for IT staff and knowledge repositories for both end-users and IT staff.
 - • Network debugging and tracing (VLANs, Openvswitch, port mappings).
 - • Optimised and improved security for IT staff.
-- • Implementation of a helpdesk ticketing system for IT staff to track user issues and generate reports.
-
+- • Implementation of a helpdesk (Freshdesk) ticketing system for IT staff to track user issues and generate reports.
 
 `2015-2016`
 __<u>Systems Administrator Intern</u>__ --- _VOSS Solutions_
@@ -304,18 +298,6 @@ __<u>Systems Administrator Intern</u>__ --- _VOSS Solutions_
 - • User management on Linux devices.
 - • Gathering quotes and creating purchase orders.
 - • Desktop support for employees (Operating system installs, software troubleshooting, etc.).
-
-
-`2013-2014`
-__<u>Computer Laboratory Administrator</u>__ --- _University of the Western Cape_
-- • Ansible for managing fleet of computers.
-- • Managed Linux operating system installations.
-- • Network configuration for lab.
-- • Provide equipment for use by researchers.
-- • Prepare lab for use by computer science students during networking practicals.
-- • Fixed physical broken computers.
-- • Built website for South African Sign Language university project.
-
 
 ### Volunteering Roles
 
@@ -351,11 +333,6 @@ __<u>Hackathon Participant</u>__ --- _H3ABioNet Cloud computing hackathon, Unive
 `2014`
 __<u>Tutor</u>__ --- _Software Carpentry, University of Cape Town_ ([Source.](https://software-carpentry.org/blog/2014/12/cape-town-swc.html))
 - Assisted in tutoring researchers in Bash, Python and Git at the Software Carpentry meeting at the University of Cape Town.
-
-
-`2012-2013`
-__<u>Volunteer Technical Assistant</u>__ --- _University of the Western Cape_
-- Assisted with managing a computer laboratory for Computer Literacy. Duties included operating system installation, hardware repair and other administrative duties.
 
 
 ## Education
@@ -403,7 +380,7 @@ __de Beste, E__., van Heusden, P., Christoffels, A., Bagula, A. (2017). "_Moving
 `2019`
 __de Beste, E__., Christoffels, A., van Heusden, P. (2019). "_Leveraging Open Source Technologies to Rapidly Deploy Infrastructure with Minimum Human Capacity_". __Centre for High Performance Computing Annual Conference__. ([Source.](/static/education/open-source-HPC-infra.jpeg))
 
-## Conferences
+## Confer&shy;ences
 
 `2013`
 - __<u>Centre for High Performance Computing Annual Conference</u>__ --- _Cape Town, South Africa_
@@ -453,7 +430,7 @@ __de Beste, E__., Christoffels, A., van Heusden, P. (2019). "_Leveraging Open So
 - Presented a poster on "_Leveraging Open Source Technologies to Rapidly Deploy Infrastructure with Minimum Human Capacity_". Refer to above [poster section](#posters).
 
 
-## Achievements
+## Achieve&shy;ments
 
 `2018`
 __<u>BSides Cape Town - Rite of Passage</u>__ --- _Las Vegas, United States of America_
@@ -484,7 +461,7 @@ __<u>Top 5 Academic Achiever in First Year (undergraduate)</u>__ --- _University
 - Achieved placement in the top five best performers in the first year of the Computer Science bachelors degree at the University of the Western Cape.
 
 
-## Occupation
+## Occu&shy;pation
 
 Cape Town, South Africa
 
