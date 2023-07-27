@@ -3,12 +3,10 @@ layout: cv
 title: Eugene de Beste - Cirriculum Vitae
 ---
 # Eugene de Beste
-<p id="subtitle"><u>Senior HPC Technologist</u></p>
+<p id="subtitle"><u>Senior Cloud Engineer</u></p>
 
 <div class="webaddress">
-<a href="mailto:eugene@debeste.co.za"><i class="fa fa-envelope"></i>eugene@debeste.co.za</a>
-<br />
-<a href="https://themeanti.me"><i class="fa fa-globe"></i>https://TheMeanTi.me</a>
+<a href="https://eugene.debeste.co.za"><i class="fa fa-globe"></i>eugene.debeste.co.za</a>
 <br />
 <a href="https://www.linkedin.com/in/eugene-de-beste/"><i class="fa fa-linkedin"></i>LinkedIn Profile</a>
 <br />
@@ -21,28 +19,33 @@ _"The right man in the wrong place can make all the difference in the world."_<b
 
 ## Current Role
 
-Senior HPC Technologist based in the __Centre for High Performance Computing's (CHPC)__ __Advanced Computer Engineering (ACE)__ Lab with a primary focus on HPC education, cloud computing systems and distributed storage. The CHPC operates under the __National Integrated Cyber Infrastructure System (NICIS)__, which in turn falls under the umbrella of the __Council for Scientific and Industrial Research (CSIR)__ of South Africa.
+__Senior Cloud and HPC Technologist II__
+<br />
+
+In my current role, I am based at the Centre for High-Performance Computing's (CHPC) Advanced Computer Engineering (ACE) Lab, with a primary focus on HPC education, cloud computing systems, and distributed storage. The CHPC operates under the National Integrated Cyber Infrastructure System (NICIS), which is part of the prestigious Council for Scientific and Industrial Research (CSIR) of South Africa.
 
 ### Responsi&shy;bilities 
 
-Responsibilities for current role include, but are not limited to:
-- • __Cloud computing__ research and development, primarily focussing on OpenStack. Manage the OpenStack Research Cloud initiative, which aims to provide a test-bed platform for investigating OpenStack services and developing solutions on-top of OpenStack for the CHPC and CSIR.
-- • Shape development and implementation of the CSIR Public cloud offering policies and assist with technical support.
-- • __Distributed storage__ research and development, primarily focussing on CEPH. Manage and optimise the ACE CEPH cluster and investigate it's ability to serve as a tier 1 filesystem to compete with traditional High Performance Computing (HPC) filesystems.
-- • Contributing to the international __Student Cluster Competition (SCC)__ initiative. The SCC aims to educate young South African tertiary education students in Linux and HPC. Duties include planning the event, educational video content creation, preparing tutorial tasks for students, providing students with cloud computing resources to train on, innovating on assignments and grading and preparing the online education management system.
-- • Infrastructure procurement, management and maintenance, including maintenance of legacy OpenNebula cloud deployment.
-- • Migration of legacy OpenNebula private cloud system to a standardised OpenStack implementation.
-- • Software system __innovations__, which include implementing monitoring and alerting for infrastructure, new hardware and inventory management systems, improvements to knowledge-base and general software stack innovations.
-- • Supporting and training staff with software and infrastructure in the broader CSIR organisation. Duties include, but are not limited to, introducing staff to new concepts in software, assisting with programming and debugging software, training staff on cloud computing paradigms and software containers and more.
-- • Support the South African Development Community (SADC) through the __HPC Ecosystems__ project (donation HPC equipment and training). Duties include liaison with Universities across Africa in order to deliver HPC donation equipment, educating recipients with HPC and Linux administration concepts and skills, contributing to OpenHPC training materials and implementing monitoring and reporting services.
-- • Network configuration and debugging in the ACE Lab data center in order to facilitate new equipment being installed and to standardise network configurations to match upstream CSIR projects.
-- • Automation engineering and bringing infrastructure in the ACE Lab into an infrastructure-as-code approach as to optimise efficiency and advise the broader CSIR on new and better paradigms for hardware and software management.
-- • Introducing __containerisation__ for software development and porting legacy codebase and applications to Docker.
-- • Introducing continuous delivery for software development and other __DevOps__ practices.
-- • __Training__ of graduate staff. Duties include introducing graduate training staff to various concepts such as cloud computing, networking and HPC and providing hands-on scenarios for them to develop skills.
-- • Supporting various business units with technical expertise on networking, cloud operations, and more.
+In my capacity as a Senior Cloud Technologist, I am entrusted with a diverse range of responsibilities, including but not limited to:
+<br />
 
-## Technology Experience
+- • __Cloud Computing Research and Development__: Spearheading research on OpenStack, managing the ACE Lab's OpenStack cloud, and leading the OpenStack Research Cloud (ORC) initiative for innovative solutions.
+- • __CSIR Public Cloud Offering Policies__:  Shaping and implementing CSIR's public cloud offering policies with seamless technical support.
+- • __Third-Party Collaboration__: Collaborating with academic and SMME partners to develop private cloud capabilities and upskilling.
+- • __Automation Engineering__: Optimizing efficiency through infrastructure-as-code practices and advising CSIR on new paradigms.
+- • __GitOps Implementation and Infrastructure Modernization__: Introducing GitOps for infrastructure management and enhancing deployment schemes.
+- • __Distributed Storage Research__: Managing and optimizing the ACE CEPH cluster for potential tier 1 filesystem use in HPC.
+- • __International Student Cluster Competition (SCC) Initiative__: Co-planning and supporting the SCC initiative for educating South African students in Linux and HPC.
+- • __Infrastructure Procurement and Management__: Efficiently managing infrastructure procurement, vendor communication, and documentation.
+- • __Software Innovations__: Implementing advanced monitoring systems, contributing to the software stack, and enhancing inventory management.
+- • __Support and Training__: Providing technical support and training for staff on cloud computing, networking, software containers and more.
+- • __Supporting the South African Development Community (SADC)__: Contributing to HPC equipment donations, education, and training across Africa.
+- • __Network Configuration and Debugging__: Managing network configurations and facilitating new equipment installations.
+- • __Containerization and Continuous Delivery__: Driving the adoption of containerization and continuous delivery practices for software development.
+- • __Graduate Staff Training__: Training graduate staff in various cloud computing and HPC concepts.
+- • __Technical Expertise Support__: Offering insights on networking, cloud operations, and related matters to various business units.
+
+<!-- ## Technology Experience
 ### Non-exhaustive
 <div class="webaddress img-container">
   <figure>
@@ -173,7 +176,7 @@ Responsibilities for current role include, but are not limited to:
     <img src="static/logos/letsencrypt.png"/>
     <figcaption>Let's Encrypt</figcaption>
   </figure>
-</div>
+</div> -->
 
 ## Special Projects
 ___NB: Details of projects listed here are reduced in [work experience](#professional-work-experience) section below to remove redundancies.___ \\
@@ -181,76 +184,79 @@ __CHPC__ = Centre for High Performance Computing (South Africa) \| __UCT__ = Uni
 \| __NICD__ = National Institute for Communicable Diseases \| __ICS__ = Internet Communication Services
 \| __HPC__ = High Performance Computing \| __UWC__ = University of the Western Cape
 
+### African Pathogen Archive
+`CHPC`
+In __(2023 - ongoing)__, I facilitated the signing of a Memorandum of Understanding (MoU) between the CHPC and SANBI, in which I am assuming the role of __Infrastructure Automation Lead__ for the African Pathogen Archive (APA) project. My key responsibilities include:
+- • Porting microservice application stack to a local development environment.
+- • Designing and developed automation for APA services.
+- • Rapidly deploying the APA stack with Kubernetes on OpenStack using Terraform and Kubespray.
+- • Implementing GitOps with FluxCD v2 for streamlined management.
+- • Organizing project's git structure for efficient collaboration.
+- • Conceptualizing and working on deployable black-box OpenStack + APA stack units for federation across Africa.
+
 ### HISP OpenStack Deploy&shy;ment
 `CHPC`
-- __(2022)__ HISP and the CHPC entered into an agreement for consulting on OpenStack cloud deployment. 
-- Duties included:
-- • Evaluation of existing hardware infrastructure and suggestion on how to best have it fit an OpenStack design.
-- • Conceptual network design and layout for the OpenStack control plane and cloud network.
-- • Configuration of aspects of network switching equipment: Configuring switchports ports for VLAN access, configuring MLAG on Mellanox switches.
-- • Deployment of MAAS provisioning server and high-available configuration thereof.
-- • Deploying the OpenStack platform using Kolla and Kolla-ansible.
-- • Providing training and documentation to the team during and after the deployment.
-
+In __(2022)__, I established a significant collaboration between HISP and the CHPC for consulting on an OpenStack private cloud deployment. My responsibilities encompassed a range of duties, including:
+- • Optimizing hardware infrastructure for OpenStack deployment.
+- • Conceptualizing and designing the network layout and configured switches for OpenStack control plane.
+- • Configuring network switching equipment, including VLAN access and MLAG on Mellanox switches.
+- • Deploying the MAAS provisioning server with high-availability.
+- • Successfully deploying OpenStack platform using Kolla and Kolla-ansible.
+- • Providing comprehensive training and documentation to the team.
 
 ### Student Cluster Compe&shy;tition
 `CHPC`
-- __(2020)__ Due to the coronavirus pandemic, the CHPC needed to move their student cluster competition online.
-- Duties included:
-- • The generation of many high-quality videos for the educational part of the competition, with topics such as memory, network interconnects, NUMA, CPU vectorisation, software containers, BASH tips and tricks and more.
-- • Preparing content on the learning management system (Canvas).
-- • Assisting students with tutorials.
-- • Tutoring students in "office-hours" sessions.
+In __(2020)__, I played a crucial role in the CHPC's adaptation of the Student Cluster Competition to an online format during the challenging times of the coronavirus pandemic. My duties included:
+- • Creating high-quality educational videos on essential topics. [YouTube playlist as example](https://www.youtube.com/embed/videoseries?list=PLLhGsyuDOmrSWcpl_9kgX8xeoLMTYYKi7).
+- • Preparing and organizing content on the learning management system.
+- • Providing expert assistance and support to students.
 
 
-### Ilifu project
+
+### Ilifu Project
 `UCT/SANBI`
-- __(2018 - 2020)__ _The ilifu project is currently being used in a production setting._
-- The ilifu project is a data-intensive research cloud aimed at academic research work with specifics in astronomy and bioinformatics. It is a joint venture between multiple universities, as well as the Department of Science and Technology in South Africa. This project involved the planning, prototyping and deployment of an OpenStack based private cloud with a multi-petabyte CEPH cluster as its storage. 
-- Duties included the following:
-- • Planning of private cloud deployment with a team from UCT. This included the necessary hardware, network configuration and OpenStack services.
-- • Development and implementation a prototype OpenStack instance on testing hardware. Experimentation of OpenStack services were conducted on this prototype implementation.
-- • Research and implementation of CEPH distributed storage system with erasure coding to maximize available end-user storage space.
-- • Development and implementation of production OpenStack private cloud utilising the aforementioned CEPH storage backend using the Kolla and Kolla-ansible deployment method.
-- • Exploring and implementing OpenStack Manila to allow the use of the CEPH backend as a tier 1 filesystem for end-users of the cloud.
-- • Consulting services and generalised second-tier technology support support for CEPH implementation.
-- • Project details here: [http://www.ilifu.ac.za/](http://www.ilifu.ac.za/).
+During __(2018 - 2020)__, I actively participated in the Ilifu project, a data-intensive research cloud designed for academic research, specifically in the fields of astronomy and bioinformatics. This collaborative venture involved multiple universities and the Department of Science and Technology in South Africa. My responsibilities encompassed various aspects of planning, prototyping, and deploying an OpenStack-based private cloud with a multi-petabyte CEPH cluster for storage. Key duties included:
+- • Collaborating with the UCT team to meticulously plan the deployment of the private cloud.
+- • Creating and implementing a prototype OpenStack instance on testing hardware.
+- • Planning and prototyping an OpenStack-based private cloud with CEPH storage.
+- • Successfully developing and deploying the production OpenStack private cloud.
+- • Exploring and implementing OpenStack Manila to enable the use of the CEPH for end-users of the cloud.
+- • Providing consulting services and second-tier technology support for the CEPH implementation.
+- • Contributing to the overall success of the project aimed at advancing data-intensive research in the academic community.
+- • For more details, visit the project website: [http://www.ilifu.ac.za/](http://www.ilifu.ac.za/).
 
 
 ### HISP OpenStack Deploy&shy;ment Training
 `SANBI`
-- __(2019 - 2020)__ HISP and SANBI entered into an agreement for assistance with deploying an OpenStack cluster. 
-- Duties included:
-- • Introducing software containers and training HISP users on the topic.
-- • Planning the hardware and network layout for HISP OpenStack by discussing needs and expectations for the cloud.
-- • Planning the deployment of the OpenStack cloud and training the HISP IT staff on OpenStack deployment and usage.
-- • Running multiple deployment scenarios with the HISP IT team and training them with hands-on deployment of OpenStack in a simulated lab.
+From __(2019 - 2020)__, I collaborated with HISP in facilitating the deployment of an OpenStack cluster. My responsibilities included:
+- • Introducing software containers and conducting comprehensive training sessions for HISP users to ensure their proficiency in this area.
+- • Planning the hardware and network layout for the HISP OpenStack cluster, engaging in discussions to understand specific needs and expectations for the cloud environment.
+- • Strategizing the deployment of the OpenStack cloud and providing extensive training to the HISP IT staff, enabling them to effectively manage and utilize the OpenStack infrastructure.
+- • Collaborating with the HISP IT team to execute multiple deployment scenarios in a simulated lab environment, offering hands-on training for OpenStack deployment.
 
 ### NICD HPC Deploy&shy;ment
 `SANBI`
-- __(2019 - 2020)__ The NICD requested assistance from SANBI to deploy an HPC software stack.
-- Duties included:
-- • Evaluating and understanding the NICD hardware configuration.
-- • Deploying the HPC stack with Slurm and Singularity containers.
-- • Deploying the Galaxy (bioinformatics) platform on top of the HPC software stack.
-- • Training the IT staff of the NICD in order to maintain and improve the deployed software stack and provide new tools to users via Singularity containers.
+Between __(2019 - 2020)__, I was actively involved in the deployment of an HPC software stack at the NICD. My key responsibilities included:
+- • Conducting a thorough evaluation and understanding of the NICD's hardware configuration to ensure compatibility with the HPC software stack.
+- • Deploying the HPC software stack at NICD with Slurm and Singularity containers.
+- • Facilitating deployment of Galaxy platform on the HPC software stack.
+- • Providing comprehensive training to NICD IT staff.
 
 ### UWC HPC Deploy&shy;ment
 `SANBI`
-- __(2019 - 2020)__ UWC eResearch contacted SANBI to request help with deploying an HPC cluster.
-- The goal of this project was to allow UWC to be able to offer common resources to researchers and students across departments in a unified research-first offering.
-- Duties included:
-- • Working with the Internet Communication Services (ICS) team to discuss and plan a hardware and software stack as well as the networking configuration for the cluster. This involved the re-use of older existing computer hardware that was donated to the project.
-- • Deploying bare-metal servers using MAAS (highly available) to provision and manage the hardware.
-- • Deploying the cluster software stack (Slurm based) using Ansible.
-- • Providing support for the cluster software and hardware stacks.
+During __(2019 - 2020)__, I collaborated with UWC eResearch to facilitate the deployment of an HPC cluster, aiming to provide unified research-focused resources to researchers and students across various departments. My responsibilities included:
+- • Collaborating with UWC eResearch and ISC to deploy an HPC cluster.
+- • Planning of hardware and software stack and repurposing of donated hardware.
+- • Implementing and utilizing MAAS for bare-metal server deployment.
+- • Developing Ansible playbooks and using them to deploy a Slurm-based cluster.
+- • Providing comprehensive support for software and hardware stacks.
 
 ## Professional Work Experience
 
 ### Job Roles
 
 `2020-ongoing`
-__<u>(Current) Senior High Performance Computing Technologist</u>__ --- _Advanced Computer Engineering Lab, Centre for High Performance Computing, Council for Scientific and Industrial Research_
+__<u>(Current) Senior Cloud and HPC Technologist II</u>__ --- _Advanced Computer Engineering Lab, Centre for High Performance Computing, Council for Scientific and Industrial Research_
 <br/><br/>
 - ___Refer to the [Responsibilities](#responsibilities) section in [Current Role](#current-role) above.___
 <hr id="work"/>
@@ -259,80 +265,68 @@ __<u>(Current) Senior High Performance Computing Technologist</u>__ --- _Advance
 
 `2018-2020`
 __<u>External Consultant</u>__ --- _ILIFU Project, University of Cape Town_
-- • Planning, development, implementation, consulting and support of a private cloud deployment for use primarily by astronomy and bioinformatics researchers.
+- • Planned, developed, and implemented a tailored private cloud deployment for astronomy and bioinformatics researchers.
+- • Provided expert consulting and ongoing support for the private cloud infrastructure.
+- ___Refer to [Ilifu Project](#ilifu-project) under the [Special Projects](#special-projects) section for more detal___.
 
 
 `2017-2020`
 __<u>Systems Developer</u>__ --- _South African National Bioinformatics Institute, University of the Western Cape_
-- • Trained multiple teams of students to enter the Centre for High Performance Computing Student Cluster Competition, one of which proceeded to compete internationally at the International Supercomputing Conference's Student Cluster Challenge in 2017. ([Source.](https://www.uwc.ac.za/news-and-announcements/news/uwc-students-lead-team-sa-in-2017-international-supercomputing-competition-823))
-- • Migration of in-house developed VM management software to OpenStack Cloud. This involved inventorying the fleet of bare-metal hosts and VMs, deploying OpenStack using Kolla-ansible and migrating VMs to the new platform.
-- • Provided training and assistance on the implementation of an OpenStack based cloud to the Health Information Systems Program (HISP) organisation.
-- • Optimisation of CEPH storage performance by correcting inefficient legacy configuration, upgrading to latest releases and re-balancing data distribution of CEPH cluster.
-- • Provided CEPH as a filesystem to High Performance Computing (HPC) users. This allowed for the management of one single filesystem that could be used for both end-users as well as administrators.
-- • Implemented the software stack for an HPC cluster and Galaxy server at the National Institute for Communicable Diseases (NICD) in Johannesburg.
-- • Assisted the University of the Western Cape (UWC) Internet Communication Services (ICS) team with deployment of an HPC cluster for UWC eResearch HPC offering.
-- • Containerised (Docker) many system and administrative services in order to optimise the efficiency of IT staff.
-- • Containerised (Singularity) many bioinformatics scientific user applications, creating a substantially simpler way for SANBI to package and deploy software applications with complicated and/or conflicting software dependencies for their HPC cluster.
-- • Migrated from legacy system of manual infrastructure deployment with automated infrastructure deployments utilising MAAS and PXE.
-- • Implemented infrastructure-as-code approach with Ansible and Terraform for IT management and up-skilled development staff to utilise these tools to reduce their development and testing time.
+- • Trained student teams for the Centre for High Performance Computing's Student Cluster Competition, some of which placed first locally and second internationally. ([Source.](https://www.uwc.ac.za/news-and-announcements/news/uwc-students-lead-team-sa-in-2017-international-supercomputing-competition-823))
+- • Migrated in-house developed VM management software to OpenStack Cloud.
+- • Trained and assisted on the implementation of an OpenStack based cloud to the Health Information Systems Program (HISP) organisation.
+- • Maintained, optimized and enhanced CEPH storage, both from a system and user perspective.
+- • Implemented the software stack for an HPC cluster and Galaxy server at the National Institute for Communicable Diseases (NICD).
+- • Deployed an HPC cluster for UWC eResearch in collaboration with UWC Internet Communication Services (ICS).
+- • Containerized (Docker) system and administrative services for IT staff efficiency.
+- • Containerized (Singularity) many bioinformatics scientific user applications.
+- • Migrated to automated infrastructure deployments using MAAS, PXE, Ansible, and Terraform.
 - • Implemented pfSense firewall to migrate legacy system which involved reworking SANBI networking configuration.
 - • Deployed HPC clusters in cloud and on bare-metal (with focus on the SLURM scheduler.).
-- • Wrote many Ansible roles and playbooks for automated deployment of various internal systems including HPC clusters, administrative services and more.
-- • Migrated legacy authentication LDAP system to FreeIPA.
-- • Implemented monitoring and alerting automation with Prometheus, Grafana and alertmanager in order to preemptively catch and solve infrastructure issues.
-- • Managed IT infrastructure for academic researchers, including provisioning of virtual and physical resources for computational activities.
-- • Provided IT consulting and advanced support to end-users, academic staff and development staff.
-- • Procurement for various projects, ranging from user laptops to high performance servers and switching equipment.
-- • Established change management control for IT staff and knowledge repositories for both end-users and IT staff.
+- • Wrote many Ansible roles and playbooks for automated deployment of various internal systems.
+- • Migrated authentication LDAP system to FreeIPA.
+- • Implemented monitoring automation.
+- • Managed IT infrastructure, provided consulting and support to users, and handled procurement.
+- • Established change management control and knowledge repositories in the IT team.
 - • Network debugging and tracing (VLANs, Openvswitch, port mappings).
-- • Optimised and improved security for IT staff.
 - • Implementation of a helpdesk (Freshdesk) ticketing system for IT staff to track user issues and generate reports.
 
 `2015-2016`
 __<u>Systems Administrator Intern</u>__ --- _VOSS Solutions_
-- • Upgrading production service software from source.
-- • VMWare management - Network tracing and VLAN tagging configuration.
-- • Debugging issues related to removable storage passthrough to virtual machines on VMWare ESXI.
-- • AD, DNS and WSUS management.
-- • User management on Cisco ASA devices.
-- • User management on Linux devices.
-- • Gathering quotes and creating purchase orders.
-- • Desktop support for employees (Operating system installs, software troubleshooting, etc.).
+- • Upgraded production service software and managed VMWare, AD, DNS, and WSUS.
+- • Provided user management on Cisco ASA and Linux devices.
+- • Assisted with quotes, purchase orders, and offered desktop support for employees.
 
 ### Volunteering Roles
 
 `2017-2018`
 __<u>Volunteer Staff</u>__ --- _BSides Cape Town_
-- Assisted with preparation for the event as well as operation during the event.
+- Assisted with event preparation and operations.
 
 
 `2017-2018`
 __<u>Volunteer Staff</u>__ --- _DevOpsDays Cape Town_
-- Assisted with preparation for the event as well as operation during the event.
+- Assisted with event preparation and operations.
 
 
 `2018`
-<strong class="page-breaker"><u>Tutor</u></strong> --- _JEDI Workshop, Madagascar_ ([Source.](https://themeanti.me/technology/2018/06/27/cwl_pipeline_astro.html))
-- Trained students in the following:
-- • Navigating and using Jupyter notebooks.
-- • Using Bash, navigating Linux and running scripts.
-- • Using Docker and Singularity containers (creation and use).
-- • Utilising Jupyter and software containers to develop reproducible scientific data processing pipelines in an astronomy focussed context.
+<strong class="page-breaker"><u>Tutor</u></strong> --- _JEDI Workshop, Madagascar_ ([Source.](https://eugene.debeste.co.za/technology/2018/06/27/cwl_pipeline_astro.html))
+- Trained students in Jupyter notebooks, Bash, Linux navigation, Docker, Singularity, and developing reproducible data processing pipelines in astronomy context.
 
 
 `2017`
 __<u>Tutor</u>__ --- _Software Carpentry, Observatory_
-- Assisted in tutoring researchers in Bash, Python and Git at the Software Carpentry meeting during PyCon 2017.
+- Assisted in tutoring researchers in Bash, Python, and Git at the Software Carpentry meeting during PyCon 2017.
 
 
 `2016`
 __<u>Hackathon Participant</u>__ --- _H3ABioNet Cloud computing hackathon, University of Pretoria_ ([Source.](https://www.h3abionet.org/categories/training/h3abionet-cloud-computing-hackathon))
-- Co-developed the Nextflow implementation of the H3Agwas pipeline for H3ABioNet. This involved Dockerising tools that the pipeline required and bringing them into use for Nextflow. [GitHub Repository here.](https://github.com/h3abionet/h3agwas#8-acknowledgement-copyright-and-general)
+- Co-developed the Nextflow implementation of the H3Agwas pipeline for H3ABioNet, Dockerizing tools and using Nextflow. [GitHub Repository here.](https://github.com/h3abionet/h3agwas#8-acknowledgement-copyright-and-general)
 
 
 `2014`
 __<u>Tutor</u>__ --- _Software Carpentry, University of Cape Town_ ([Source.](https://software-carpentry.org/blog/2014/12/cape-town-swc.html))
-- Assisted in tutoring researchers in Bash, Python and Git at the Software Carpentry meeting at the University of Cape Town.
+- Assisted in tutoring researchers in Bash, Python, and Git at the Software Carpentry meeting at the University of Cape Town.
 
 
 ## Education
@@ -354,7 +348,6 @@ __<u>B.Sc. Hons Information Technology</u>__ --- _University of Cape Town_
 `2012-2014`
 __<u>B.Sc. Computer Science</u>__ --- _University of the Western Cape_
 - Awarded B.Sc. Computer Science _Cum Laude_.
-
 
 ### Secondary Education
 `2007-2011`
@@ -384,81 +377,83 @@ __de Beste, E__., Christoffels, A., van Heusden, P. (2019). "_Leveraging Open So
 
 `2013`
 - __<u>Centre for High Performance Computing Annual Conference</u>__ --- _Cape Town, South Africa_
-- Participated in the local CHPC Student Cluster Competition. Achieved first place.
+- Participated in the local CHPC Student Cluster Competition, achieved first place.
 
 
 `2014`
 - __<u>International Supercomputing Conference</u>__ --- _Leipzig, Germany_
-- Participated in the international Student Cluster Challenge. Achieved first overall prize.
+- Participated in the international Student Cluster Challenge, achieved first overall prize.
 - __<u>Software Carpentry UCT</u>__ --- _Cape Town, South Africa_
-- Tutored researchers and interested parties in scientific computing with BASH and Python.
+- Tutored researchers in scientific computing with BASH and Python.
 
 
 `2016`
 - __<u>Centre for High Performance Computing Annual Conference</u>__ --- _East London, South Africa_
-- Mentored a team of students from the University of the Western Cape to compete in the 2016 local Student Cluster Competition. This team achieved first place.
+- Mentored UWC student team in the local Student Cluster Competition, achieved first place locally and went on to achieve second place internationally.
 
 
 `2017`
 - __<u>Software Carpentry PyCon</u>__ --- _Cape Town, South Africa_
-- Teaching assistant and tutor for scientific computing to researchers and interested parties.
+- Teaching assistant and tutor for scientific computing.
 - __<u>BSides Cape Town</u>__ --- _Cape Town, South Africa_
-- Volunteered as staff for organising the event and doing duties on-floor such as coordination, audio-visual and more.
+- Volunteered as staff for organizing the event.
 - __<u>ISCB Africa ASBCB Conference on Bioinformatics</u>__ --- _Entebbe, Uganda_
-- Presented a poster on "_Moving Workfows to Data_". Refer to above [poster section](#posters).
+- Presented a poster on "_Moving Workfows to Data_" (refer to [poster section](#posters)).
 - __<u>Global Emerging Pathogens Treatment Consortium (GET) workshop on Data Management Design and LIMS Usage</u>__ --- _Freetown, Sierra Leone_
-- Presented work on my MSc. thesis, cloud and container technologies for bioinformatics.
+- Presented work on MSc. thesis, cloud, and container technologies for bioinformatics.
 - __<u>DevOpsDays Cape Town</u>__ --- _Cape Town, South Africa_
-- Volunteered as staff for organising the event and doing duties on-floor such as coordination, audio-visual and more.
+- Volunteered as staff for organizing the event.
 
 
 `2018`
 - __<u>JEDI Workship and Conference</u>__ --- _Madagascar_
-- Lead workshop for a group of students on reproducible science using software containers and pipeline/workflow language tools, specifically Singularity and the Common Workflow Language. 
+- Led workshop on reproducible science using software containers and pipeline/workflow tools.
 - __<u>DevOpsDays Cape Town</u>__ --- _Cape Town, South Africa_
-- Volunteered as staff for organising the event and doing duties on-floor such as coordination, audio-visual and more.
+- Volunteered as staff for organizing the event.
 - __<u>BSides Cape Town</u>__ --- _Cape Town, South Africa_
-- Volunteered as staff for organising the event and doing duties on-floor such as coordination, audio-visual and more.
+- Volunteered as staff for organizing the event.
 
 
 `2019`
 - __<u>DevOpsDays Cape Town</u>__ --- _Cape Town, South Africa_
-- Volunteered as staff for organising the event and doing duties on-floor such as coordination, audio-visual and more.
+- Volunteered as staff for organizing the event.
 - __<u>Supercomputing Conference</u>__ --- _Denver, Colorado, United States of America_
-- Awarded opportunity to attend through the STEM-TREK program in collaboration with the CHPC due to the work that my employer at the time was doing in collaboration with the CHPC's HPC ecosystems project.
+- Awarded opportunity to attend through the STEM-TREK program in collaboration with CHPC.
 - __<u>Centre for High Performance Computing Annual Conference</u>__ --- _Johannesburg, South Africa_
-- Presented a poster on "_Leveraging Open Source Technologies to Rapidly Deploy Infrastructure with Minimum Human Capacity_". Refer to above [poster section](#posters).
+- Presented a poster on "_Leveraging Open Source Technologies to Rapidly Deploy Infrastructure with Minimum Human Capacity_" (refer to [poster section](#posters)).
 
+`2022`
+- __<u>International Supercomputing Conference</u>__ --- _Frankfurt, Germany_
+- Attended various talks and workshops related to cloud and HPC synergy.
 
 ## Achieve&shy;ments
 
 `2018`
 __<u>BSides Cape Town - Rite of Passage</u>__ --- _Las Vegas, United States of America_
-- I was selected to attend DefCon (a cyber-security conference) 2018 in Las Vegas, as part of the __BSides Cape Town__ "_Rite of Passage_" event. This was as a result of my volunteering work at said event. The program has me working on-the-floor at the BSides Las Vegas event. I managed recordings of the event, showing people to their conference venues and general management duties. After BSides Las Vegas, I was given access to DefCon where I attended numberous talks and demonstrations by elite hackers in the cyber-security sphere.
-
+- Selected to attend DefCon cyber-security conference in Las Vegas as part of the "Rite of Passage" program for volunteering at BSides Cape Town event. I contributed to event management and gained access to elite hacker talks and demonstrations at DefCon.
 
 `2014`
 __<u>First Place Overall Prize for the ISC’14 Student Cluster Challenge</u>__ --- _International Supercomputing Conference, Leipzig, Germany_
-- The ISC Student Cluster Challenge is a multi-faceted competition that pits students from universities across the world together in order to design and implement high performance computing clusters on both hardware and software fronts. Students are tasked with building and optimising a networked compute cluster and running various scientific tools and benchmarks in order to achieve the most accurate or fastest results. My team and I finished first place in the International Supercomputing Conference Student Cluster Challenge in Germany.
+- Led a team to victory at the ISC’14 Student Cluster Challenge in Germany, excelling in hardware and software cluster design and high-performance computing tasks.
 
-__<u>Top 3 Academic Achiever in Third Year (undergraduate)</u>__ --- _University of the Western Cape_ ([Source.](https://media-exp1.licdn.com/dms/image/C562DAQF1PwGgyVRBow/profile-treasury-image-shrink_1280_1280/0/1598201365987?e=1624431600&v=beta&t=cbWMyF6RHlTxYHcm12V9SkZ7BTQNWZqx-vuvmxogiYI))
-- Achieved third top student in the third year of the Computer Science bachelors degree at the University of the Western Cape.
+__<u>Top 3 Academic Achiever in Third Year</u>__ --- _University of the Western Cape_ ([Source.](https://photos.app.goo.gl/LhGsXeUj7f7BWvux8))
+- Ranked third among Computer Science bachelor's degree students in the third year.
 
 
 `2013`
 __<u>First Place for the CHPC Student Cluster Competition 2013</u>__ --- _Centre for High Performance Computing, Council for Scientific and Industrial Research_
-- Placed first in the Centre for High Performance Computing (CHPC) Student Cluster Competition. The CHPC run a competition that is a smaller scale version of the ISC Student Cluster Challenge, mentioned above. Students go through two phases of competition: The first is systems administration and Linux training and the second round is competing with a cluster that is designed by each team.
+- Secured first place in the CHPC Student Cluster Competition, demonstrating excellence in systems administration and cluster competition.
 
 __<u>IBM Master the Mainframe Competition</u>__ --- _University of the Western Cape_
-- IBM run an annual competition in which they introduce students to their "System z" platform. The goal is to educate students to leave them with hands-on and marketable skills in operating mainframe computing environments. I competed and completed the first phase of the competition.
+- Successfully completed the first phase of the IBM Master the Mainframe Competition, showcasing proficiency in operating mainframe computing environments.
 
 
 `2012`
 __<u>Golden Key Society</u>__ --- _University of the Western Cape_
-- Invited to join the Golden Key International Honour Society. This is a program that aims to be made available to high academic achievers and provides them with experience and work opportunities, scholarships and more.
+- Invited to join the Golden Key International Honour Society, recognizing high academic achievers and providing valuable benefits.
 
-__<u>Top 5 Academic Achiever in First Year (undergraduate)</u>__ --- _University of the Western Cape_ ([Source.](https://media-exp1.licdn.com/dms/image/C562DAQHLdAmW8PyWeQ/profile-treasury-image-shrink_1280_1280/0/1602111872959?e=1624431600&v=beta&t=6ywBa4z_Llz8MwssXyhZb68v0ztUz5mYOFJhO1p_XV0))
-- Achieved placement in the top five best performers in the first year of the Computer Science bachelors degree at the University of the Western Cape.
+__<u>Top 5 Academic Achiever in First Year</u>__ --- _University of the Western Cape_ ([Source.](https://photos.app.goo.gl/wyHAs3h1AdEgphhZA))
+- Ranked among the top 5 academic achievers in the first year of the Computer Science bachelor's degree.
 
 
 ## Occu&shy;pation
