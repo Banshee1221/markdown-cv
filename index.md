@@ -1,9 +1,9 @@
 ---
 layout: cv
-title: Eugene de Beste - Cirriculum Vitae
+title: Eugene de Beste - Curriculum Vitae
 ---
 # Eugene de Beste
-<p id="subtitle"><u>Senior Cloud Engineer</u></p>
+<p id="subtitle"><u>Senior Infrastructure Engineer</u></p>
 
 <div class="webaddress">
 <a href="https://eugene.debeste.co.za"><i class="fa fa-globe"></i>eugene.debeste.co.za</a>
@@ -19,31 +19,27 @@ _"The right man in the wrong place can make all the difference in the world."_<b
 
 ## Current Role
 
-__Senior Cloud and HPC Technologist II__
+__Senior Infrastructure Engineer @ NexGen Cloud__
 <br />
 
-In my current role, I am based at the Centre for High-Performance Computing's (CHPC) Advanced Computer Engineering (ACE) Lab, with a primary focus on HPC education, cloud computing systems, and distributed storage. The CHPC operates under the National Integrated Cyber Infrastructure System (NICIS), which is part of the prestigious Council for Scientific and Industrial Research (CSIR) of South Africa.
+At NexGen Cloud, I serve as a Senior Infrastructure Engineer, focusing on developing and maintaining robust GPU and CPU cloud infrastructure solutions while driving technical innovation and operational excellence in a high-performance computing environment.
 
-### Responsi&shy;bilities 
-
+### Responsi&shy;bilities
 In my capacity as a Senior Cloud Technologist, I am entrusted with a diverse range of responsibilities, including but not limited to:
 <br />
 
-- • __Cloud Computing Research and Development__: Spearheading research on OpenStack, managing the ACE Lab's OpenStack cloud, and leading the OpenStack Research Cloud (ORC) initiative for innovative solutions.
-- • __CSIR Public Cloud Offering Policies__:  Shaping and implementing CSIR's public cloud offering policies with seamless technical support.
-- • __Third-Party Collaboration__: Collaborating with academic and SMME partners to develop private cloud capabilities and upskilling.
-- • __Automation Engineering__: Optimizing efficiency through infrastructure-as-code practices and advising CSIR on new paradigms.
-- • __GitOps Implementation and Infrastructure Modernization__: Introducing GitOps for infrastructure management and enhancing deployment schemes.
-- • __Distributed Storage Research__: Managing and optimizing the ACE CEPH cluster for potential tier 1 filesystem use in HPC.
-- • __International Student Cluster Competition (SCC) Initiative__: Co-planning and supporting the SCC initiative for educating South African students in Linux and HPC.
-- • __Infrastructure Procurement and Management__: Efficiently managing infrastructure procurement, vendor communication, and documentation.
-- • __Software Innovations__: Implementing advanced monitoring systems, contributing to the software stack, and enhancing inventory management.
-- • __Support and Training__: Providing technical support and training for staff on cloud computing, networking, software containers and more.
-- • __Supporting the South African Development Community (SADC)__: Contributing to HPC equipment donations, education, and training across Africa.
-- • __Network Configuration and Debugging__: Managing network configurations and facilitating new equipment installations.
-- • __Containerization and Continuous Delivery__: Driving the adoption of containerization and continuous delivery practices for software development.
-- • __Graduate Staff Training__: Training graduate staff in various cloud computing and HPC concepts.
-- • __Technical Expertise Support__: Offering insights on networking, cloud operations, and related matters to various business units.
+- • __Platform Architecture and Development__: Leading major releases of the Hyperstack platform, implementing critical Python solutions, and co-leading SR-IOV implementation enabling 400Gbps networking capabilities.
+- • __Next-Generation Technology Research__: Spearheading R&D initiatives for cutting-edge hardware platforms, including GraceHopper GH200 and Nvidia SXM GPU virtualization with Infiniband.
+- • __Infrastructure Modernization__: Implementing Kubernetes and GitOps methodologies to enhance system reliability and streamline deployment processes.
+- • __Automation Engineering__: Developing sophisticated automation tools for L2 support operations, deployment workflows, and infrastructure team operations through Rundeck implementation.
+- • __Technical Documentation__: Establishing comprehensive infrastructure documentation and improving team onboarding processes through enhanced documentation.
+- • __Performance Optimization__: Conducting hardware validation and performance optimization to maximize system capabilities and efficiency.
+- • __Large-Scale Migration Management__: Successfully planning and executing large-scale client migrations involving 300+ virtual machines.
+- • __Vendor Relations__: Collaborating with vendors to resolve critical platform issues and develop long-term solutions.
+- • __Client Technical Support__: Providing expert technical guidance for complex client challenges and implementing infrastructure improvements based on real-world requirements.
+- • __Team Leadership__: Bridging strategic planning with practical implementation while supporting team members through knowledge sharing and collaboration.
+- • __Infrastructure Asset Management__: Developing and maintaining comprehensive hardware inventory management systems.
+- • __System Reliability Engineering__: Ensuring platform stability through robust deployment processes and continuous system improvements.
 
 <!-- ## Technology Experience
 ### Non-exhaustive
@@ -186,9 +182,9 @@ __CHPC__ = Centre for High Performance Computing (South Africa) \| __UCT__ = Uni
 
 ### African Pathogen Archive
 `CHPC`
-In __(2023 - ongoing)__, I facilitated the signing of a Memorandum of Understanding (MoU) between the CHPC and SANBI, in which I am assuming the role of __Infrastructure Automation Lead__ for the African Pathogen Archive (APA) project. My key responsibilities include:
+In __(2023 - 2024)__, I facilitated the signing of a Memorandum of Understanding (MoU) between the CHPC and SANBI, in which I assumed the role of __Infrastructure Automation Lead__ for the African Pathogen Archive (APA) project. My key responsibilities included:
 - • Porting microservice application stack to a local development environment.
-- • Designing and developed automation for APA services.
+- • Designing and developing automation for APA services.
 - • Rapidly deploying the APA stack with Kubernetes on OpenStack using Terraform and Kubespray.
 - • Implementing GitOps with FluxCD v2 for streamlined management.
 - • Organizing project's git structure for efficient collaboration.
@@ -255,19 +251,33 @@ During __(2019 - 2020)__, I collaborated with UWC eResearch to facilitate the de
 
 ### Job Roles
 
-`2020-ongoing`
-__<u>(Current) Senior Cloud and HPC Technologist II</u>__ --- _Advanced Computer Engineering Lab, Centre for High Performance Computing, Council for Scientific and Industrial Research_
+`2024-ongoing`
+__<u>(Current) Senior Infrastructure Engineer</u>__ --- _NexGen Cloud_
 <br/><br/>
 - ___Refer to the [Responsibilities](#responsibilities) section in [Current Role](#current-role) above.___
 <hr id="work"/>
 <br/>
 
+`2020-2024`
+__<u>Senior Cloud and HPC Technologist II</u>__ --- _Council for Scientific and Industrial Research (CSIR), Centre for High Performance Computing_
+- • Led OpenStack Research Cloud (ORC) initiative and managed ACE Lab's cloud infrastructure serving hundreds of researchers.
+- • Spearheaded GitOps/DevOps transformation across CHPC, implementing CI/CD pipelines and infrastructure-as-code practices.
+- • Architected and optimized multi-petabyte CEPH storage clusters for HPC workloads.
+- • Co-led International Student Cluster Competition initiative, mentoring teams to achieve international recognition.
+- • Designed and implemented monitoring and inventory management systems.
+- • Established CSIR's public cloud offering policies and technical framework.
+- • Drove containerization adoption and modern deployment practices across research units.
+- • Led technical training programs for graduate staff and researchers in HPC/cloud technologies.
+- • Managed procurement and vendor relationships for multi-million rand infrastructure projects.
+- • Supported pan-African HPC initiatives through equipment donations and technical training programs.
+- • Implemented bare-metal automated infrastructure deployment solutions using modern DevOps tools.
+- • Provided technical leadership in networking, storage, and cloud operations across business units.
 
 `2018-2020`
 __<u>External Consultant</u>__ --- _ILIFU Project, University of Cape Town_
 - • Planned, developed, and implemented a tailored private cloud deployment for astronomy and bioinformatics researchers.
 - • Provided expert consulting and ongoing support for the private cloud infrastructure.
-- ___Refer to [Ilifu Project](#ilifu-project) under the [Special Projects](#special-projects) section for more detal___.
+- ___Refer to [Ilifu Project](#ilifu-project) under the [Special Projects](#special-projects) section for more detail___.
 
 
 `2017-2020`
@@ -353,12 +363,23 @@ __<u>B.Sc. Computer Science</u>__ --- _University of the Western Cape_
 `2007-2011`
 __<u>National Senior Certificate</u>__ --- Fairbairn College
 
+## Certification
+
+`2022`
+__<u>Certified Kubernetes Administrator (CKA)</u>__
+- • Certificate: [LF-nl49naft2a](https://www.credly.com/badges/0eda1f8e-1af0-46ab-bd44-eea745e982a0/public_url)
+
+__<u>Linux Foundation Certified System Administrator (LFCS)</u>__
+- • Certificate: [LF-dvrsnn5jro](https://www.credly.com/badges/8857c733-3669-44b9-a804-d975cf0ba413/public_url)
+
 ## Academic Outputs
 
 ### Journal Publications
 
 `2018`
 Ahmed, A.E., Mpangase, P.T., Panji, S., Baichoo, S., Souilmi, Y., Fadlelmola, F.M., Alghali, M., Aron, S., Bendou, H., __de Beste, E__. and Mbiyavanga, M. (2018). "_Organizing and running bioinformatics hackathons within Africa: The H3ABioNet cloud computing experience_". AAS open research, 1. ([Source.](https://aasopenresearch.org/articles/1-9))
+
+Baichoo, S., Souilmi, Y., Panji, S. et al. (2018). "_Developing reproducible bioinformatics analysis workflows for heterogeneous computing environments to support African genomics._". BMC Bioinformatics 19, 457. ([Source.](https://link.springer.com/article/10.1186/s12859-018-2446-1#citeas))
 
 ### Thesis (M.Sc)
 
@@ -406,7 +427,7 @@ __de Beste, E__., Christoffels, A., van Heusden, P. (2019). "_Leveraging Open So
 
 
 `2018`
-- __<u>JEDI Workship and Conference</u>__ --- _Madagascar_
+- __<u>JEDI Workshop and Conference</u>__ --- _Madagascar_
 - Led workshop on reproducible science using software containers and pipeline/workflow tools.
 - __<u>DevOpsDays Cape Town</u>__ --- _Cape Town, South Africa_
 - Volunteered as staff for organizing the event.
