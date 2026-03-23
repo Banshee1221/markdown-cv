@@ -57,14 +57,13 @@ table {
 	--page-block-end: clamp(1.7rem, 3vw, 3rem);
 	--surface-max: 108rem;
 	--rail-width: clamp(11rem, 15vw, 15.5rem);
-	--meta-width: clamp(7rem, 10vw, 9rem);
+	--meta-width: clamp(8rem, 11vw, 10.5rem);
 	--column-gap: clamp(1rem, 1.8vw, 2rem);
 	--section-gap: clamp(1.3rem, 2.8vw, 2.15rem);
 	--subsection-gap: clamp(0.62rem, 1.15vw, 0.95rem);
 	--block-gap: clamp(0.5rem, 0.8vw, 0.8rem);
 	--list-gap: clamp(0.32rem, 0.55vw, 0.55rem);
 	--content-measure: clamp(38rem, 58vw, 60rem);
-	--quote-measure: clamp(28rem, 42vw, 41rem);
 	--lane-inset: clamp(0.05rem, 0.35vw, 0.35rem);
 	--accent: #bc412b;
 	--ink: #101114;
@@ -108,6 +107,7 @@ p,
 ul,
 .webaddress {
 	grid-column: main;
+	width: 100%;
 	max-width: var(--content-measure);
 	margin-bottom: var(--block-gap);
 }
@@ -140,6 +140,7 @@ h4 {
 
 h1 {
 	grid-column: main / meta;
+	width: 100%;
 	font-size: clamp(1.95rem, 3vw, 2.85rem);
 	line-height: 0.95;
 	max-width: calc(var(--content-measure) + var(--meta-width) + var(--column-gap));
@@ -147,6 +148,7 @@ h1 {
 
 #subtitle {
 	grid-column: main / meta;
+	width: 100%;
 	max-width: calc(var(--content-measure) + var(--meta-width) + var(--column-gap));
 	margin-top: 0.28rem;
 	margin-bottom: 0.45rem;
@@ -159,6 +161,9 @@ h1 {
 }
 
 .webaddress {
+	grid-column: main / meta;
+	width: 100%;
+	max-width: calc(var(--content-measure) + var(--meta-width) + var(--column-gap));
 	margin-top: 0.2rem;
 	color: var(--accent);
 	font-family: var(--mono);
@@ -219,15 +224,17 @@ a:hover {
 }
 
 .quote-block {
-	grid-column: main;
+	grid-column: main / meta;
+	width: 100%;
 	display: grid;
 	row-gap: 0.5rem;
-	max-width: var(--quote-measure);
+	max-width: calc(var(--content-measure) + var(--meta-width) + var(--column-gap));
 	margin-top: calc(var(--section-gap) * 0.25);
 	margin-bottom: calc(var(--section-gap) * 0.35);
 }
 
 .quote-text {
+	width: 100%;
 	margin-bottom: 0;
 	font-size: 0.98em;
 	font-style: italic;
@@ -406,58 +413,13 @@ hr,
 
 @media (max-width: 72rem) {
 	:root {
-		--rail-width: clamp(10.5rem, 20vw, 14rem);
-		--meta-width: clamp(6.5rem, 12vw, 8.5rem);
-		--column-gap: clamp(0.9rem, 1.4vw, 1.4rem);
-	}
-
-	#content {
-		grid-template-columns:
-			[rail] minmax(0, var(--rail-width))
-			[main] minmax(0, 1fr);
-	}
-
-	h1,
-	#subtitle,
-	.webaddress,
-	.quote-block,
-	h2,
-	p,
-	ul,
-	hr,
-	#work,
-	.cv-item {
-		grid-column: main;
-	}
-
-	.cv-item {
-		grid-template-columns:
-			minmax(0, var(--rail-width))
-			minmax(0, 1fr);
-	}
-
-	.cv-item__content {
-		grid-column: 2;
-	}
-
-	.cv-item__rail > h2 {
-		text-align: left;
-		padding-right: 0;
-	}
-
-	.cv-item__meta {
-		grid-column: 2;
-		justify-self: end;
-		text-align: right;
-		padding-right: 0;
-	}
-
-	.entry-row {
-		max-width: calc(var(--content-measure) + var(--meta-width));
+		--rail-width: clamp(10rem, 18vw, 14rem);
+		--meta-width: clamp(6.5rem, 9vw, 8.5rem);
+		--column-gap: clamp(0.85rem, 1.35vw, 1.4rem);
 	}
 }
 
-@media (max-width: 56rem) {
+@media (max-width: 60rem) {
 	:root {
 		--page-inline: clamp(0.9rem, 3vw, 1.2rem);
 		--page-block-start: clamp(0.95rem, 3vw, 1.35rem);
@@ -495,6 +457,7 @@ hr,
 	}
 
 	.quote-block {
+		width: 100%;
 		max-width: none;
 		margin-top: calc(var(--section-gap) * 0.22);
 		margin-bottom: calc(var(--section-gap) * 0.32);
@@ -548,6 +511,20 @@ hr,
 		padding-right: 0;
 		margin-bottom: 0.15rem;
 	}
+
+	.entry-row {
+		grid-template-columns: minmax(0, 1fr);
+		row-gap: 0.18rem;
+		max-width: none;
+	}
+
+	.entry-meta {
+		justify-self: start;
+		text-align: left;
+		white-space: normal;
+		padding-right: 0;
+		font-size: 0.83em;
+	}
 }
 
 @media (max-width: 40rem) {
@@ -577,14 +554,11 @@ hr,
 	}
 
 	.entry-row {
-		grid-template-columns: minmax(0, 1fr);
 		row-gap: 0.08rem;
 	}
 
 	.entry-meta {
-		justify-self: start;
-		text-align: left;
-		white-space: normal;
+		font-size: 0.8em;
 	}
 
 }

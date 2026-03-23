@@ -3,7 +3,7 @@ layout: cv
 title: Eugene de Beste - Curriculum Vitae
 ---
 # Eugene de Beste
-<p id="subtitle"><u>Infrastructure Operations Manager (Secondment) | Platform / Infrastructure Engineering</u></p>
+<p id="subtitle"><u>Infrastructure Operations Manager (Secondment) | Platform & Infrastructure Engineering</u></p>
 
 <div class="webaddress">
 <a href="https://eugene.debeste.co.za"><i class="fa fa-globe"></i>eugene.debeste.co.za</a>
@@ -23,8 +23,8 @@ Cape Town, South Africa
 <section class="cv-item cv-item--section-inline">
   <div class="cv-item__rail"><h2>Professional Summary</h2></div>
   <div class="cv-item__content">
-    <p>Infrastructure and platform engineer who progressed into infrastructure operations leadership while staying hands-on with OpenStack, GPU cloud, automation, and reliability work. I move comfortably from firmware/kernel-level debugging through deployment tooling, customer migrations, and CX self-service enablement.</p>
-    <p>I modernise brittle operational paths into repeatable systems, build internal tooling that reduces toil, and keep delivery grounded in production constraints. I also use Anthropic Claude / Claude Code, ChatGPT Codex via <code>opencode</code>, and Cursor as practical force multipliers for research, scripting, and internal tooling.</p>
+    <p>Senior infrastructure engineer turned infrastructure operations leader, with hands-on depth across OpenStack, GPU cloud, automation, and reliability engineering. Comfortable moving from low-level debugging and deployment tooling through customer migrations and CX self-service enablement.</p>
+    <p>I modernise brittle deployment paths into repeatable systems grounded in production constraints, and I use AI-assisted development tools to accelerate research, scripting, and internal tooling.</p>
   </div>
 </section>
 
@@ -33,10 +33,10 @@ Cape Town, South Africa
   <div class="cv-item__content">
     <ul>
       <li><strong>Cloud / Platform:</strong> OpenStack, Kolla-ansible, Kubernetes, Ceph RBD, MAAS, NetBox, PowerDNS, GitOps, ArgoCD, FluxCD</li>
-      <li><strong>Automation / IaC / Tooling:</strong> Ansible, Python, Windmill, Bash, Terraform, config generation, internal tooling</li>
+      <li><strong>Automation / IaC / Tooling:</strong> Ansible, Python, Windmill, config generation, internal tooling</li>
       <li><strong>Systems / Virtualisation:</strong> QEMU, KVM, libvirt, OVMF/EDK2, Open vSwitch, SR-IOV</li>
       <li><strong>Observability / Ops:</strong> Prometheus, Grafana, SRE, incident response, runbooks, operational tooling</li>
-      <li><strong>GPU / HPC / Networking:</strong> H100, H200, GH200, GPU virtualisation, InfiniBand, RoCEv2, GPU Direct RDMA, ConnectX</li>
+      <li><strong>GPU / HPC / Networking:</strong> H100, H200, GH200, GPU virtualisation, InfiniBand, RoCEv2, GPU Direct RDMA</li>
       <li><strong>AI-assisted engineering:</strong> Anthropic Claude / Claude Code, ChatGPT Codex via <code>opencode</code>, Cursor</li>
     </ul>
   </div>
@@ -59,16 +59,15 @@ Cape Town, South Africa
       <div class="entry-main"><strong>Senior Infrastructure Engineer</strong></div>
       <div class="entry-meta">Jan 2024 - Jun 2025</div>
     </div>
-    <p><em>Note: the Head of -> Manager title change reflected an internal leadership restructuring; the scope and job spec stayed the same.</em></p>
-    <p>At NexGen Cloud, I progressed from hands-on infrastructure engineering into infrastructure operations leadership while remaining close to OpenStack, GPU cloud, automation, and systems debugging. I modernised region bring-up, built CX self-service tooling, and kept customer migrations and reliability improvements grounded in real platform constraints.</p>
+    <p><em>Title updated from Head of Infrastructure Operations to Infrastructure Operations Manager during an internal leadership restructuring; scope remained unchanged.</em></p>
+    <p>At NexGen Cloud, I progressed from hands-on infrastructure engineering into infrastructure operations leadership while remaining close to OpenStack, GPU cloud, automation, and systems debugging. I modernised region bring-up, built CX self-service tooling, and kept customer migrations and reliability work grounded in real platform constraints.</p>
     <ul>
-      <li>Standardised region deployment with custom Ansible, custom Python/config-generation tooling, and upstream Kolla-ansible, replacing hand-grown container deployment patterns and brittle legacy Ansible repos with repeatable bring-up timelines measured in days and weeks instead of prolonged manual effort.</li>
-      <li>Investigated tooling options, moved beyond an earlier Rundeck attempt, and selected, PoC'd, and implemented Windmill as a production CX self-service platform with fine-grained access control, auditability, and safe delegated remediation; the platform now spans 10,000+ lines of Python libraries, scripts, and flows for troubleshooting, maintenance, information retrieval, access management, and remediation, with Claude Code, ChatGPT Codex via <code>opencode</code>, and Cursor used as practical accelerators in research and scripting.</li>
-      <li>Built <code>nova-libvirt-interceptor</code> after a long debugging effort on problematic vendor hardware to work around PCIe-switch and NUMA-related behaviour, turning a customer-impacting platform fault into a targeted Python systems fix.</li>
-      <li>Planned and executed the Oblivus / Skyportal migration from an outgoing platform to NexGen's platform in a mostly automated fashion, combining storage, cloud, and customer-facing delivery work.</li>
+      <li>Standardised region deployment with custom Ansible, custom Python/config-generation tooling, and upstream Kolla-ansible, replacing hand-grown container deployment patterns and brittle legacy Ansible repos with repeatable bring-up and node deployment.</li>
+      <li>Evaluated automation and CX self-service tools, moved beyond an earlier Rundeck attempt, and selected, PoC'd, and implemented Windmill in production; the platform now provides audited, delegated self-service for troubleshooting and remediation, spans 10,000+ lines of Python libraries, scripts, and flows, and uses Claude Code, ChatGPT Codex via <code>opencode</code>, and Cursor as practical accelerators for research and scripting.</li>
+      <li>Built <code>nova-libvirt-interceptor</code> after a long debugging effort on problematic vendor hardware, isolating PCIe-switch and NUMA-related behaviour and turning a customer-impacting platform fault into a targeted Python systems fix.</li>
+      <li>Planned and executed the Oblivus / Skyportal migration from the outgoing platform to NexGen's platform in a mostly automated fashion, combining storage, cloud, and customer-facing delivery work.</li>
       <li>Diagnosed low-level firmware, kernel, and virtualisation bottlenecks behind GPU VM boot times and shipped a production fix that reduced boot times by 80%+ where applicable.</li>
-      <li>Improved platform reliability through monitoring and observability work, operational tooling, incident response patterns, and cleaner runbooks and handover practices.</li>
-      <li>Continued R&amp;D on GPU and cloud platform capabilities such as static 1GB hugepages, CPU pinning, GPU Direct RDMA, and Gnocchi HA design work, without overstating unfinished features as delivered products.</li>
+      <li>Improved platform reliability through monitoring, observability, operational tooling, incident response patterns, runbooks, and handover practices, while continuing R&amp;D on static 1GB hugepages, CPU pinning, GPU Direct RDMA, and Gnocchi HA design work without overstating unfinished features as delivered products.</li>
     </ul>
   </div>
 </section>
@@ -84,8 +83,7 @@ Cape Town, South Africa
       <li>Led the OpenStack Research Cloud and ACE Lab cloud infrastructure serving hundreds of researchers, with responsibility spanning cloud operations, storage, networking, and support.</li>
       <li>Drove GitOps and DevOps adoption across CHPC with CI/CD, infrastructure-as-code, and more repeatable deployment patterns for research infrastructure.</li>
       <li>Architected and operated multi-petabyte Ceph storage for HPC workloads, including monitoring and inventory systems that improved operational visibility.</li>
-      <li>Co-led the International Student Cluster Competition effort, mentoring teams and helping develop training material for graduate staff and researchers.</li>
-      <li>Supported bare-metal deployment automation, containerisation, and cross-team technical training across research units.</li>
+      <li>Co-led the International Student Cluster Competition effort, mentoring teams and developing training material for graduate staff and researchers.</li>
     </ul>
   </div>
 </section>
@@ -136,7 +134,7 @@ Cape Town, South Africa
   </div>
 </section>
 
-## Notable Projects
+## Selected Projects
 
 <section class="cv-item cv-item--project">
   <div class="cv-item__rail"><h3>African Pathogen Archive</h3></div>
@@ -212,7 +210,7 @@ Cape Town, South Africa
 </section>
 
 <section class="cv-item cv-item--section-inline">
-  <div class="cv-item__rail"><h2>Notable Publications, Talks & Awards</h2></div>
+  <div class="cv-item__rail"><h2>Selected Publications & Awards</h2></div>
   <div class="cv-item__content">
     <div class="entry-row">
       <div class="entry-main"><strong>de Beste, E.</strong> (2019). <em>"Enabling the processing of bioinformatics workflows where data is located through the use of cloud and container technologies"</em>. <a href="static/education/msc_thesis.pdf">Thesis</a></div>
