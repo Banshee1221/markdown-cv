@@ -6,13 +6,11 @@ title: Eugene de Beste - Curriculum Vitae
 <p id="subtitle"><u>Infrastructure Operations Manager (Secondment) | Platform & Infrastructure Engineering</u></p>
 
 <div class="webaddress">
-<a href="https://eugene.debeste.co.za"><i class="fa fa-globe"></i>eugene.debeste.co.za</a>
-<br />
-<a href="https://www.linkedin.com/in/eugene-de-beste/"><i class="fa fa-linkedin"></i>LinkedIn Profile</a>
-<br />
-<a href="https://github.com/Banshee1221"><i class="fa fa-github"></i>GitHub Profile</a>
-<br />
-Cape Town, South Africa
+<a href="mailto:eugene@debeste.co.za" aria-label="Email Address"><i class="fa fa-envelope" aria-hidden="true"></i>eugene@debeste.co.za</a>
+<a href="https://eugene.debeste.co.za" aria-label="Personal Website"><i class="fa fa-globe" aria-hidden="true"></i>eugene.debeste.co.za</a>
+<a href="https://www.linkedin.com/in/eugene-de-beste/" aria-label="LinkedIn Profile"><i class="fa fa-linkedin" aria-hidden="true"></i>linkedin.com/in/eugene-de-beste</a>
+<a href="https://github.com/Banshee1221" aria-label="GitHub Profile"><i class="fa fa-github" aria-hidden="true"></i>github.com/Banshee1221</a>
+<span><i class="fa fa-map-marker" aria-hidden="true"></i>Cape Town, South Africa</span>
 </div>
 
 <div class="quote-block">
@@ -37,7 +35,7 @@ Cape Town, South Africa
       <li><strong>Systems / Virtualisation:</strong> QEMU, KVM, libvirt, OVMF/EDK2, Open vSwitch, SR-IOV</li>
       <li><strong>Observability / Ops:</strong> Prometheus, Grafana, SRE, incident response, runbooks, operational tooling</li>
       <li><strong>GPU / HPC / Networking:</strong> H100, H200, GH200, GPU virtualisation, InfiniBand, RoCEv2, GPU Direct RDMA</li>
-      <li><strong>AI-assisted engineering:</strong> Anthropic Claude / Claude Code, ChatGPT Codex via <code>opencode</code>, Cursor</li>
+      <li><strong>AI-assisted engineering:</strong> Anthropic Claude / Claude Code, OpenAI ChatGPT Codex (via <code>opencode</code>), Cursor</li>
     </ul>
   </div>
 </section>
@@ -49,7 +47,7 @@ Cape Town, South Africa
   <div class="cv-item__content">
     <div class="entry-row entry-row--role">
       <div class="entry-main"><strong>Infrastructure Operations Manager (Secondment)</strong></div>
-      <div class="entry-meta">Mar 2026 - Jun 2026</div>
+      <div class="entry-meta" style="margin-right: -0.2em;">Mar 2026 - Current</div>
     </div>
     <div class="entry-row entry-row--role">
       <div class="entry-main"><strong>Head of Infrastructure Operations (Secondment)</strong></div>
@@ -73,7 +71,7 @@ Cape Town, South Africa
 </section>
 
 <section class="cv-item cv-item--experience">
-  <div class="cv-item__rail"><h3>Council for Scientific and Industrial Research, Centre for High Performance Computing</h3></div>
+  <div class="cv-item__rail"><h3>Council for Scientific and Industrial Research, Centre for High Performance Computing (CHPC)</h3></div>
   <div class="cv-item__content">
     <div class="entry-row">
       <div class="entry-main"><strong>Senior Cloud and HPC Technologist II</strong></div>
@@ -89,7 +87,7 @@ Cape Town, South Africa
 </section>
 
 <section class="cv-item cv-item--experience">
-  <div class="cv-item__rail"><h3>ILIFU Project, University of Cape Town</h3></div>
+  <div class="cv-item__rail"><h3>ILIFU Project, University of Cape Town (UCT)</h3></div>
   <div class="cv-item__content">
     <div class="entry-row">
       <div class="entry-main"><strong>External Consultant</strong></div>
@@ -104,7 +102,7 @@ Cape Town, South Africa
 </section>
 
 <section class="cv-item cv-item--experience">
-  <div class="cv-item__rail"><h3>South African National Bioinformatics Institute, University of the Western Cape</h3></div>
+  <div class="cv-item__rail"><h3>South African National Bioinformatics Institute (SANBI), University of the Western Cape (UWC)</h3></div>
   <div class="cv-item__content">
     <div class="entry-row">
       <div class="entry-main"><strong>Systems Developer</strong></div>
@@ -112,7 +110,7 @@ Cape Town, South Africa
     </div>
     <ul>
       <li>Trained and supported student teams for the CHPC Student Cluster Competition, including the move to remote delivery during the pandemic.</li>
-      <li>Migrated in-house VM management onto OpenStack and supported HISP, NICD, and UWC HPC deployments across cloud and bare-metal environments.</li>
+      <li>Migrated in-house VM management onto OpenStack and supported Health Information Systems Programme (HISP), National Institute for Communicable Diseases (NICD), and UWC HPC deployments across cloud and bare-metal environments.</li>
       <li>Automated bare-metal and cloud builds with MAAS, PXE, Ansible, and Terraform, and introduced FreeIPA, monitoring, and change-management practices.</li>
       <li>Supported Ceph, networking, and helpdesk operations across research and IT teams while maintaining internal tooling and documentation.</li>
     </ul>
@@ -140,7 +138,7 @@ Cape Town, South Africa
   <div class="cv-item__rail"><h3>African Pathogen Archive</h3></div>
   <div class="cv-item__content">
     <div class="entry-row">
-      <div class="entry-main">Helped secure the CHPC and SANBI MoU and shaped the Infrastructure Automation Lead role for the project.</div>
+      <div class="entry-main">Helped secure the CHPC and SANBI Memorandum of Understanding (MoU) and shaped the Infrastructure Automation Lead role for the project.</div>
       <div class="entry-meta">CHPC</div>
     </div>
     <p>Ported the microservice stack into a local development environment and built Kubernetes / OpenStack / Terraform / FluxCD automation for repeatable deployment.</p>
