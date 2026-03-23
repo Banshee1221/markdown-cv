@@ -21,8 +21,8 @@ title: Eugene de Beste - Curriculum Vitae
 <section class="cv-item cv-item--section-inline">
   <div class="cv-item__rail"><h2>Professional Summary</h2></div>
   <div class="cv-item__content">
-    <p>Senior infrastructure and platform engineer turned infrastructure operations leader, with hands-on depth across OpenStack, GPU cloud, automation, and reliability engineering. Proven across the full stack from low-level debugging and deployment tooling to customer migrations, CX self-service enablement, and operational modernisation.</p>
-    <p>I modernise brittle deployment paths into repeatable systems grounded in production constraints, and use AI-assisted development tools to accelerate research, scripting, and internal tooling.</p>
+    <p>Innovative infrastructure and platform engineer turned operations leader who thrives on diving deep into complex problems and engineering sustainable, tech-debt-free solutions. Proven across the full stack from low-level kernel and firmware debugging through to customer migrations, CX self-service platforms, and operational modernisation.</p>
+    <p>I consistently go above and beyond to replace brittle, inherited systems with clean, repeatable automation grounded in production constraints, and leverage AI-assisted development tools to accelerate research, scripting, and internal tooling.</p>
   </div>
 </section>
 
@@ -58,14 +58,14 @@ title: Eugene de Beste - Curriculum Vitae
       <div class="entry-meta">Jan 2024 - Jun 2025</div>
     </div>
     <p class="cv-note"><em>Title updated from Head of Infrastructure Operations to Infrastructure Operations Manager during an internal leadership restructuring; scope remained unchanged.</em></p>
-    <p>At NexGen Cloud, I progressed from hands-on infrastructure engineering into infrastructure operations leadership while remaining close to OpenStack, GPU cloud, automation, and systems debugging. I modernised region bring-up, built CX self-service tooling, and kept customer migrations and reliability work grounded in real platform constraints.</p>
+    <p>At NexGen Cloud, I progressed from hands-on infrastructure engineering into infrastructure operations leadership while remaining deeply embedded in OpenStack, GPU cloud, automation, and systems debugging. I proactively identified and eliminated legacy tech debt, modernised region bring-up from the ground up, and consistently went beyond my defined scope to deliver production-grade tooling and reliability improvements.</p>
     <ul>
-      <li>Standardised region deployment by introducing custom Ansible, Python/config-generation tooling, and upstream Kolla-ansible, replacing brittle hand-grown deployment patterns with repeatable region bring-up and faster node configuration.</li>
+      <li>Overhauled region deployment end-to-end by designing custom Ansible, Python/config-generation tooling, and integrating upstream Kolla-ansible, systematically eliminating legacy tech debt and replacing fragile hand-grown patterns with clean, repeatable infrastructure.</li>
       <li>Evaluated automation and self-service tooling, selected and productionised Windmill, and built an audited CX self-service platform with 10,000+ lines of Python libraries, scripts, and flows, enabling delegated troubleshooting and remediation and reducing BAU load on infrastructure engineering.</li>
-      <li>Built <code>nova-libvirt-interceptor</code> after a long debugging effort on problematic vendor hardware, isolating PCIe-switch and NUMA-related behaviour and turning a customer-impacting platform fault into a targeted Python systems fix.</li>
-      <li>Planned and executed the Oblivus / Skyportal migration from the outgoing platform to NexGen's platform in a mostly automated fashion, combining storage, cloud, and customer-facing delivery work.</li>
-      <li>Diagnosed low-level firmware, kernel, and virtualisation bottlenecks behind GPU VM boot times and shipped a production fix that reduced boot times by 80%+ where applicable.</li>
-      <li>Improved platform reliability through observability, operational tooling, incident response patterns, runbooks, and handover practices, while continuing platform R&amp;D on static 1GB hugepages, CPU pinning, GPU Direct RDMA, and Gnocchi HA design.</li>
+      <li>Dove deep into complex, cross-cutting technical problems others had deprioritised, engineering targeted Python-based hypervisor interventions that isolated deep-seated vendor hardware faults and permanently neutralized recurring customer-impacting outages.</li>
+      <li>Planned and executed massive customer migrations from their outgoing platform to NexGen's platform in a mostly automated fashion, combining storage, cloud, and customer-facing delivery work.</li>
+      <li>Diagnosed low-level firmware, kernel, and virtualisation bottlenecks behind GPU VM boot times through methodical root-cause analysis, shipping a production fix that reduced boot times by 80%+ where applicable.</li>
+      <li>Drove platform reliability improvements well beyond day-to-day responsibilities, building observability, operational tooling, incident response patterns, runbooks, and handover practices, while self-directing R&amp;D on static 1GB hugepages, CPU pinning, GPU Direct RDMA, and Gnocchi HA design.</li>
     </ul>
   </div>
 </section>
@@ -78,10 +78,10 @@ title: Eugene de Beste - Curriculum Vitae
       <div class="entry-meta">2020 - 2024</div>
     </div>
     <ul>
-      <li>Led the OpenStack Research Cloud and ACE Lab cloud infrastructure serving hundreds of researchers, with responsibility spanning cloud operations, storage, networking, and support.</li>
-      <li>Drove GitOps and DevOps adoption across CHPC with CI/CD, infrastructure-as-code, and more repeatable deployment patterns for research infrastructure.</li>
-      <li>Architected and operated multi-petabyte Ceph storage for HPC workloads, including monitoring and inventory systems that improved operational visibility.</li>
-      <li>Co-led the International Student Cluster Competition effort, mentoring teams and developing training material for graduate staff and researchers.</li>
+      <li>Led the OpenStack Research Cloud and ACE Lab cloud infrastructure serving hundreds of researchers, taking ownership well beyond the formal brief to cover cloud operations, storage, networking, and frontline support.</li>
+      <li>Championed GitOps and DevOps adoption across CHPC, introducing CI/CD and infrastructure-as-code to replace ad-hoc manual processes with sustainable, repeatable deployment patterns.</li>
+      <li>Architected and operated multi-petabyte Ceph storage for HPC workloads, proactively building monitoring and inventory systems that eliminated operational blind spots.</li>
+      <li>Co-led the International Student Cluster Competition effort, voluntarily mentoring teams and developing training material for graduate staff and researchers.</li>
     </ul>
   </div>
 </section>
@@ -109,10 +109,10 @@ title: Eugene de Beste - Curriculum Vitae
       <div class="entry-meta">2017 - 2020</div>
     </div>
     <ul>
-      <li>Trained and supported student teams for the CHPC Student Cluster Competition, including the move to remote delivery during the pandemic.</li>
+      <li>Trained and supported student teams for the CHPC Student Cluster Competition, stepping up to redesign delivery for fully remote operation during the pandemic.</li>
       <li>Migrated in-house VM management onto OpenStack and supported Health Information Systems Programme (HISP), National Institute for Communicable Diseases (NICD), and UWC HPC deployments across cloud and bare-metal environments.</li>
-      <li>Automated bare-metal and cloud builds with MAAS, PXE, Ansible, and Terraform, and introduced FreeIPA, monitoring, and change-management practices.</li>
-      <li>Supported Ceph, networking, and helpdesk operations across research and IT teams while maintaining internal tooling and documentation.</li>
+      <li>Automated bare-metal and cloud builds with MAAS, PXE, Ansible, and Terraform, replacing manual provisioning workflows and introducing FreeIPA, monitoring, and change-management practices to reduce operational tech debt.</li>
+      <li>Went beyond the core developer role to support Ceph, networking, and helpdesk operations across research and IT teams while maintaining internal tooling and documentation.</li>
     </ul>
   </div>
 </section>
