@@ -1,4 +1,5 @@
-markdown:   kramdown
-style:  davewhipp
+---
+markdown: "kramdown"
+style: "davewhipp"
 references: false
-baseurl: /markdown-cv
+baseurl: "/markdown-cv"

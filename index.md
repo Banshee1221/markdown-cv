@@ -23,8 +23,8 @@ Cape Town, South Africa
 <section class="cv-item cv-item--section-inline">
   <div class="cv-item__rail"><h2>Professional Summary</h2></div>
   <div class="cv-item__content">
-    <p>Senior infrastructure engineer turned infrastructure operations leader, with hands-on depth across OpenStack, GPU cloud, automation, and reliability engineering. Comfortable moving from low-level debugging and deployment tooling through customer migrations and CX self-service enablement.</p>
-    <p>I modernise brittle deployment paths into repeatable systems grounded in production constraints, and I use AI-assisted development tools to accelerate research, scripting, and internal tooling.</p>
+    <p>Senior infrastructure and platform engineer turned infrastructure operations leader, with hands-on depth across OpenStack, GPU cloud, automation, and reliability engineering. Proven across the full stack from low-level debugging and deployment tooling to customer migrations, CX self-service enablement, and operational modernisation.</p>
+    <p>I modernise brittle deployment paths into repeatable systems grounded in production constraints, and use AI-assisted development tools to accelerate research, scripting, and internal tooling.</p>
   </div>
 </section>
 
@@ -44,7 +44,7 @@ Cape Town, South Africa
 
 ## Professional Experience
 
-<section class="cv-item">
+<section class="cv-item cv-item--experience">
   <div class="cv-item__rail"><h3>NexGen Cloud</h3></div>
   <div class="cv-item__content">
     <div class="entry-row entry-row--role">
@@ -59,20 +59,20 @@ Cape Town, South Africa
       <div class="entry-main"><strong>Senior Infrastructure Engineer</strong></div>
       <div class="entry-meta">Jan 2024 - Jun 2025</div>
     </div>
-    <p><em>Title updated from Head of Infrastructure Operations to Infrastructure Operations Manager during an internal leadership restructuring; scope remained unchanged.</em></p>
+    <p class="cv-note"><em>Title updated from Head of Infrastructure Operations to Infrastructure Operations Manager during an internal leadership restructuring; scope remained unchanged.</em></p>
     <p>At NexGen Cloud, I progressed from hands-on infrastructure engineering into infrastructure operations leadership while remaining close to OpenStack, GPU cloud, automation, and systems debugging. I modernised region bring-up, built CX self-service tooling, and kept customer migrations and reliability work grounded in real platform constraints.</p>
     <ul>
-      <li>Standardised region deployment with custom Ansible, custom Python/config-generation tooling, and upstream Kolla-ansible, replacing hand-grown container deployment patterns and brittle legacy Ansible repos with repeatable bring-up and node deployment.</li>
-      <li>Evaluated automation and CX self-service tools, moved beyond an earlier Rundeck attempt, and selected, PoC'd, and implemented Windmill in production; the platform now provides audited, delegated self-service for troubleshooting and remediation, spans 10,000+ lines of Python libraries, scripts, and flows, and uses Claude Code, ChatGPT Codex via <code>opencode</code>, and Cursor as practical accelerators for research and scripting.</li>
+      <li>Standardised region deployment by introducing custom Ansible, Python/config-generation tooling, and upstream Kolla-ansible, replacing brittle hand-grown deployment patterns with repeatable region bring-up and faster node configuration.</li>
+      <li>Evaluated automation and self-service tooling, selected and productionised Windmill, and built an audited CX self-service platform with 10,000+ lines of Python libraries, scripts, and flows, enabling delegated troubleshooting and remediation and reducing BAU load on infrastructure engineering.</li>
       <li>Built <code>nova-libvirt-interceptor</code> after a long debugging effort on problematic vendor hardware, isolating PCIe-switch and NUMA-related behaviour and turning a customer-impacting platform fault into a targeted Python systems fix.</li>
       <li>Planned and executed the Oblivus / Skyportal migration from the outgoing platform to NexGen's platform in a mostly automated fashion, combining storage, cloud, and customer-facing delivery work.</li>
       <li>Diagnosed low-level firmware, kernel, and virtualisation bottlenecks behind GPU VM boot times and shipped a production fix that reduced boot times by 80%+ where applicable.</li>
-      <li>Improved platform reliability through monitoring, observability, operational tooling, incident response patterns, runbooks, and handover practices, while continuing R&amp;D on static 1GB hugepages, CPU pinning, GPU Direct RDMA, and Gnocchi HA design work without overstating unfinished features as delivered products.</li>
+      <li>Improved platform reliability through observability, operational tooling, incident response patterns, runbooks, and handover practices, while continuing platform R&amp;D on static 1GB hugepages, CPU pinning, GPU Direct RDMA, and Gnocchi HA design.</li>
     </ul>
   </div>
 </section>
 
-<section class="cv-item">
+<section class="cv-item cv-item--experience">
   <div class="cv-item__rail"><h3>Council for Scientific and Industrial Research, Centre for High Performance Computing</h3></div>
   <div class="cv-item__content">
     <div class="entry-row">
@@ -88,7 +88,7 @@ Cape Town, South Africa
   </div>
 </section>
 
-<section class="cv-item">
+<section class="cv-item cv-item--experience">
   <div class="cv-item__rail"><h3>ILIFU Project, University of Cape Town</h3></div>
   <div class="cv-item__content">
     <div class="entry-row">
@@ -103,7 +103,7 @@ Cape Town, South Africa
   </div>
 </section>
 
-<section class="cv-item">
+<section class="cv-item cv-item--experience">
   <div class="cv-item__rail"><h3>South African National Bioinformatics Institute, University of the Western Cape</h3></div>
   <div class="cv-item__content">
     <div class="entry-row">
@@ -119,7 +119,7 @@ Cape Town, South Africa
   </div>
 </section>
 
-<section class="cv-item">
+<section class="cv-item cv-item--experience">
   <div class="cv-item__rail"><h3>VOSS Solutions</h3></div>
   <div class="cv-item__content">
     <div class="entry-row">

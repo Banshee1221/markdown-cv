@@ -1,1 +1,5 @@
+---
+markdown: "kramdown"
+style: "davewhipp"
+references: false
 baseurl: ""
