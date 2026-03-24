@@ -23,7 +23,16 @@ const { rail, items } = Astro.props as Props;
     {items.map((item) => (
       <div class="entry-row entry-row--impact grid grid-cols-1 gap-y-1 gap-x-[var(--cv-gap)] lg:[grid-template-columns:minmax(0,1fr)_var(--cv-meta)] lg:items-start print:grid-cols-[minmax(0,1fr)_auto] print:items-start print:gap-y-0.5 print:gap-x-4">
         <div class:list={['entry-main', bodyTextClass, 'relative pl-5 print:pl-5 before:absolute before:left-0 before:top-[0.78rem] before:h-[0.28rem] before:w-[0.28rem] before:rounded-full before:bg-[var(--accent)] print:before:block']} >
-          <div class="cv-entry-bullet max-w-[47rem] print:max-w-none [&_a]:font-medium [&_a]:text-[var(--accent)] [&_a]:underline [&_a]:decoration-[color:color-mix(in_srgb,var(--accent)_55%,transparent)] [&_a]:decoration-1 [&_a]:underline-offset-[0.16em] print:[&_a]:decoration-black/60" set:html={item.html} />
+          {item.href ? (
+            <a
+              href={item.href}
+              class="cv-entry-bullet block max-w-[47rem] rounded-sm text-slate-700 underline decoration-[color:color-mix(in_srgb,var(--accent)_55%,transparent)] decoration-1 underline-offset-[0.16em] transition-colors hover:text-[var(--accent)] hover:decoration-[var(--accent)] print:max-w-none print:decoration-black/60"
+            >
+              <span set:html={item.html} />
+            </a>
+          ) : (
+            <div class="cv-entry-bullet max-w-[47rem] print:max-w-none" set:html={item.html} />
+          )}
           <div class:list={['entry-meta', metaClass, 'mt-0.5 lg:hidden print:hidden']}>{item.meta}</div>
         </div>
         <div class:list={['entry-meta', metaClass, 'hidden self-start lg:block print:block print:mt-0 print:text-right']}>{item.meta}</div>

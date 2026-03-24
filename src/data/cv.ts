@@ -34,6 +34,7 @@ export type CompactItem = {
 export type ImpactEntry = {
   html: string;
   meta: string;
+  href?: string;
 };
 
 export const profile = {
@@ -133,7 +134,7 @@ export const experience: ExperienceItem[] = [
     rail: 'CSIR / CHPC',
     roles: [{ title: 'Senior Cloud and HPC Technologist II', meta: '2020 - 2024' }],
     bullets: [
-      'Led the OpenStack Research Cloud and ACE Lab as R&D platforms for cloud/HPC experimentation, while also contributing to Sebowa production-cloud operations serving hundreds of researchers.',
+      'Led the OpenStack Research Cloud and ACE Lab at the CHPC, part of the CSIR, as R&D platforms for cloud/HPC experimentation, while also contributing to Sebowa production-cloud operations serving hundreds of researchers.',
       'Deployed the CHPC Pretoria region for Sebowa and trained the local team on OpenStack operations, support, and policy alignment.',
       'Architected and operated multi-petabyte <strong>Ceph storage</strong> for HPC workloads, building monitoring and inventory systems that improved operational visibility.',
       'Co-led the South African Student Cluster Competition programme, mentoring teams and developing training material for cohorts progressing to the ISC Student Cluster Challenge.'
@@ -186,7 +187,7 @@ export const projects: CompactItem[] = [
     rail: 'Ilifu Project',
     meta: 'UCT / SANBI',
     bullets: [
-      'Planned and prototyped the data-intensive <strong>OpenStack</strong> and <strong>Ceph</strong> research cloud that supported astronomy and bioinformatics workloads.',
+      'Planned and prototyped the data-intensive <strong>OpenStack</strong> and <strong>Ceph</strong> research cloud for UCT and SANBI that supported astronomy and bioinformatics workloads.',
       'Contributed to production delivery, Manila exploration, and second-tier storage and cloud support.'
     ]
   }
@@ -200,7 +201,7 @@ export const education: CompactItem[] = [
     details: ['Awarded <em>Cum Laude</em>.']
   },
   {
-    rail: 'University of Cape Town',
+    rail: 'UCT',
     meta: '2015',
     lead: '<strong>B.Sc. Hons Information Technology</strong>',
     details: [
@@ -209,7 +210,7 @@ export const education: CompactItem[] = [
     ]
   },
   {
-    rail: 'University of the Western Cape',
+    rail: 'UWC',
     meta: '2012 - 2014',
     lead: '<strong>B.Sc. Computer Science</strong>',
     details: ['Awarded <em>Cum Laude</em>.']
@@ -220,22 +221,32 @@ export const scholarlyImpact = {
   publications: [
     {
       meta: '2025',
+      href: 'https://sc25.supercomputing.org/proceedings/workshops/workshop_pages/ws_bphpcte106.html',
       html: '<strong>de Beste, E.</strong>, Johnston, B., Thorne, N., Cawood, M., Macleod, D. and Poole, J. (2025). <em>"A Retrospective on South Africa\'s Student Cluster Competition and its Model for Inclusive HPC Outreach and Training (2012-2020)"</em>. <em>12th SC Workshop on Best Practices for HPC Training and Education</em>, SC25.'
     },
     {
-      meta: '2019',
-      html: '<strong>de Beste, E.</strong> (2019). <em>"Enabling the processing of bioinformatics workflows where data is located through the use of cloud and container technologies"</em>. <a href="education/msc_thesis.pdf">Thesis</a>'
+      meta: '2024',
+      href: 'https://dl.acm.org/doi/fullHtml/10.1145/3626203.3670573',
+      html: '<strong>Beukman, M.</strong>, Jumoorty, S., Faller, J.L., <strong>de Beste, E.</strong> and Johnston, B. (2024). <em>"Second Life: Enabling a Student Special Interest Group through Decommissioned HPC Systems"</em>. <em>Practice and Experience in Advanced Research Computing 2024</em> (PEARC 2024).'
     },
     {
       meta: '2019',
+      href: 'education/msc_thesis.pdf',
+      html: '<strong>de Beste, E.</strong> (2019). <em>"Enabling the processing of bioinformatics workflows where data is located through the use of cloud and container technologies"</em>. M.Sc. Bioinformatics thesis, <em>SANBI / UWC</em>.'
+    },
+    {
+      meta: '2019',
+      href: 'https://events.chpc.ac.za/event/47/book-of-abstracts.pdf#page=73',
       html: '<strong>de Beste, E.</strong>, Christoffels, A., van Heusden, P. (2019). <em>"Leveraging Open Source Technologies to Rapidly Deploy Infrastructure with Minimum Human Capacity"</em>. <em>Centre for High Performance Computing Annual Conference</em>.'
     },
     {
       meta: '2018',
+      href: 'https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-018-2446-1',
       html: 'Baichoo, S., Souilmi, Y., Panji, S. et al. (2018). <em>"Developing reproducible bioinformatics analysis workflows for heterogeneous computing environments to support African genomics."</em>. <em>BMC Bioinformatics</em> 19, 457.'
     },
     {
       meta: '2018',
+      href: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC7194140/',
       html: 'Ahmed, A.E., Mpangase, P.T., Panji, S., Baichoo, S., Souilmi, Y., Fadlelmola, F.M., Alghali, M., Aron, S., Bendou, H., <strong>de Beste, E.</strong> and Mbiyavanga, M. (2018). <em>"Organizing and running bioinformatics hackathons within Africa: The H3ABioNet cloud computing experience"</em>. <em>AAS Open Research</em>, 1.'
     }
   ] satisfies ImpactEntry[],
