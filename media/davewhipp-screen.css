@@ -147,8 +147,8 @@ table {
 	--column-gap: clamp(1rem, 1.8vw, 2rem);
 	--section-gap: clamp(1.3rem, 2.8vw, 2.15rem);
 	--subsection-gap: clamp(0.62rem, 1.15vw, 0.95rem);
-	--block-gap: clamp(0.5rem, 0.8vw, 0.8rem);
-	--list-gap: clamp(0.32rem, 0.55vw, 0.55rem);
+	--block-gap: clamp(0.5rem, 0.8vw, 0.85rem);
+	--list-gap: clamp(0.42rem, 0.7vw, 0.75rem);
 	--content-measure: clamp(38rem, 58vw, 60rem);
 	--lane-inset: clamp(0.05rem, 0.35vw, 0.35rem);
 	--accent: #bc412b;
@@ -336,20 +336,29 @@ a:hover {
 
 #quoted {
 	justify-self: end;
-	margin-bottom: 0;
-	color: #444;
+}
+
+li {
+	margin-bottom: 0.55rem;
+	color: #333;
+	font-weight: 400;
+	font-size: 0.98rem;
+	line-height: 1.5;
+}
+
+li::marker {
+	color: var(--accent);
 	font-weight: 700;
-	font-size: 0.95em;
 }
 
 .cv-note {
-	max-width: min(100%, var(--content-measure));
-	padding: 0.7rem 0.85rem;
-	margin: calc(var(--block-gap) * 0.9) 0 calc(var(--block-gap) * 1.1);
-	border-left: 3px solid rgba(47, 109, 242, 0.45);
-	border-radius: 0.45rem;
-	background: rgba(47, 109, 242, 0.05);
-	box-sizing: border-box;
+	max-width: var(--content-measure);
+	margin: calc(var(--block-gap) * 0.5) 0 calc(var(--block-gap) * 0.8);
+	font-size: 0.9em;
+	font-style: italic;
+	color: var(--muted);
+	border-left: 2px solid var(--rule);
+	padding-left: 0.8rem;
 }
 
 .cv-note em {
@@ -424,7 +433,8 @@ a:hover {
 	font-family: var(--mono);
 	font-size: 0.86em;
 	line-height: 1.35;
-	letter-spacing: 0.02em;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
 	color: var(--muted);
 	white-space: nowrap;
 	padding-right: var(--lane-inset);
@@ -440,34 +450,56 @@ a:hover {
 }
 
 .cv-item__content ul {
-	list-style: none;
-	padding-left: 0;
+	list-style-type: disc;
+	padding-left: 1.25rem;
+	margin-top: calc(var(--block-gap) * 0.2);
 }
 
 .cv-item__content li {
 	position: relative;
-	padding-left: 1rem;
+	padding-left: 0.35rem;
 	text-indent: 0;
+	margin-bottom: 0.55rem;
 }
 
-.cv-item__content li::before {
-	content: "•";
-	position: absolute;
-	left: 0;
-	color: var(--ink);
+.cv-item__content > :first-child {
+	margin-top: 0 !important;
 }
 
-.cv-item--section-inline .cv-item__content> :first-child,
-.cv-item--project .cv-item__content> :first-child {
-	margin-top: 0;
+.cv-item--project .cv-item__content,
+.cv-item--education .cv-item__content,
+.cv-item--publication .cv-item__content,
+.cv-item--award .cv-item__content {
+	grid-column: 2 / 4;
+	position: relative;
 }
 
-.cv-item--project .cv-item__content>p {
-	margin-bottom: calc(var(--block-gap) * 0.85);
+.cv-item--project .cv-item__meta,
+.cv-item--education .cv-item__meta,
+.cv-item--publication .cv-item__meta,
+.cv-item--award .cv-item__meta {
+	float: right;
+	grid-column: auto;
+	width: auto;
+	margin-left: 1rem;
+	text-align: right;
+	padding-top: 0.19rem;
 }
 
-.cv-item--project .entry-row {
-	margin-bottom: calc(var(--block-gap) * 0.45);
+.cv-item--project ul,
+.cv-item--education ul,
+.cv-item--publication ul,
+.cv-item--award ul {
+	margin-top: 0.08rem;
+}
+
+.cv-item__details {
+	font-size: 0.85em;
+	line-height: 1.45;
+	color: var(--muted);
+	padding-left: 0.8rem;
+	margin-top: 0.15rem;
+	font-style: normal;
 }
 
 .entry-main {
@@ -487,7 +519,8 @@ a:hover {
 	font-family: var(--mono);
 	font-size: 0.86em;
 	line-height: 1.35;
-	letter-spacing: 0.02em;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
 	color: var(--muted);
 	white-space: nowrap;
 	padding-right: var(--lane-inset);
@@ -669,7 +702,7 @@ hr,
 		--content-measure: 100%;
 		--section-gap: clamp(1.75rem, 6.5vw, 2.25rem);
 		--subsection-gap: clamp(1rem, 3.2vw, 1.25rem);
-		--block-gap: clamp(0.72rem, 2.4vw, 0.95rem);
+		--block-gap: clamp(0.62rem, 2vw, 0.82rem);
 		--list-gap: clamp(0.36rem, 1.3vw, 0.56rem);
 	}
 
@@ -702,7 +735,7 @@ hr,
 	}
 
 	#subtitle {
-		font-size: 0.95em;
+		font-size: 1.1em;
 		margin-top: 0.18rem;
 		margin-bottom: 0.62rem;
 	}
@@ -752,8 +785,8 @@ hr,
 		margin-bottom: 0.68rem;
 		padding-top: 0.5rem;
 		border-top: 0;
-		font-size: 0.98em;
-		font-weight: 600;
+		font-size: 1.32em;
+		font-weight: 700;
 		line-height: 1.14;
 	}
 
@@ -770,8 +803,13 @@ hr,
 	}
 
 	.cv-item__rail,
-	.cv-item__content {
+	.cv-item__content,
+	.cv-item--project .cv-item__content,
+	.cv-item--education .cv-item__content,
+	.cv-item--publication .cv-item__content,
+	.cv-item--award .cv-item__content {
 		max-width: none;
+		padding-left: 0;
 	}
 
 	.cv-item__rail {
@@ -788,17 +826,21 @@ hr,
 		width: 100%;
 	}
 
-	.cv-item--experience .cv-item__rail>h3 {
-		font-size: 1.03em;
-		line-height: 1.22;
+	.cv-item__rail>h3 {
+		font-size: 1.1em;
+		line-height: 1.2;
 		font-weight: 600;
 		color: var(--muted);
 	}
 
 	.cv-item__rail>h2 {
-		font-size: 0.98em;
-		line-height: 1.16;
-		font-weight: 600;
+		font-size: 1.25em;
+		line-height: 1.14;
+		font-weight: 700;
+	}
+
+	.entry-row--role .entry-main {
+		font-size: 1.1em;
 	}
 
 	.cv-item--experience .cv-item__meta,
@@ -842,13 +884,15 @@ hr,
 	}
 
 	.cv-item--experience .entry-row--role .entry-main strong,
-	.cv-item--experience .entry-row .entry-main strong {
+	.cv-item--experience .entry-row .entry-main strong,
+	.cv-item--education .entry-main strong,
+	.cv-item--publication .entry-row .entry-main strong,
+	.cv-item--award .entry-row .entry-main strong {
 		display: block;
 		margin-top: 0.18rem;
-		font-size: 0.9em;
-		font-weight: 600;
-		line-height: 1.3;
-		color: rgba(16, 17, 20, 0.84);
+		font-size: 1.05em;
+		font-weight: 700;
+		color: var(--ink);
 	}
 
 	.cv-item--experience .entry-row--role {
@@ -865,25 +909,22 @@ hr,
 		max-width: none;
 	}
 
-	.cv-item--project .cv-item__rail>h3 {
-		font-size: 1.02em;
-		font-weight: 700;
-		color: var(--ink);
-	}
 
-	.cv-item--project .entry-row {
-		display: flex;
-		flex-direction: column;
-		gap: 0;
-	}
-
-	.cv-item--project .entry-meta {
-		order: -1;
-		margin-top: 0;
-		margin-bottom: 0.34rem;
+	.cv-item--project .cv-item__meta,
+	.cv-item--education .cv-item__meta,
+	.cv-item--publication .cv-item__meta,
+	.cv-item--award .cv-item__meta {
+		display: block;
+		float: none;
+		margin-left: 0;
+		width: 100%;
+		text-align: left;
+		margin-top: -0.24rem;
+		margin-bottom: 0.38rem;
 		font-size: 0.86em;
 		letter-spacing: 0.03em;
 		text-transform: uppercase;
+		color: var(--muted);
 	}
 
 	.cv-item--project .entry-main {
@@ -898,6 +939,7 @@ hr,
 
 	ul {
 		margin-top: 0.14rem;
+		padding-left: 1.25rem;
 	}
 
 	li {
@@ -913,10 +955,10 @@ hr,
 	}
 
 	.cv-note {
-		padding: 0.75rem 0.88rem;
-		margin: calc(var(--block-gap) * 1.04) 0 calc(var(--block-gap) * 1.18);
+		padding: 0;
+		margin: calc(var(--block-gap) * 0.6) 0 calc(var(--block-gap) * 0.9);
 		border-left-width: 2px;
-		border-radius: 0.5rem;
-		background: rgba(47, 109, 242, 0.045);
+		border-radius: 0;
+		background: transparent;
 	}
 }

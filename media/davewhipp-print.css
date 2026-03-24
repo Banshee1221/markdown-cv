@@ -100,7 +100,13 @@ ul {
 }
 
 li {
-    margin-bottom: 3pt;
+    margin-bottom: 4pt;
+    font-size: 10pt;
+}
+
+li::marker {
+    color: #bc412b; /* Match accent color in print */
+    font-weight: bold;
 }
 
 .cv-item {
