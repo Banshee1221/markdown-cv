@@ -1,0 +1,18 @@
+---
+const { title } = Astro.props;
+import {
+  bodyTextClass,
+  inlineSectionClass,
+  sectionHeadingClass
+} from '../lib/cvClasses';
+---
+
+<section class={inlineSectionClass}>
+  <div class="cv-inline__rail">
+    <h2 class={sectionHeadingClass}>{title}</h2>
+  </div>
+  <div class={`cv-inline__content min-w-0 max-w-[47rem] ${bodyTextClass} [&>p]:m-0 [&>p]:max-w-[47rem] print:[&>p]:max-w-none [&>p+p]:mt-3`}>
+    <slot />
+  </div>
+  <div class="cv-inline__meta hidden lg:block" aria-hidden="true"></div>
+</section>

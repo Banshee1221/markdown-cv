@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  --accent: #c6593f;
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter Variable", Inter, ui-sans-serif, system-ui, sans-serif;
+  background: #fff;
+  color: #172131;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  text-underline-offset: 0.16em;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--accent);
+  text-decoration-color: currentColor;
+}
+
+:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  outline-offset: 3px;
+}
+
+@media print {
+  .page-shell {
+    --cv-gap: 0.65rem;
+    --cv-rail: 5rem;
+    --cv-meta: 5rem;
+    max-width: none;
+    padding-inline: 0.45in;
+    padding-block: 0.32in;
+  }
+}
