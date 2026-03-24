@@ -1,2 +1,7 @@
-_site/
+dist/
+node_modules/
+.astro/
 .sass-cache/
+.jekyll-cache/
+_site/
+.DS_Store
