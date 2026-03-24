@@ -125,10 +125,14 @@ title: Eugene de Beste - Curriculum Vitae
   <div class="cv-item__rail"><h3>African Pathogen Archive</h3></div>
   <div class="cv-item__content">
     <div class="entry-row">
-      <div class="entry-main">Helped secure the CHPC and SANBI Memorandum of Understanding (MoU) and shaped the Infrastructure Automation Lead role for the project.</div>
+      <div class="entry-main">
+        <ul>
+          <li>Helped secure the CHPC and SANBI Memorandum of Understanding (MoU) and shaped the Infrastructure Automation Lead role for the project.</li>
+          <li>Ported the microservice stack into a local development environment and built Kubernetes / OpenStack / Terraform / Flux CD automation for repeatable deployment.</li>
+        </ul>
+      </div>
       <div class="entry-meta">CHPC</div>
     </div>
-    <p>Ported the microservice stack into a local development environment and built Kubernetes / OpenStack / Terraform / Flux CD automation for repeatable deployment.</p>
   </div>
 </section>
 
@@ -136,10 +140,14 @@ title: Eugene de Beste - Curriculum Vitae
   <div class="cv-item__rail"><h3>HISP OpenStack Deployment</h3></div>
   <div class="cv-item__content">
     <div class="entry-row">
-      <div class="entry-main">Designed the network layout, configured switching for the control plane, and delivered MAAS and Kolla-Ansible based OpenStack deployment support.</div>
+      <div class="entry-main">
+        <ul>
+          <li>Designed the network layout, configured switching for the control plane, and delivered MAAS and Kolla-Ansible based OpenStack deployment support.</li>
+          <li>Provided training and documentation to help the team operate the platform independently.</li>
+        </ul>
+      </div>
       <div class="entry-meta">CHPC</div>
     </div>
-    <p>Provided training and documentation to help the team operate the platform independently.</p>
   </div>
 </section>
 
@@ -147,7 +155,11 @@ title: Eugene de Beste - Curriculum Vitae
   <div class="cv-item__rail"><h3>Student Cluster Competition</h3></div>
   <div class="cv-item__content">
     <div class="entry-row">
-      <div class="entry-main">Helped move the competition online during COVID by producing training material, learning content, and remote support for students.</div>
+      <div class="entry-main">
+        <ul>
+          <li>Helped move the competition online during COVID by producing training material, learning content, and remote support for students.</li>
+        </ul>
+      </div>
       <div class="entry-meta">CHPC</div>
     </div>
   </div>
@@ -157,10 +169,14 @@ title: Eugene de Beste - Curriculum Vitae
   <div class="cv-item__rail"><h3>Ilifu Project</h3></div>
   <div class="cv-item__content">
     <div class="entry-row">
-      <div class="entry-main">Planned and prototyped the data-intensive OpenStack and Ceph research cloud that supported astronomy and bioinformatics workloads.</div>
+      <div class="entry-main">
+        <ul>
+          <li>Planned and prototyped the data-intensive OpenStack and Ceph research cloud that supported astronomy and bioinformatics workloads.</li>
+          <li>Contributed to production delivery, Manila exploration, and second-tier storage and cloud support.</li>
+        </ul>
+      </div>
       <div class="entry-meta">UCT / SANBI</div>
     </div>
-    <p>Contributed to production delivery, Manila exploration, and second-tier storage and cloud support.</p>
   </div>
 </section>
 
@@ -194,28 +210,63 @@ title: Eugene de Beste - Curriculum Vitae
   </div>
 </section>
 
-<section class="cv-item cv-item--section-inline">
-  <div class="cv-item__rail"><h2>Selected Publications & Awards</h2></div>
+## Scholarly Impact & Recognition
+
+<section class="cv-item">
+  <div class="cv-item__rail"><h3>Selected Publications</h3></div>
   <div class="cv-item__content">
     <div class="entry-row">
-      <div class="entry-main"><strong>de Beste, E.</strong> (2019). <em>"Enabling the processing of bioinformatics workflows where data is located through the use of cloud and container technologies"</em>. <a href="static/education/msc_thesis.pdf">Thesis</a></div>
+      <div class="entry-main">
+        <ul>
+          <li><strong>de Beste, E.</strong> (2019). <em>"Enabling the processing of bioinformatics workflows where data is located through the use of cloud and container technologies"</em>. <a href="static/education/msc_thesis.pdf">Thesis</a></li>
+        </ul>
+      </div>
       <div class="entry-meta">2019</div>
     </div>
     <div class="entry-row">
-      <div class="entry-main">Ahmed, A.E., Mpangase, P.T., Panji, S., Baichoo, S., Souilmi, Y., Fadlelmola, F.M., Alghali, M., Aron, S., Bendou, H., <strong>de Beste, E.</strong> and Mbiyavanga, M. (2018). <em>"Organizing and running bioinformatics hackathons within Africa: The H3ABioNet cloud computing experience"</em>. <em>AAS Open Research</em>, 1.</div>
+      <div class="entry-main">
+        <ul>
+          <li>Ahmed, A.E., Mpangase, P.T., Panji, S., Baichoo, S., Souilmi, Y., Fadlelmola, F.M., Alghali, M., Aron, S., Bendou, H., <strong>de Beste, E.</strong> and Mbiyavanga, M. (2018). <em>"Organizing and running bioinformatics hackathons within Africa: The H3ABioNet cloud computing experience"</em>. <em>AAS Open Research</em>, 1.</li>
+        </ul>
+      </div>
       <div class="entry-meta">2018</div>
     </div>
-    <p>Baichoo, S., Souilmi, Y., Panji, S. et al. (2018). <em>"Developing reproducible bioinformatics analysis workflows for heterogeneous computing environments to support African genomics."</em>. <em>BMC Bioinformatics</em> 19, 457.</p>
     <div class="entry-row">
-      <div class="entry-main"><strong>de Beste, E.</strong>, Christoffels, A., van Heusden, P. (2019). <em>"Leveraging Open Source Technologies to Rapidly Deploy Infrastructure with Minimum Human Capacity"</em>. <em>Centre for High Performance Computing Annual Conference</em>.</div>
-      <div class="entry-meta">2019</div>
+      <div class="entry-main">
+        <ul>
+          <li>Baichoo, S., Souilmi, Y., Panji, S. et al. (2018). <em>"Developing reproducible bioinformatics analysis workflows for heterogeneous computing environments to support African genomics."</em>. <em>BMC Bioinformatics</em> 19, 457.</li>
+        </ul>
+      </div>
+      <div class="entry-meta">2018</div>
     </div>
     <div class="entry-row">
-      <div class="entry-main"><strong><u>First Place Overall Prize for the ISC'14 Student Cluster Challenge</u></strong> - <em>International Supercomputing Conference, Leipzig, Germany</em></div>
+      <div class="entry-main">
+        <ul>
+          <li><strong>de Beste, E.</strong>, Christoffels, A., van Heusden, P. (2019). <em>"Leveraging Open Source Technologies to Rapidly Deploy Infrastructure with Minimum Human Capacity"</em>. <em>Centre for High Performance Computing Annual Conference</em>.</li>
+        </ul>
+      </div>
+      <div class="entry-meta">2019</div>
+    </div>
+  </div>
+</section>
+
+<section class="cv-item">
+  <div class="cv-item__rail"><h3>Honours & Awards</h3></div>
+  <div class="cv-item__content">
+    <div class="entry-row">
+      <div class="entry-main">
+        <ul>
+          <li><strong><u>First Place Overall Prize for the ISC'14 Student Cluster Challenge</u></strong> - <em>International Supercomputing Conference, Leipzig, Germany</em></li>
+        </ul>
+      </div>
       <div class="entry-meta">2014</div>
     </div>
     <div class="entry-row">
-      <div class="entry-main"><strong><u>First Place for the CHPC Student Cluster Competition 2013</u></strong> - <em>Centre for High Performance Computing, Council for Scientific and Industrial Research</em></div>
+      <div class="entry-main">
+        <ul>
+          <li><strong><u>First Place for the CHPC Student Cluster Competition 2013</u></strong> - <em>Centre for High Performance Computing, Council for Scientific and Industrial Research</em></li>
+        </ul>
+      </div>
       <div class="entry-meta">2013</div>
     </div>
   </div>

@@ -3,19 +3,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -25,26 +93,44 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
-	position:relative;
+	position: relative;
 	line-height: 1;
 	overflow-x: hidden;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -90,16 +176,14 @@ body {
 #content {
 	display: grid;
 	grid-template-columns:
-		[rail] minmax(0, var(--rail-width))
-		[main] minmax(0, 1fr)
-		[meta] minmax(0, var(--meta-width));
+		[rail] minmax(0, var(--rail-width)) [main] minmax(0, 1fr) [meta] minmax(0, var(--meta-width));
 	column-gap: var(--column-gap);
 	width: min(100%, var(--surface-max));
 	margin: 0 auto;
 	align-items: start;
 }
 
-#content > * {
+#content>* {
 	min-width: 0;
 }
 
@@ -287,9 +371,7 @@ a:hover {
 	grid-column: rail / meta;
 	display: grid;
 	grid-template-columns:
-		minmax(0, var(--rail-width))
-		minmax(0, 1fr)
-		minmax(0, var(--meta-width));
+		minmax(0, var(--rail-width)) minmax(0, 1fr) minmax(0, var(--meta-width));
 	column-gap: var(--column-gap);
 	align-items: start;
 	margin-top: calc(var(--subsection-gap) * 0.7);
@@ -308,7 +390,7 @@ a:hover {
 	padding-top: 0.19rem;
 }
 
-.cv-item__rail > h3 {
+.cv-item__rail>h3 {
 	text-align: right;
 	margin-top: 0;
 	max-width: 100%;
@@ -317,7 +399,7 @@ a:hover {
 	padding-right: var(--lane-inset);
 }
 
-.cv-item__rail > h2 {
+.cv-item__rail>h2 {
 	width: auto;
 	margin-top: 0;
 	max-width: 100%;
@@ -357,12 +439,30 @@ a:hover {
 	min-width: 0;
 }
 
-.cv-item--section-inline .cv-item__content > :first-child,
-.cv-item--project .cv-item__content > :first-child {
+.cv-item__content ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+.cv-item__content li {
+	position: relative;
+	padding-left: 1rem;
+	text-indent: 0;
+}
+
+.cv-item__content li::before {
+	content: "•";
+	position: absolute;
+	left: 0;
+	color: var(--ink);
+}
+
+.cv-item--section-inline .cv-item__content> :first-child,
+.cv-item--project .cv-item__content> :first-child {
 	margin-top: 0;
 }
 
-.cv-item--project .cv-item__content > p {
+.cv-item--project .cv-item__content>p {
 	margin-bottom: calc(var(--block-gap) * 0.85);
 }
 
@@ -464,9 +564,7 @@ hr,
 
 	#content {
 		grid-template-columns:
-			[rail] minmax(0, var(--rail-width))
-			[main] minmax(0, 1fr)
-			[meta] minmax(0, var(--meta-width));
+			[rail] minmax(0, var(--rail-width)) [main] minmax(0, 1fr) [meta] minmax(0, var(--meta-width));
 	}
 
 	h1,
@@ -507,9 +605,7 @@ hr,
 	.cv-item {
 		display: grid;
 		grid-template-columns:
-			minmax(0, var(--rail-width))
-			minmax(0, 1fr)
-			minmax(0, var(--meta-width));
+			minmax(0, var(--rail-width)) minmax(0, 1fr) minmax(0, var(--meta-width));
 		margin-top: calc(var(--subsection-gap) * 0.85);
 	}
 
@@ -519,13 +615,13 @@ hr,
 		margin-bottom: 0;
 	}
 
-	.cv-item__rail > h3,
-	.cv-item__rail > h2 {
+	.cv-item__rail>h3,
+	.cv-item__rail>h2 {
 		text-align: right;
 		padding-right: var(--lane-inset);
 	}
 
-	.cv-item__rail > h3 {
+	.cv-item__rail>h3 {
 		font-size: 0.92em;
 		line-height: 1.2;
 		font-weight: 500;
@@ -558,7 +654,7 @@ hr,
 		max-width: var(--content-measure);
 	}
 
-	.cv-item__content > p {
+	.cv-item__content>p {
 		font-size: 1em;
 		line-height: 1.56;
 		margin-bottom: calc(var(--block-gap) * 0.98);
@@ -667,7 +763,7 @@ hr,
 	}
 
 	/* keep spacing, but remove mobile-only decorative separators */
-	.cv-item + .cv-item {
+	.cv-item+.cv-item {
 		margin-top: calc(var(--subsection-gap) * 1.08);
 		padding-top: 0;
 		border-top: 0;
@@ -685,21 +781,21 @@ hr,
 		padding-top: 0;
 	}
 
-	.cv-item__rail > h3,
-	.cv-item__rail > h2 {
+	.cv-item__rail>h3,
+	.cv-item__rail>h2 {
 		text-align: left;
 		padding-right: 0;
 		width: 100%;
 	}
 
-	.cv-item--experience .cv-item__rail > h3 {
+	.cv-item--experience .cv-item__rail>h3 {
 		font-size: 1.03em;
 		line-height: 1.22;
 		font-weight: 600;
 		color: var(--muted);
 	}
 
-	.cv-item__rail > h2 {
+	.cv-item__rail>h2 {
 		font-size: 0.98em;
 		line-height: 1.16;
 		font-weight: 600;
@@ -759,7 +855,7 @@ hr,
 		margin-bottom: calc(var(--block-gap) * 1.02);
 	}
 
-	.cv-item--experience .entry-row--role + .entry-row--role {
+	.cv-item--experience .entry-row--role+.entry-row--role {
 		margin-top: calc(var(--block-gap) * 0.9);
 		padding-top: 0.1rem;
 	}
@@ -769,7 +865,7 @@ hr,
 		max-width: none;
 	}
 
-	.cv-item--project .cv-item__rail > h3 {
+	.cv-item--project .cv-item__rail>h3 {
 		font-size: 1.02em;
 		font-weight: 700;
 		color: var(--ink);
@@ -810,7 +906,7 @@ hr,
 		margin-bottom: calc(var(--list-gap) * 1.02);
 	}
 
-	.cv-item__content > p {
+	.cv-item__content>p {
 		font-size: 1em;
 		line-height: 1.66;
 		margin-bottom: calc(var(--block-gap) * 1.06);
