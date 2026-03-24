@@ -1,0 +1,49 @@
+---
+import type { ExperienceItem } from '../data/cv';
+import {
+  bodyTextClass,
+  bulletListClass,
+  experienceRailTitleClass,
+  itemClass,
+  metaClass,
+  roleTitleClass
+} from '../lib/cvClasses';
+
+interface Props {
+  item: ExperienceItem;
+}
+
+const { item } = Astro.props as Props;
+---
+
+<article class:list={[itemClass, 'cv-item--experience']}>
+  <div class="cv-item__rail md:col-start-1">
+    <h3 class={experienceRailTitleClass}>{item.rail}</h3>
+  </div>
+  <div class="cv-item__main min-w-0 max-w-[47rem] print:max-w-none md:col-start-2">
+    <div class="cv-item__roles cv-item__roles--titles space-y-2">
+      {item.roles.map((role) => (
+        <div class="cv-item__role-title">
+          <strong class={roleTitleClass}>{role.title}</strong>
+          <div class:list={['entry-meta', metaClass, 'mt-0.5 lg:hidden']}>{role.meta}</div>
+        </div>
+      ))}
+    </div>
+    {item.note && (
+      <p class="cv-note mt-3 border-l-2 border-[color:rgba(198,89,63,0.22)] pl-3 text-[0.92rem] italic leading-6 text-slate-500">
+        <em>{item.note}</em>
+      </p>
+    )}
+    {item.intro && <p class:list={['cv-intro', bodyTextClass, 'mt-3 m-0']} set:html={item.intro} />}
+    <ul class:list={['cv-list', bulletListClass, bodyTextClass, 'mt-2']}>
+      {item.bullets.map((bullet) => (
+        <li set:html={bullet} />
+      ))}
+    </ul>
+  </div>
+  <div class:list={['cv-item__meta', 'cv-item__meta--stacked', metaClass, 'hidden self-start space-y-1 lg:col-start-3 lg:block']}>
+    {item.roles.map((role) => (
+      <div class="entry-meta">{role.meta}</div>
+    ))}
+  </div>
+</article>

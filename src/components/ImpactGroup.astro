@@ -1,0 +1,33 @@
+---
+import type { ImpactEntry } from '../data/cv';
+import {
+  bodyTextClass,
+  itemClass,
+  metaClass,
+  railTitleClass
+} from '../lib/cvClasses';
+
+interface Props {
+  rail: string;
+  items: ImpactEntry[];
+}
+
+const { rail, items } = Astro.props as Props;
+---
+
+<article class:list={[itemClass, 'cv-item--impact']}>
+  <div class="cv-item__rail md:col-start-1">
+    <h3 class={railTitleClass}>{rail}</h3>
+  </div>
+  <div class="cv-item__main min-w-0 self-start space-y-2 md:col-start-2 lg:col-[2/4] print:max-w-none">
+    {items.map((item) => (
+      <div class="entry-row entry-row--impact grid grid-cols-1 gap-y-1 gap-x-[var(--cv-gap)] lg:[grid-template-columns:minmax(0,1fr)_var(--cv-meta)] lg:items-start print:grid-cols-1 print:gap-y-0">
+        <div class:list={['entry-main', bodyTextClass, 'relative pl-5 print:pl-0 before:absolute before:left-0 before:top-[0.78rem] before:h-[0.28rem] before:w-[0.28rem] before:rounded-full before:bg-[var(--accent)] print:before:hidden']} >
+          <div class="cv-entry-bullet max-w-[47rem] print:max-w-none" set:html={item.html} />
+          <div class:list={['entry-meta', metaClass, 'mt-0.5 lg:hidden']}>{item.meta}</div>
+        </div>
+        <div class:list={['entry-meta', metaClass, 'hidden self-start lg:block']}>{item.meta}</div>
+      </div>
+    ))}
+  </div>
+</article>

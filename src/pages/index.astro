@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactIcon from '../components/ContactIcon.astro';
+import CompactItem from '../components/CompactItem.astro';
+import ExperienceItem from '../components/ExperienceItem.astro';
+import ImpactGroup from '../components/ImpactGroup.astro';
+import InlineSection from '../components/InlineSection.astro';
+import { sectionClass, sectionHeadingClass, shellClass } from '../lib/cvClasses';
+import {
+  education,
+  experience,
+  profile,
+  projects,
+  scholarlyImpact,
+  skills,
+  summary
+} from '../data/cv';
+---
+
+<BaseLayout title={`${profile.name} | CV`}>
+  <main class={shellClass}>
+    <header class="masthead grid grid-cols-1 gap-x-[var(--cv-gap)] gap-y-3 md:[grid-template-columns:var(--cv-rail)_minmax(0,1fr)_var(--cv-meta)] md:items-start">
+      <div class="masthead__rail hidden md:block" aria-hidden="true"></div>
+      <div class="masthead__main min-w-0">
+        <h1 class="m-0 text-[2.25rem] font-semibold leading-[0.96] tracking-[-0.045em] text-slate-900 sm:text-[2.45rem] md:text-[3.6rem]">
+          {profile.name}
+        </h1>
+        <p class="masthead__title mt-1.5 max-w-[48rem] text-[0.92rem] leading-6 text-slate-600 md:text-[1.02rem] md:italic">
+          {profile.title}
+        </p>
+
+        <div class="masthead__links mt-4 flex flex-col gap-1" aria-label="Contact">
+          {profile.links.map((link) => (
+            link.href ? (
+              <a
+                href={link.href}
+                class="masthead__link grid grid-cols-[1rem_minmax(0,1fr)] items-center gap-x-2 text-[0.78rem] no-underline transition-colors hover:text-[var(--accent)] md:text-[0.8rem]"
+                aria-label={`${link.label}: ${link.value}`}
+              >
+                <ContactIcon kind={link.kind} />
+                <span class="masthead__value min-w-0 break-all font-['IBM_Plex_Mono',ui-monospace,monospace] text-[0.76rem] text-[var(--accent)] md:text-[0.8rem]">
+                  {link.value}
+                </span>
+              </a>
+            ) : (
+              <div class="masthead__link grid grid-cols-[1rem_minmax(0,1fr)] items-center gap-x-2 text-[0.78rem] md:text-[0.8rem]">
+                <ContactIcon kind={link.kind} />
+                <span class="masthead__value min-w-0 break-words font-['IBM_Plex_Mono',ui-monospace,monospace] text-[0.76rem] text-[var(--accent)] md:text-[0.8rem]">
+                  {link.value}
+                </span>
+              </div>
+            )
+          ))}
+        </div>
+
+        <figure class="quote mt-5 ml-auto max-w-[28ch] text-right md:max-w-[30ch]">
+          <blockquote class="m-0 text-balance text-[0.96rem] italic leading-[1.5] text-slate-600 md:text-[1.05rem]">
+            {profile.quote}
+          </blockquote>
+          <figcaption class="mt-2 font-['IBM_Plex_Mono',ui-monospace,monospace] text-[0.74rem] text-slate-400">
+            {profile.attribution}
+          </figcaption>
+        </figure>
+      </div>
+      <div class="masthead__meta hidden md:block" aria-hidden="true"></div>
+    </header>
+
+    <InlineSection title="Professional Summary">
+      {summary.map((paragraph) => <p set:html={paragraph} />)}
+    </InlineSection>
+
+    <InlineSection title="Core Skills / Technologies">
+      <ul class="skill-list mt-0 list-disc space-y-1.5 pl-5 text-[0.94rem] leading-6 text-slate-700 marker:text-[var(--accent)] marker:text-[0.7em]">
+        {skills.map((group) => (
+          <li>
+            <strong>{group.label}:</strong> {group.items}
+          </li>
+        ))}
+      </ul>
+    </InlineSection>
+
+    <section class={sectionClass}>
+      <div class="cv-section__rail">
+        <h2 class={sectionHeadingClass}>Professional Experience</h2>
+      </div>
+      <div class="cv-section__main contents">
+        {experience.map((item) => <ExperienceItem item={item} />)}
+      </div>
+      <div class="cv-section__meta hidden md:block" aria-hidden="true"></div>
+    </section>
+
+    <section class={sectionClass}>
+      <div class="cv-section__rail">
+        <h2 class={sectionHeadingClass}>Selected Projects</h2>
+      </div>
+      <div class="cv-section__main contents">
+        {projects.map((item) => <CompactItem item={item} variant="project" />)}
+      </div>
+      <div class="cv-section__meta hidden md:block" aria-hidden="true"></div>
+    </section>
+
+    <section class={sectionClass}>
+      <div class="cv-section__rail">
+        <h2 class={sectionHeadingClass}>Education</h2>
+      </div>
+      <div class="cv-section__main contents">
+        {education.map((item) => <CompactItem item={item} variant="education" />)}
+      </div>
+      <div class="cv-section__meta hidden md:block" aria-hidden="true"></div>
+    </section>
+
+    <section class={sectionClass}>
+      <div class="cv-section__rail">
+        <h2 class={sectionHeadingClass}>Scholarly Impact &amp; Recognition</h2>
+      </div>
+      <div class="cv-section__main contents">
+        <ImpactGroup rail="Publications" items={scholarlyImpact.publications} />
+        <ImpactGroup rail="Awards" items={scholarlyImpact.awards} />
+      </div>
+      <div class="cv-section__meta hidden md:block" aria-hidden="true"></div>
+    </section>
+  </main>
+</BaseLayout>
