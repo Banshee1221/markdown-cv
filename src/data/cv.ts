@@ -93,7 +93,7 @@ export const skills: SkillGroup[] = [
     items: 'Linux, QEMU, KVM, libvirt, OVMF/EDK2, Open vSwitch, SR-IOV'
   },
   {
-    label: 'Networking',
+    label: 'Networking / Integration',
     items: 'VLANs, VRRP, MetalLB, BGP, L2/L3 fabrics'
   },
   {
@@ -118,9 +118,7 @@ export const experience: ExperienceItem[] = [
       { title: 'Head of Infrastructure Operations (Secondment)', meta: 'Jul 2025 - Feb 2026' },
       { title: 'Senior Infrastructure Engineer', meta: 'Jan 2024 - Jun 2025' }
     ],
-    note: 'Title changed during internal leadership restructuring; scope remained unchanged.',
-    intro:
-      'Progressed from hands-on infrastructure engineering into infrastructure operations leadership while staying close to OpenStack, GPU cloud, automation, and real platform constraints.',
+    note: 'Title updated during internal restructuring; scope unchanged.',
     bullets: [
       'Standardised OpenStack region deployment for GPU cloud by building custom Ansible and Python configuration tooling around <strong>Kolla-Ansible</strong>, supporting major platform releases and accelerating node and region bring-up across multiple data centres.',
       'Designed and implemented the multi-region <strong>Kubernetes</strong> platform for internal services, using Kubespray, <strong>Argo CD / ApplicationSet</strong> GitOps, and Cilium across both BGP/L3 and L2-only environments, integrating with existing VRRP and MetalLB load-balancing patterns.',
@@ -220,6 +218,10 @@ export const education: CompactItem[] = [
 
 export const scholarlyImpact = {
   publications: [
+    {
+      meta: '2025',
+      html: '<strong>de Beste, E.</strong>, Johnston, B., Thorne, N., Cawood, M., Macleod, D. and Poole, J. (2025). <em>"A Retrospective on South Africa\'s Student Cluster Competition and its Model for Inclusive HPC Outreach and Training (2012-2020)"</em>. <em>12th SC Workshop on Best Practices for HPC Training and Education</em>, SC25.'
+    },
     {
       meta: '2019',
       html: '<strong>de Beste, E.</strong> (2019). <em>"Enabling the processing of bioinformatics workflows where data is located through the use of cloud and container technologies"</em>. <a href="education/msc_thesis.pdf">Thesis</a>'

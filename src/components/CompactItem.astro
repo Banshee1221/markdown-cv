@@ -25,14 +25,14 @@ const { item, variant = 'project' } = Astro.props as Props;
     {item.lead && <p class:list={['cv-item__lead', leadTextClass, 'm-0']} set:html={item.lead} />}
     <div class:list={['entry-meta', metaClass, 'mt-0.5 lg:hidden']}>{item.meta}</div>
     {item.details && (
-      <ul class:list={['cv-sublist', subBulletListClass, item.lead ? 'mt-2' : 'mt-0']}>
+      <ul class:list={['cv-sublist', subBulletListClass, item.lead ? 'mt-2 print:mt-1.5' : 'mt-0']}>
         {item.details.map((detail) => (
           <li set:html={detail} />
         ))}
       </ul>
     )}
     {item.bullets && (
-      <ul class:list={['cv-list', 'm-0 list-none space-y-2 p-0', item.lead || item.details ? 'mt-2' : 'mt-0']} role="list">
+      <ul class:list={['cv-list', 'm-0 list-none space-y-2 print:space-y-1.5 p-0', item.lead || item.details ? 'mt-2 print:mt-1.5' : 'mt-0']} role="list">
         {item.bullets.map((bullet) => (
           <li class:list={['relative pl-4', bodyTextClass]}>
             <span aria-hidden="true" class="absolute left-0 top-[0.72rem] h-[0.28rem] w-[0.28rem] rounded-full bg-[var(--accent)]"></span>

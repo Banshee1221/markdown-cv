@@ -39,7 +39,7 @@ a:focus-visible {
     --cv-rail: 5rem;
     --cv-meta: 5rem;
     max-width: none;
-    padding-inline: 0.55in;
-    padding-block: 0.38in;
+    padding-inline: 0.45in;
+    padding-block: 0.32in;
   }
 }

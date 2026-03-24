@@ -22,10 +22,10 @@ import {
     <header class="masthead grid grid-cols-1 gap-x-[var(--cv-gap)] gap-y-3 md:[grid-template-columns:var(--cv-rail)_minmax(0,1fr)_var(--cv-meta)] md:items-start">
       <div class="masthead__rail hidden md:block" aria-hidden="true"></div>
       <div class="masthead__main min-w-0">
-        <h1 class="m-0 text-[2.25rem] font-semibold leading-[0.96] tracking-[-0.045em] text-slate-900 sm:text-[2.45rem] md:text-[3.6rem]">
+        <h1 class="m-0 text-[clamp(2.55rem,7.5vw,3.6rem)] font-semibold leading-[0.96] tracking-[-0.045em] text-slate-900">
           {profile.name}
         </h1>
-        <p class="masthead__title mt-1.5 max-w-[48rem] text-[0.92rem] leading-6 text-slate-600 md:text-[1.02rem] md:italic">
+        <p class="masthead__title mt-1.5 max-w-[48rem] text-[clamp(0.98rem,2vw,1.02rem)] leading-6 text-slate-600 md:italic">
           {profile.title}
         </p>
 
@@ -53,11 +53,11 @@ import {
           ))}
         </div>
 
-        <figure class="quote mt-5 ml-auto max-w-[28ch] text-right md:max-w-[30ch]">
-          <blockquote class="m-0 text-balance text-[0.96rem] italic leading-[1.5] text-slate-600 md:text-[1.05rem]">
+        <figure class="quote mt-5 ml-auto max-w-[26ch] text-right md:max-w-[28ch]">
+          <blockquote class="m-0 text-balance text-[0.92rem] italic leading-[1.45] text-slate-500 md:text-[1rem]">
             {profile.quote}
           </blockquote>
-          <figcaption class="mt-2 font-['IBM_Plex_Mono',ui-monospace,monospace] text-[0.74rem] text-slate-400">
+          <figcaption class="mt-2 font-['IBM_Plex_Mono',ui-monospace,monospace] text-[0.72rem] text-slate-400">
             {profile.attribution}
           </figcaption>
         </figure>
@@ -109,7 +109,7 @@ import {
       <div class="cv-section__meta hidden md:block" aria-hidden="true"></div>
     </section>
 
-    <section class={sectionClass}>
+    <section class:list={[sectionClass, 'print:break-before-page print:mt-0']}>
       <div class="cv-section__rail">
         <h2 class={sectionHeadingClass}>Scholarly Impact &amp; Recognition</h2>
       </div>
