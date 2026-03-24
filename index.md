@@ -21,8 +21,7 @@ title: Eugene de Beste - Curriculum Vitae
 <section class="cv-item cv-item--section-inline">
   <div class="cv-item__rail"><h2>Professional Summary</h2></div>
   <div class="cv-item__content">
-    <p>Innovative infrastructure and platform engineer turned operations leader who thrives on diving deep into complex problems and engineering sustainable, tech-debt-free solutions. Proven across the full stack from low-level kernel and firmware debugging through to customer migrations, CX self-service platforms, and operational modernisation.</p>
-    <p>I consistently go above and beyond to replace brittle, inherited systems with clean, repeatable automation grounded in production constraints, and leverage AI-assisted development tools to accelerate research, scripting, and internal tooling.</p>
+    <p>Platform and infrastructure engineer specialising in <strong>OpenStack</strong> private cloud, <strong>Kubernetes/GitOps</strong>, and <strong>GPU cloud platforms</strong>, with experience spanning hands-on systems engineering and infrastructure operations leadership. Built deployment, automation, and observability tooling across multi-region environments; led customer migrations and workload troubleshooting; and <strong>diagnosed</strong> low-level virtualisation, firmware, and hardware issues, translating findings into <strong>proposed platform fixes</strong> and operational improvements.</p>
   </div>
 </section>
 
@@ -30,12 +29,13 @@ title: Eugene de Beste - Curriculum Vitae
   <div class="cv-item__rail"><h2>Core Skills / Technologies</h2></div>
   <div class="cv-item__content">
     <ul>
-      <li><strong>Cloud / Platform:</strong> OpenStack, Kolla-ansible, Kubernetes, Ceph RBD, MAAS, NetBox, PowerDNS, GitOps, ArgoCD, FluxCD</li>
-      <li><strong>Automation / IaC / Tooling:</strong> Ansible, Python, Windmill, config generation, internal tooling</li>
-      <li><strong>Systems / Virtualisation:</strong> QEMU, KVM, libvirt, OVMF/EDK2, Open vSwitch, SR-IOV</li>
-      <li><strong>Observability / Ops:</strong> Prometheus, Grafana, SRE, incident response, runbooks, operational tooling</li>
-      <li><strong>GPU / HPC / Networking:</strong> H100, H200, GH200, GPU virtualisation, InfiniBand, RoCEv2, GPU Direct RDMA</li>
-      <li><strong>AI-assisted engineering:</strong> Anthropic Claude / Claude Code, OpenAI ChatGPT Codex (via <code>opencode</code>), Cursor</li>
+      <li><strong>Cloud / Platform:</strong> OpenStack, Kolla-Ansible, Kubernetes, Kubespray, Cilium, Argo CD, ApplicationSet, Helm, Ceph, MAAS, NetBox, PowerDNS</li>
+      <li><strong>Automation / IaC / Tooling:</strong> Ansible, Python, GitOps, Windmill, Packer, Terraform</li>
+      <li><strong>Systems / Virtualisation:</strong> Linux, QEMU, KVM, libvirt, OVMF/EDK2, Open vSwitch, SR-IOV</li>
+      <li><strong>Networking:</strong> VLANs, VRRP, MetalLB, BGP, L2/L3 Fabrics</li>
+      <li><strong>Observability / Ops:</strong> Prometheus, Grafana, incident response, runbooks, operational tooling, SRE</li>
+      <li><strong>GPU / HPC:</strong> H100, H200, B200, GH200, GPU virtualisation, InfiniBand, RoCEv2, GPU Direct RDMA</li>
+      <li><strong>AI-assisted engineering:</strong> Anthropic Claude / Claude Code, OpenAI ChatGPT Codex, Cursor</li>
     </ul>
   </div>
 </section>
@@ -57,15 +57,16 @@ title: Eugene de Beste - Curriculum Vitae
       <div class="entry-main"><strong>Senior Infrastructure Engineer</strong></div>
       <div class="entry-meta">Jan 2024 - Jun 2025</div>
     </div>
-    <p class="cv-note"><em>Title updated from Head of Infrastructure Operations to Infrastructure Operations Manager during an internal leadership restructuring; scope remained unchanged.</em></p>
-    <p>At NexGen Cloud, I progressed from hands-on infrastructure engineering into infrastructure operations leadership while remaining deeply embedded in OpenStack, GPU cloud, automation, and systems debugging. I proactively identified and eliminated legacy tech debt, modernised region bring-up from the ground up, and consistently went beyond my defined scope to deliver production-grade tooling and reliability improvements.</p>
+    <p class="cv-note"><em>Title changed during internal leadership restructuring; scope remained unchanged.</em></p>
     <ul>
-      <li>Overhauled region deployment end-to-end by designing custom Ansible, Python/config-generation tooling, and integrating upstream Kolla-ansible, systematically eliminating legacy tech debt and replacing fragile hand-grown patterns with clean, repeatable infrastructure.</li>
-      <li>Evaluated automation and self-service tooling, selected and productionised Windmill, and built an audited CX self-service platform with 10,000+ lines of Python libraries, scripts, and flows, enabling delegated troubleshooting and remediation and reducing BAU load on infrastructure engineering.</li>
-      <li>Dove deep into complex, cross-cutting technical problems others had deprioritised, engineering targeted Python-based hypervisor interventions that isolated deep-seated vendor hardware faults and permanently neutralized recurring customer-impacting outages.</li>
-      <li>Planned and executed massive customer migrations from their outgoing platform to NexGen's platform in a mostly automated fashion, combining storage, cloud, and customer-facing delivery work.</li>
-      <li>Diagnosed low-level firmware, kernel, and virtualisation bottlenecks behind GPU VM boot times through methodical root-cause analysis, shipping a production fix that reduced boot times by 80%+ where applicable.</li>
-      <li>Drove platform reliability improvements well beyond day-to-day responsibilities, building observability, operational tooling, incident response patterns, runbooks, and handover practices, while self-directing R&amp;D on static 1GB hugepages, CPU pinning, GPU Direct RDMA, and Gnocchi HA design.</li>
+      <li>Progressed from Senior Infrastructure Engineer to Infrastructure Operations Manager while remaining hands-on across <strong>OpenStack</strong>, <strong>Kubernetes</strong>, and production systems debugging.</li>
+      <li>Standardised OpenStack region deployment for GPU cloud by building <strong>custom Ansible and Python configuration tooling</strong> around <strong>Kolla-Ansible</strong>, accelerating node and region bring-up across multiple data centres.</li>
+      <li>Designed and implemented the multi-region <strong>Kubernetes</strong> platform for internal services, using <strong>Kubespray</strong>, <strong>Argo CD / ApplicationSet</strong> GitOps, and <strong>Cilium</strong> across both BGP/L3 and L2-only environments, integrating with existing <strong>VRRP</strong> and <strong>MetalLB</strong> load-balancing patterns.</li>
+      <li>Developed a plugin-based <strong>NetBox sync tool</strong> to reconcile inventory and DNS state across <strong>NetBox</strong>, <strong>MAAS</strong>, and <strong>PowerDNS</strong>, improving consistency in infrastructure source-of-truth workflows.</li>
+      <li>Built and productionised <strong>Windmill</strong> as an audited self-service automation platform, delivering <strong>10,000+ lines of Python</strong> libraries that enabled self-service troubleshooting for customer operations teams.</li>
+      <li>Engineered a targeted <strong>hypervisor-side Python integration</strong> around Nova/libvirt that isolated recurring vendor GPU-platform faults at the PCIe-switch and NUMA level, turning a persistent stability issue into a controlled workaround.</li>
+      <li>Planned and executed largely automated <strong>customer migrations</strong> across <strong>300+ virtual machines</strong>, providing direct workload troubleshooting and escalations during onboarding.</li>
+      <li><strong>Diagnosed and proposed</strong> production fixes for firmware and kernel bottlenecks behind GPU VM boot times targeting an <strong>80%+ reduction</strong> in wait times.</li>
     </ul>
   </div>
 </section>
@@ -78,10 +79,10 @@ title: Eugene de Beste - Curriculum Vitae
       <div class="entry-meta">2020 - 2024</div>
     </div>
     <ul>
-      <li>Led the OpenStack Research Cloud and ACE Lab cloud infrastructure serving hundreds of researchers, taking ownership well beyond the formal brief to cover cloud operations, storage, networking, and frontline support.</li>
-      <li>Championed GitOps and DevOps adoption across CHPC, introducing CI/CD and infrastructure-as-code to replace ad-hoc manual processes with sustainable, repeatable deployment patterns.</li>
-      <li>Architected and operated multi-petabyte Ceph storage for HPC workloads, proactively building monitoring and inventory systems that eliminated operational blind spots.</li>
-      <li>Co-led the International Student Cluster Competition effort, voluntarily mentoring teams and developing training material for graduate staff and researchers.</li>
+      <li>Led the OpenStack Research Cloud and ACE Lab as <strong>R&D platforms</strong> for cloud/HPC experimentation, while also contributing to <strong>Sebowa</strong> production-cloud operations serving hundreds of researchers.</li>
+      <li>Deployed the <strong>CHPC Pretoria region</strong> for Sebowa and trained the local team on OpenStack operations, support, and policy alignment.</li>
+      <li>Architected and operated multi-petabyte <strong>Ceph storage</strong> for HPC workloads, building monitoring and inventory systems that improved operational visibility.</li>
+      <li>Co-led the <strong>South African Student Cluster Competition</strong> programme, mentoring teams and developing training material for international ISC challenge cohorts.</li>
     </ul>
   </div>
 </section>
@@ -109,28 +110,14 @@ title: Eugene de Beste - Curriculum Vitae
       <div class="entry-meta">2017 - 2020</div>
     </div>
     <ul>
-      <li>Trained and supported student teams for the CHPC Student Cluster Competition, stepping up to redesign delivery for fully remote operation during the pandemic.</li>
-      <li>Migrated in-house VM management onto OpenStack and supported Health Information Systems Programme (HISP), National Institute for Communicable Diseases (NICD), and UWC HPC deployments across cloud and bare-metal environments.</li>
-      <li>Automated bare-metal and cloud builds with MAAS, PXE, Ansible, and Terraform, replacing manual provisioning workflows and introducing FreeIPA, monitoring, and change-management practices to reduce operational tech debt.</li>
-      <li>Went beyond the core developer role to support Ceph, networking, and helpdesk operations across research and IT teams while maintaining internal tooling and documentation.</li>
+      <li>Trained and supported student teams for the CHPC Student Cluster Competition, redesigning delivery for fully remote operation during the pandemic.</li>
+      <li>Migrated in-house VM management onto OpenStack and supported <strong>HISP</strong>, <strong>NICD</strong>, and UWC HPC deployments across cloud and bare-metal environments.</li>
+      <li>Automated bare-metal and cloud builds with <strong>MAAS</strong>, PXE, Ansible, and Terraform, introducing FreeIPA, monitoring, and change-management practices.</li>
+      <li>Supported Ceph storage, networking, and helpdesk operations across research and IT teams.</li>
     </ul>
   </div>
 </section>
 
-<section class="cv-item cv-item--experience">
-  <div class="cv-item__rail"><h3>VOSS Solutions</h3></div>
-  <div class="cv-item__content">
-    <div class="entry-row">
-      <div class="entry-main"><strong>Systems Administrator Intern</strong></div>
-      <div class="entry-meta">2015 - 2016</div>
-    </div>
-    <ul>
-      <li>Managed production upgrades and supported VMware, Active Directory, DNS, and WSUS environments.</li>
-      <li>Administered Cisco ASA and Linux access controls for internal users.</li>
-      <li>Assisted with procurement, quotes, purchase orders, and desktop support.</li>
-    </ul>
-  </div>
-</section>
 
 ## Selected Projects
 
@@ -141,7 +128,7 @@ title: Eugene de Beste - Curriculum Vitae
       <div class="entry-main">Helped secure the CHPC and SANBI Memorandum of Understanding (MoU) and shaped the Infrastructure Automation Lead role for the project.</div>
       <div class="entry-meta">CHPC</div>
     </div>
-    <p>Ported the microservice stack into a local development environment and built Kubernetes / OpenStack / Terraform / FluxCD automation for repeatable deployment.</p>
+    <p>Ported the microservice stack into a local development environment and built Kubernetes / OpenStack / Terraform / Flux CD automation for repeatable deployment.</p>
   </div>
 </section>
 
@@ -149,7 +136,7 @@ title: Eugene de Beste - Curriculum Vitae
   <div class="cv-item__rail"><h3>HISP OpenStack Deployment</h3></div>
   <div class="cv-item__content">
     <div class="entry-row">
-      <div class="entry-main">Designed the network layout, configured switching for the control plane, and delivered MAAS and Kolla-ansible based OpenStack deployment support.</div>
+      <div class="entry-main">Designed the network layout, configured switching for the control plane, and delivered MAAS and Kolla-Ansible based OpenStack deployment support.</div>
       <div class="entry-meta">CHPC</div>
     </div>
     <p>Provided training and documentation to help the team operate the platform independently.</p>
