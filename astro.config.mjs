@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 const isProd = process.env.NODE_ENV === 'production';
 
 export default defineConfig({
-  site: 'https://edebeste.github.io',
+  site: 'https://eugene.debeste.co.za',
   base: isProd ? '/markdown-cv' : '/',
   output: 'static',
   publicDir: './static',

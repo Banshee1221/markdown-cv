@@ -35,6 +35,7 @@ export type ImpactEntry = {
   html: string;
   meta: string;
   href?: string;
+  showMetaInline?: boolean;
 };
 
 export const profile = {
@@ -197,23 +198,17 @@ export const education: CompactItem[] = [
   {
     rail: 'SANBI / UWC',
     meta: '2016 - 2019',
-    lead: '<strong>M.Sc. Bioinformatics</strong>',
-    details: ['Awarded <em>Cum Laude</em>.']
+    lead: '<strong>M.Sc. Bioinformatics</strong> <span class="font-normal text-slate-500">(<em>Cum Laude</em>)</span>'
   },
   {
     rail: 'UCT',
     meta: '2015',
-    lead: '<strong>B.Sc. Hons Information Technology</strong>',
-    details: [
-      'Mini-thesis: <strong>de Beste, E.</strong>, Stewart, G. and Gain, J. (2015). <em>PyTeacher: Determining the Usefulness of Visual Learning for Computer Science.</em>',
-      'Awarded <em>Cum Laude</em>.'
-    ]
+    lead: '<strong>B.Sc. Hons Information Technology</strong> <span class="font-normal text-slate-500">(<em>Cum Laude</em>)</span>'
   },
   {
     rail: 'UWC',
     meta: '2012 - 2014',
-    lead: '<strong>B.Sc. Computer Science</strong>',
-    details: ['Awarded <em>Cum Laude</em>.']
+    lead: '<strong>B.Sc. Computer Science</strong> <span class="font-normal text-slate-500">(<em>Cum Laude</em>)</span>'
   }
 ];
 
@@ -253,10 +248,12 @@ export const scholarlyImpact = {
   awards: [
     {
       meta: '2014',
+      showMetaInline: true,
       html: '<strong>First Place Overall Prize for the ISC\'14 Student Cluster Challenge</strong> – <em>International Supercomputing Conference, Leipzig, Germany</em>'
     },
     {
       meta: '2013',
+      showMetaInline: true,
       html: '<strong>First Place for the CHPC Student Cluster Competition 2013</strong> – <em>Centre for High Performance Computing, Council for Scientific and Industrial Research</em>'
     }
   ] satisfies ImpactEntry[]
