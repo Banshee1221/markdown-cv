@@ -1,14 +1,12 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
-const isProd = process.env.NODE_ENV === 'production';
-
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   site: 'https://eugene.debeste.co.za',
-  base: isProd ? '/markdown-cv' : '/',
+  base: command === 'build' ? '/markdown-cv' : '/',
   output: 'static',
   publicDir: './static',
   vite: {
     plugins: [tailwindcss()]
   }
-});
+}));
