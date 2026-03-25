@@ -18,8 +18,8 @@ const resolveHref = (href?: string) => {
   if (!href) return undefined;
   if (/^[a-z][a-z0-9+.-]*:/i.test(href)) return href;
   const relativeHref = href.replace(/^\//, '');
-  if (import.meta.env.DEV) return `/${relativeHref}`;
-  return new URL(relativeHref, 'https://eugene.debeste.co.za/markdown-cv/').toString();
+  if (import.meta.env.DEV) return relativeHref;
+  return new URL(relativeHref, new URL(import.meta.env.BASE_URL, Astro.site)).toString();
 };
 ---
 

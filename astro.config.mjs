@@ -1,12 +1,12 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
-export default defineConfig(({ command }) => ({
+export default defineConfig({
   site: 'https://eugene.debeste.co.za',
-  base: command === 'build' ? '/markdown-cv' : '/',
+  base: '/markdown-cv/',
   output: 'static',
   publicDir: './static',
   vite: {
     plugins: [tailwindcss()]
   }
-}));
+});
