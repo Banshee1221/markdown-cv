@@ -215,9 +215,9 @@ export const education: CompactItem[] = [
 export const scholarlyImpact = {
   publications: [
     {
-      meta: '2025',
-      href: 'https://sc25.supercomputing.org/proceedings/workshops/workshop_pages/ws_bphpcte106.html',
-      html: '<strong>de Beste, E.</strong>, Johnston, B., Thorne, N., Cawood, M., Macleod, D. and Poole, J. (2025). <em>"A Retrospective on South Africa\'s Student Cluster Competition and its Model for Inclusive HPC Outreach and Training (2012-2020)"</em>. <em>12th SC Workshop on Best Practices for HPC Training and Education</em>, SC25.'
+      meta: '2026',
+      href: 'https://doi.org/10.22369/issn.2153-4136/17/1/6',
+      html: 'Johnston, B., Thorne, N., Cawood, M., <strong>de Beste, E.</strong>, Macleod, D. and Poole, J. (2026). <em>"A Retrospective on South Africa\'s Student Cluster Competition and its Model for Inclusive HPC Outreach and Training (2012-2020)"</em>. <em>The Journal of Computational Science Education</em>, 17(1), pp. 42–49.'
     },
     {
       meta: '2024',
