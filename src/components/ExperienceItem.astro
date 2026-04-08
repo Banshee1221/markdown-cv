@@ -30,7 +30,7 @@ const { item } = Astro.props as Props;
       ))}
     </div>
     {item.note && (
-      <p class="cv-note mt-2.5 border-l-2 border-[color:rgba(198,89,63,0.18)] pl-3 text-[0.88rem] italic leading-6 text-slate-400 print:mt-2">
+      <p class="cv-note mt-2.5 border-l-2 border-[color:rgba(198,89,63,0.18)] pl-3 text-[0.88rem] italic leading-6 text-[var(--ink-mute)] print:mt-2">
         <em>{item.note}</em>
       </p>
     )}

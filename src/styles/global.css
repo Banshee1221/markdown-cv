@@ -1,6 +1,17 @@
 @import "tailwindcss";
 
 :root {
+  /* ----- Unified ink scale -----
+     Used by both the on-screen layout and the print stylesheet so that
+     subtitles, body text, and meta render at identical hex values across
+     viewports and PDF output. */
+  --ink:        #0f172a; /* slate-900 — name, role titles, lead text */
+  --ink-strong: #1e293b; /* slate-800 — body bullets, sub-bullets   */
+  --ink-medium: #314158; /* CUSTOM    — subtitles, acronym keys     */
+  --ink-soft:   #475569; /* slate-600 — masthead title, dl values   */
+  --ink-mute:   #64748b; /* slate-500 — meta dates, notes, quote    */
+  --ink-faint:  #94a3b8; /* slate-400 — quote attribution           */
+
   --accent: #c6593f;
   color-scheme: light;
 }
@@ -13,7 +24,7 @@ body {
   margin: 0;
   font-family: "Inter Variable", Inter, ui-sans-serif, system-ui, sans-serif;
   background: #fff;
-  color: #172131;
+  color: var(--ink);
 }
 
 a {
@@ -60,14 +71,26 @@ a:focus-visible {
      ============================================================ */
 
   :root {
-    --print-rail: 165px;
-    --print-meta: 132px;
-    --print-gap: 18px;
-    --print-ink: #1c2533;
-    --print-ink-soft: #4b5666;
-    --print-ink-faint: #8a93a3;
-    --print-accent: #c6593f;
-    --print-rule: rgba(28, 37, 51, 0.12);
+    /* Tightened from 148/124/16 to give the main content column ~20px more
+       horizontal room. The rail is sized to fit "PROFESSIONAL EXPERIENCE" on
+       a single line at 6.5pt font; longer labels (e.g. "SCHOLARLY IMPACT &
+       RECOGNITION") still wrap to 2 balanced lines as before. */
+    --print-rail: 136px;
+    --print-meta: 116px;
+    --print-gap: 16px;
+
+    /* Print ink palette mostly mirrors the on-screen --ink-* scale, but the
+       muted secondary tones are bumped one slate step darker for legibility
+       at PDF render scale (paper + smaller font sizes need higher contrast
+       than a high-DPI screen). */
+    --print-ink:        var(--ink);        /* #0f172a — name, role titles, lead */
+    --print-ink-strong: var(--ink-strong); /* #1e293b — body bullets, sub-bullets */
+    --print-ink-medium: var(--ink-medium); /* #314158 — subtitles, acronym keys */
+    --print-ink-soft:   var(--ink-soft);   /* #475569 — masthead title, dl values */
+    --print-ink-mute:   #475569;           /* slate-600 — bumped from slate-500 */
+    --print-ink-faint:  #64748b;           /* slate-500 — bumped from slate-400 */
+    --print-accent: var(--accent);
+    --print-rule: rgba(15, 23, 42, 0.16);
   }
 
   html {
@@ -158,13 +181,13 @@ a:focus-visible {
 
   .masthead__link {
     font-size: 8pt !important;
-    color: var(--print-ink-soft) !important;
+    color: var(--print-accent) !important;
   }
 
   .masthead__link .masthead__value,
   .masthead__link .masthead__value > span {
-    color: var(--print-ink-soft) !important;
-    text-decoration-color: var(--print-rule) !important;
+    color: var(--print-accent) !important;
+    text-decoration-color: color-mix(in srgb, var(--print-accent) 50%, transparent) !important;
   }
 
   /* Quote sits BELOW the contacts in the masthead's main column.
@@ -286,7 +309,7 @@ a:focus-visible {
     grid-column: 2 !important;
     font-size: 9pt !important;
     line-height: 1.55 !important;
-    color: var(--print-ink) !important;
+    color: var(--print-ink-strong) !important;
   }
 
   /* Inline section paragraphs (Professional Summary) */
@@ -316,7 +339,10 @@ a:focus-visible {
   .cv-item__rail {
     grid-column: 1 !important;
     text-align: right;
-    padding-right: 0.65rem;
+    /* Match section heading rail (padding-right: 0) so subtitle right edges
+       line up with section heading right edges in the same vertical column. */
+    padding-right: 0 !important;
+    padding-left: 0;
     /* Align the rail subtitle ("NexGen Cloud") with the first role title in main */
     padding-top: 0.05rem;
   }
@@ -324,7 +350,7 @@ a:focus-visible {
   .cv-item__rail h3 {
     font-size: 8.5pt !important;
     font-weight: 600 !important;
-    color: var(--print-ink) !important;
+    color: var(--print-ink-medium) !important;
     line-height: 1.2 !important;
     margin: 0 !important;
     word-spacing: -0.05em;
@@ -355,13 +381,13 @@ a:focus-visible {
   }
 
   .cv-item--experience .cv-note {
-    font-size: 7.5pt !important;
-    color: var(--print-ink-faint) !important;
+    font-size: 8pt !important;
+    color: var(--print-ink-mute) !important;
     font-style: italic;
-    margin: 0.2rem 0 0.2rem 0 !important;
+    margin: 0.2rem 0 0.25rem 0 !important;
     border-left: 1px solid var(--print-rule) !important;
-    padding-left: 0.5rem !important;
-    line-height: 1.35 !important;
+    padding-left: 0.55rem !important;
+    line-height: 1.4 !important;
   }
 
   /* Hide the inline (mobile/tablet) meta variants in print */
@@ -381,10 +407,10 @@ a:focus-visible {
 
   .cv-item__meta--stacked .entry-meta {
     font-family: 'IBM Plex Mono', ui-monospace, monospace !important;
-    font-size: 7pt !important;
+    font-size: 7.75pt !important;
     font-weight: 400 !important;
-    color: var(--print-ink-faint) !important;
-    line-height: 1.55 !important;
+    color: var(--print-ink-mute) !important;
+    line-height: 1.5 !important;
     white-space: nowrap;
     letter-spacing: 0.01em;
   }
@@ -396,9 +422,9 @@ a:focus-visible {
     padding-left: 0.2rem;
     padding-top: 0.05rem;
     font-family: 'IBM Plex Mono', ui-monospace, monospace !important;
-    font-size: 7pt !important;
-    color: var(--print-ink-faint) !important;
-    line-height: 1.5 !important;
+    font-size: 7.75pt !important;
+    color: var(--print-ink-mute) !important;
+    line-height: 1.45 !important;
     white-space: nowrap;
     letter-spacing: 0.01em;
   }
@@ -418,7 +444,8 @@ a:focus-visible {
     font-size: 9pt !important;
     line-height: 1.5 !important;
     margin: 0.18rem 0 !important;
-    color: var(--print-ink) !important;
+    color: var(--print-ink-strong) !important;
+    font-weight: 400 !important;
     padding: 0 0 0 0.85rem !important;
     position: relative;
   }
@@ -463,6 +490,15 @@ a:focus-visible {
     margin: 0 !important;
   }
 
+  /* The inline "(Cum Laude)" span sets text-[var(--ink-mute)] via Tailwind,
+     which resolves to the screen value of slate-500. In print we want it to
+     match the bumped --print-ink-mute (slate-600) so it stays consistent
+     with the rest of the muted print typography. */
+  .cv-item--education .cv-item__lead [class*="ink-mute"],
+  .cv-item--education .cv-item__lead .text-\[var\(--ink-mute\)\] {
+    color: var(--print-ink-mute) !important;
+  }
+
   /* ---------- Impact group: align years to parent meta column ---------- */
   .cv-item--impact .cv-item__main {
     grid-column: 2 / -1 !important;
@@ -487,7 +523,7 @@ a:focus-visible {
     grid-column: 1 !important;
     font-size: 9pt !important;
     line-height: 1.5 !important;
-    color: var(--print-ink) !important;
+    color: var(--print-ink-strong) !important;
     padding-left: 0.85rem !important;
     position: relative;
   }
@@ -505,7 +541,7 @@ a:focus-visible {
 
   .entry-row--impact .cv-entry-bullet {
     max-width: none !important;
-    color: var(--print-ink) !important;
+    color: var(--print-ink-strong) !important;
   }
 
   .entry-row--impact .cv-entry-bullet span[aria-hidden="true"] {
@@ -523,8 +559,8 @@ a:focus-visible {
     padding-left: 0.2rem;
     padding-top: 0.05rem;
     font-family: 'IBM Plex Mono', ui-monospace, monospace !important;
-    font-size: 7pt !important;
-    color: var(--print-ink-faint) !important;
+    font-size: 7.75pt !important;
+    color: var(--print-ink-mute) !important;
     line-height: 1.5 !important;
     white-space: nowrap;
     letter-spacing: 0.01em;
@@ -540,9 +576,10 @@ a:focus-visible {
     color: var(--print-ink-soft) !important;
   }
 
+  /* Acronym keys (CSIR, CHPC, ...) — same #314158 ink-medium as item subtitles */
   .cv-inline__content dl dt {
     font-weight: 600 !important;
-    color: var(--print-ink) !important;
+    color: var(--print-ink-medium) !important;
   }
 
   .cv-inline__content dl dd {
@@ -559,7 +596,7 @@ a:focus-visible {
     font-size: 9pt !important;
     line-height: 1.45 !important;
     margin: 0.18rem 0 !important;
-    color: var(--print-ink) !important;
+    color: var(--print-ink-strong) !important;
   }
 
   .skill-list li strong {
@@ -617,4 +654,5 @@ a:focus-visible {
     font-style: italic;
     color: inherit !important;
   }
+
 }

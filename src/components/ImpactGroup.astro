@@ -49,7 +49,7 @@ const rendered = items.map((item, idx) => ({
           {resolveHref(item.href) ? (
             <a
               href={resolveHref(item.href)}
-              class="cv-entry-bullet block max-w-[47rem] rounded-sm text-slate-700 transition-colors hover:text-[var(--accent)] print:max-w-none"
+              class="cv-entry-bullet block max-w-[47rem] rounded-sm text-[var(--ink-strong)] transition-colors hover:text-[var(--accent)] print:max-w-none"
             >
               <span class="inline min-w-0 underline decoration-[color:color-mix(in_srgb,var(--accent)_55%,transparent)] decoration-1 underline-offset-[0.16em] print:decoration-black/60" set:html={item.html} />
               <span aria-hidden="true" class="ml-1 inline-block text-[0.72em] leading-none text-[var(--accent)] print:hidden">

@@ -22,10 +22,10 @@ import {
     <header class="masthead grid grid-cols-1 gap-x-[var(--cv-gap)] gap-y-3 md:[grid-template-columns:var(--cv-rail)_minmax(0,1fr)_var(--cv-meta)] md:items-start">
       <div class="masthead__rail hidden md:block" aria-hidden="true"></div>
       <div class="masthead__main min-w-0">
-        <h1 class="m-0 text-[clamp(2.55rem,7.5vw,3.6rem)] font-semibold leading-[0.96] tracking-[-0.045em] text-slate-900">
+        <h1 class="m-0 text-[clamp(2.55rem,7.5vw,3.6rem)] font-semibold leading-[0.96] tracking-[-0.045em] text-[var(--ink)]">
           {profile.name}
         </h1>
-        <p class="masthead__title mt-1.5 max-w-[48rem] text-[clamp(0.98rem,2vw,1.02rem)] leading-6 text-slate-600 md:italic">
+        <p class="masthead__title mt-1.5 max-w-[48rem] text-[clamp(0.98rem,2vw,1.02rem)] leading-6 text-[var(--ink-soft)] md:italic">
           {profile.title}
         </p>
 
@@ -59,10 +59,10 @@ import {
         </div>
 
         <figure class="quote mt-5 ml-auto max-w-[26ch] text-right md:max-w-[28ch]">
-          <blockquote class="m-0 text-balance text-[0.92rem] italic leading-[1.45] text-slate-500 md:text-[1rem]">
+          <blockquote class="m-0 text-balance text-[0.92rem] italic leading-[1.45] text-[var(--ink-mute)] md:text-[1rem]">
             {profile.quote}
           </blockquote>
-          <figcaption class="mt-2 font-['IBM_Plex_Mono',ui-monospace,monospace] text-[0.72rem] text-slate-400">
+          <figcaption class="mt-2 font-['IBM_Plex_Mono',ui-monospace,monospace] text-[0.72rem] text-[var(--ink-faint)]">
             {profile.attribution}
           </figcaption>
         </figure>
@@ -75,7 +75,7 @@ import {
     </InlineSection>
 
     <InlineSection title="Core Skills / Technologies">
-      <ul class="skill-list mt-0 list-disc space-y-2 print:space-y-1.5 pl-5 text-[0.94rem] leading-6 text-slate-700 marker:text-[var(--accent)] marker:text-[0.7em]">
+      <ul class="skill-list mt-0 list-disc space-y-2 print:space-y-1.5 pl-5 text-[0.94rem] leading-6 text-[var(--ink-strong)] marker:text-[var(--accent)] marker:text-[0.7em]">
         {skills.map((group) => (
           <li>
             <strong>{group.label}:</strong> {group.items}
@@ -85,20 +85,20 @@ import {
     </InlineSection>
 
     <InlineSection title="Acronyms">
-      <dl class="m-0 grid grid-cols-[max-content_minmax(0,1fr)] gap-x-3 gap-y-1 text-[0.9rem] leading-6 text-slate-600">
-        <dt class="font-semibold text-slate-700">CSIR</dt>
+      <dl class="m-0 grid grid-cols-[max-content_minmax(0,1fr)] gap-x-3 gap-y-1 text-[0.9rem] leading-6 text-[var(--ink-soft)]">
+        <dt class="font-semibold text-[var(--ink-medium)]">CSIR</dt>
         <dd class="m-0">Council for Scientific and Industrial Research</dd>
-        <dt class="font-semibold text-slate-700">CHPC</dt>
+        <dt class="font-semibold text-[var(--ink-medium)]">CHPC</dt>
         <dd class="m-0">Centre for High Performance Computing</dd>
-        <dt class="font-semibold text-slate-700">SANBI</dt>
+        <dt class="font-semibold text-[var(--ink-medium)]">SANBI</dt>
         <dd class="m-0">South African National Bioinformatics Institute</dd>
-        <dt class="font-semibold text-slate-700">UWC</dt>
+        <dt class="font-semibold text-[var(--ink-medium)]">UWC</dt>
         <dd class="m-0">University of the Western Cape</dd>
-        <dt class="font-semibold text-slate-700">UCT</dt>
+        <dt class="font-semibold text-[var(--ink-medium)]">UCT</dt>
         <dd class="m-0">University of Cape Town</dd>
-        <dt class="font-semibold text-slate-700">HISP</dt>
+        <dt class="font-semibold text-[var(--ink-medium)]">HISP</dt>
         <dd class="m-0">Health Information Systems Programme</dd>
-        <dt class="font-semibold text-slate-700">NICD</dt>
+        <dt class="font-semibold text-[var(--ink-medium)]">NICD</dt>
         <dd class="m-0">National Institute for Communicable Diseases</dd>
       </dl>
     </InlineSection>

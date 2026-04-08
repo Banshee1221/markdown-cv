@@ -197,17 +197,17 @@ export const education: CompactItem[] = [
   {
     rail: 'SANBI / UWC',
     meta: '2016 - 2019',
-    lead: '<strong>M.Sc. Bioinformatics</strong> <span class="font-normal text-slate-500">(<em>Cum Laude</em>)</span>'
+    lead: '<strong>M.Sc. Bioinformatics</strong> <span class="font-normal text-[var(--ink-mute)]">(<em>Cum Laude</em>)</span>'
   },
   {
     rail: 'UCT',
     meta: '2015',
-    lead: '<strong>B.Sc. Hons Information Technology</strong> <span class="font-normal text-slate-500">(<em>Cum Laude</em>)</span>'
+    lead: '<strong>B.Sc. Hons Information Technology</strong> <span class="font-normal text-[var(--ink-mute)]">(<em>Cum Laude</em>)</span>'
   },
   {
     rail: 'UWC',
     meta: '2012 - 2014',
-    lead: '<strong>B.Sc. Computer Science</strong> <span class="font-normal text-slate-500">(<em>Cum Laude</em>)</span>'
+    lead: '<strong>B.Sc. Computer Science</strong> <span class="font-normal text-[var(--ink-mute)]">(<em>Cum Laude</em>)</span>'
   }
 ];
 
