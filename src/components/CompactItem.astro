@@ -15,38 +15,15 @@ interface Props {
 }
 
 const { item, variant = 'project' } = Astro.props as Props;
-const isEducation = variant === 'education';
 ---
 
-<article class:list={[
-  itemClass,
-  'cv-item--compact',
-  `cv-item--${variant}`,
-  isEducation && 'print:grid-cols-1 print:[grid-template-columns:minmax(0,1fr)]'
-]}>
-  <div class:list={['cv-item__rail', isEducation ? 'hidden md:block md:col-start-1 print:hidden' : 'md:col-start-1']}>
-    <h3 class={railTitleClass}>
-      {item.rail}
-    </h3>
+<article class:list={[itemClass, 'cv-item--compact', `cv-item--${variant}`]}>
+  <div class="cv-item__rail md:col-start-1">
+    <h3 class={railTitleClass}>{item.rail}</h3>
   </div>
-  <div class:list={['cv-item__main', 'min-w-0 self-start max-w-[47rem] print:max-w-none', isEducation ? 'md:col-start-2 lg:col-start-2 print:col-auto' : 'md:col-start-2']}>
-    {isEducation && (
-      <div class="mb-1 md:hidden print:block">
-        <h3 class="m-0 text-[clamp(0.95rem,1.3vw,0.98rem)] font-semibold leading-[1.08] text-slate-600">
-          {item.rail}
-        </h3>
-        <div class:list={['entry-meta', metaClass, 'mt-0.5 block text-left']}>
-          {item.meta}
-        </div>
-      </div>
-    )}
-    {isEducation && (
-      <div class:list={['entry-meta', metaClass, 'mb-0.5 hidden md:block md:text-left lg:hidden print:hidden']}>
-        {item.meta}
-      </div>
-    )}
+  <div class="cv-item__main min-w-0 self-start max-w-[47rem] print:max-w-none md:col-start-2">
     {item.lead && <p class:list={['cv-item__lead', leadTextClass, 'm-0 md:pl-0']} set:html={item.lead} />}
-    {!isEducation && <div class:list={['entry-meta', metaClass, 'mt-0.5 lg:hidden']}>{item.meta}</div>}
+    <div class:list={['entry-meta', metaClass, 'mt-0.5 lg:hidden print:hidden']}>{item.meta}</div>
     {item.details && (
       <ul class:list={['cv-sublist', subBulletListClass, item.lead ? 'mt-2 print:mt-1.5' : 'mt-0']}>
         {item.details.map((detail) => (
@@ -65,7 +42,7 @@ const isEducation = variant === 'education';
       </ul>
     )}
   </div>
-  <div class:list={['cv-item__meta', metaClass, isEducation ? 'hidden self-start lg:col-start-3 lg:block print:hidden' : 'hidden self-start lg:col-start-3 lg:block']}>
+  <div class:list={['cv-item__meta', metaClass, 'hidden self-start lg:col-start-3 lg:block print:col-start-3 print:block']}>
     {item.meta}
   </div>
 </article>

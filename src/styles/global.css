@@ -33,13 +33,588 @@ a:focus-visible {
   outline-offset: 3px;
 }
 
+/* Ensure stacked meta dates are flush right at lg+ on screen.
+   The metaClass utility chain sometimes loses alignment due to specificity. */
+@media (min-width: 64rem) {
+  .cv-item__meta--stacked,
+  .cv-item--compact .cv-item__meta {
+    text-align: right;
+    padding-right: 0;
+  }
+  .cv-item__meta--stacked .entry-meta {
+    text-align: right;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 0.65in 0.7in 0.65in 0.7in;
+}
+
 @media print {
-  .page-shell {
-    --cv-gap: 0.65rem;
-    --cv-rail: 5rem;
-    --cv-meta: 5rem;
-    max-width: none;
-    padding-inline: 0.45in;
-    padding-block: 0.32in;
+  /* ============================================================
+     EDITORIAL PRINT STYLESHEET
+     A refined, magazine-style layout for the printed CV.
+     Uses direct selectors (not Tailwind variants) so it doesn't
+     depend on responsive breakpoint resolution in the print engine.
+     ============================================================ */
+
+  :root {
+    --print-rail: 165px;
+    --print-meta: 132px;
+    --print-gap: 18px;
+    --print-ink: #1c2533;
+    --print-ink-soft: #4b5666;
+    --print-ink-faint: #8a93a3;
+    --print-accent: #c6593f;
+    --print-rule: rgba(28, 37, 51, 0.12);
+  }
+
+  html {
+    font-size: 16px;
+    background: #fff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    background: #fff !important;
+    color: var(--print-ink) !important;
+    font-size: 9.25pt;
+    line-height: 1.5;
+    font-feature-settings: "kern", "liga", "calt";
+    text-rendering: optimizeLegibility;
+  }
+
+  /* ---------- Page shell ----------
+     The Tailwind utility classes on .page-shell set --cv-rail/--cv-meta/--cv-gap
+     via responsive variants like md:[--cv-rail:7.25rem]. Those variants match in
+     print rendering (because Chrome's print viewport hits the md breakpoint),
+     overriding our print values. We need to assert higher specificity. */
+  .page-shell.page-shell {
+    --cv-gap: var(--print-gap) !important;
+    --cv-rail: var(--print-rail) !important;
+    --cv-meta: var(--print-meta) !important;
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* ---------- Masthead ---------- */
+  /* Clean masthead, no border line. Quote sits in normal flow below the contacts,
+     right-aligned within the main column (mirrors the screen layout). */
+  .masthead {
+    display: grid !important;
+    grid-template-columns: var(--print-rail) minmax(0, 1fr) var(--print-meta) !important;
+    column-gap: var(--print-gap) !important;
+    align-items: start !important;
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+    margin-bottom: 0.55rem !important;
+    position: static;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .masthead__main {
+    grid-column: 2 / -1 !important;
+    min-width: 0;
+    /* Force the children (h1, title, contacts, quote) to stack as a block flow
+       so the quote is unambiguously placed BELOW the contact links. */
+    display: block !important;
+  }
+
+  /* Hide the empty meta placeholder in print since masthead__main now spans
+     cols 2 and 3 of the masthead grid. */
+  .masthead__meta {
+    display: none !important;
+  }
+
+  .masthead__main h1 {
+    font-size: 24pt !important;
+    line-height: 1 !important;
+    letter-spacing: -0.025em !important;
+    margin: 0 !important;
+    color: var(--print-ink) !important;
+    font-weight: 600 !important;
+  }
+
+  .masthead__title {
+    font-size: 9pt !important;
+    margin-top: 0.22rem !important;
+    color: var(--print-ink-soft) !important;
+    font-style: italic;
+    max-width: none !important;
+    letter-spacing: 0.005em;
+  }
+
+  .masthead__links {
+    margin-top: 0.55rem !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 1.6rem;
+    row-gap: 0.18rem;
+  }
+
+  .masthead__link {
+    font-size: 8pt !important;
+    color: var(--print-ink-soft) !important;
+  }
+
+  .masthead__link .masthead__value,
+  .masthead__link .masthead__value > span {
+    color: var(--print-ink-soft) !important;
+    text-decoration-color: var(--print-rule) !important;
+  }
+
+  /* Quote sits BELOW the contacts in the masthead's main column.
+     margin-left: auto pushes it to the right edge in block flow. */
+  .masthead .quote {
+    position: static !important;
+    margin: 1.1rem 0 0 auto !important;
+    max-width: 32ch !important;
+    text-align: right;
+    display: block !important;
+    clear: both;
+  }
+
+  .masthead .quote blockquote {
+    font-size: 8.5pt !important;
+    line-height: 1.4 !important;
+    font-style: italic;
+    color: var(--print-ink-soft) !important;
+    margin: 0;
+  }
+
+  .masthead .quote figcaption {
+    font-size: 7pt !important;
+    color: var(--print-ink-faint) !important;
+    margin-top: 0.22rem;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace !important;
+  }
+
+  /* ---------- Sections (3-column grid) ---------- */
+  .cv-section,
+  .cv-inline {
+    display: grid !important;
+    grid-template-columns: var(--print-rail) minmax(0, 1fr) var(--print-meta) !important;
+    column-gap: var(--print-gap) !important;
+    row-gap: 0 !important;
+    align-items: start !important;
+    margin-top: 1rem !important;
+  }
+
+  /* Section heading rail explicitly placed in row 1, col 1.
+     The cv-items below it will auto-flow into rows 2, 3, 4, etc. spanning
+     all 3 columns. Without explicit grid-row on the rail, CSS grid auto-flow
+     may place the rail and the first item on the same row, causing overlap. */
+  .cv-section > .cv-section__rail {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    padding-top: 0.18rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .cv-section {
+    grid-auto-rows: min-content;
+  }
+
+  .cv-section > .cv-item {
+    grid-column: 1 / -1 !important;
+    grid-row: auto !important;
+  }
+
+  /* The first section after the masthead should sit closer to it */
+  .masthead + .cv-inline,
+  .masthead + .cv-section {
+    margin-top: 0 !important;
+  }
+
+  .cv-inline > .cv-inline__rail {
+    padding-top: 0.18rem;
+  }
+
+  /* Section heading: small uppercase label in the rail column.
+     The rail wrapper handles right alignment + the orange accent rule.
+     Padding-right is 0 in print to give the heading text the full rail width. */
+  .cv-section > .cv-section__rail,
+  .cv-inline > .cv-inline__rail {
+    grid-column: 1 !important;
+    text-align: right;
+    padding-right: 0 !important;
+    padding-top: 0.18rem;
+    padding-left: 0;
+    min-width: 0;
+  }
+
+  .cv-section h2,
+  .cv-inline h2 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 6.5pt !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--print-accent) !important;
+    line-height: 1.4 !important;
+    text-align: right;
+    margin: 0 !important;
+    padding: 0 !important;
+    word-spacing: -0.02em;
+    /* Allow longest labels (e.g. SCHOLARLY IMPACT & RECOGNITION) to wrap
+       to 2 balanced lines, right-aligned. Most fit on one line. */
+    text-wrap: balance;
+    hyphens: none;
+  }
+
+  /* Keep the heading underline below the label in print, matching the screen
+     layout instead of switching to a wrapper rule above the text. */
+  .cv-section h2::after,
+  .cv-inline h2::after {
+    display: block !important;
+    align-self: flex-end;
+    width: 1.4rem !important;
+    height: 1.5px !important;
+    margin: 0.32rem 0 0 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .cv-inline__content {
+    grid-column: 2 !important;
+    font-size: 9pt !important;
+    line-height: 1.55 !important;
+    color: var(--print-ink) !important;
+  }
+
+  /* Inline section paragraphs (Professional Summary) */
+  .cv-inline__content p {
+    margin: 0 0 0.45rem 0 !important;
+  }
+  .cv-inline__content p:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  /* ---------- Items inside sections ---------- */
+  .cv-item {
+    display: grid !important;
+    grid-template-columns: var(--print-rail) minmax(0, 1fr) var(--print-meta) !important;
+    column-gap: var(--print-gap) !important;
+    align-items: start !important;
+    grid-column: 1 / -1 !important;
+    margin-top: 0.4rem !important;
+  }
+
+  /* The first item after the section heading sits close to it */
+  .cv-section .cv-item:first-of-type,
+  .cv-inline .cv-item:first-of-type {
+    margin-top: 0 !important;
+  }
+
+  .cv-item__rail {
+    grid-column: 1 !important;
+    text-align: right;
+    padding-right: 0.65rem;
+    /* Align the rail subtitle ("NexGen Cloud") with the first role title in main */
+    padding-top: 0.05rem;
+  }
+
+  .cv-item__rail h3 {
+    font-size: 8.5pt !important;
+    font-weight: 600 !important;
+    color: var(--print-ink) !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+    word-spacing: -0.05em;
+    letter-spacing: 0.005em;
+  }
+
+  .cv-item--experience .cv-item__main,
+  .cv-item--compact .cv-item__main {
+    grid-column: 2 !important;
+    max-width: none !important;
+  }
+
+  /* Role titles: condensed and clean */
+  .cv-item--experience .cv-item__role-title strong {
+    font-size: 9.5pt !important;
+    font-weight: 600 !important;
+    color: var(--print-ink) !important;
+    line-height: 1.2 !important;
+    display: block;
+  }
+
+  .cv-item--experience .cv-item__roles {
+    margin-bottom: 0.2rem;
+  }
+
+  .cv-item--experience .cv-item__role-title + .cv-item__role-title {
+    margin-top: 0.1rem;
+  }
+
+  .cv-item--experience .cv-note {
+    font-size: 7.5pt !important;
+    color: var(--print-ink-faint) !important;
+    font-style: italic;
+    margin: 0.2rem 0 0.2rem 0 !important;
+    border-left: 1px solid var(--print-rule) !important;
+    padding-left: 0.5rem !important;
+    line-height: 1.35 !important;
+  }
+
+  /* Hide the inline (mobile/tablet) meta variants in print */
+  .cv-item--experience .cv-item__role-title .entry-meta,
+  .cv-item--compact .cv-item__main > .entry-meta,
+  .entry-row--impact > .entry-meta--inline {
+    display: none !important;
+  }
+
+  /* Show the stacked meta column in print, aligned to col 3 */
+  .cv-item__meta--stacked {
+    grid-column: 3 !important;
+    display: block !important;
+    text-align: right;
+    padding-left: 0.2rem;
+  }
+
+  .cv-item__meta--stacked .entry-meta {
+    font-family: 'IBM Plex Mono', ui-monospace, monospace !important;
+    font-size: 7pt !important;
+    font-weight: 400 !important;
+    color: var(--print-ink-faint) !important;
+    line-height: 1.55 !important;
+    white-space: nowrap;
+    letter-spacing: 0.01em;
+  }
+
+  .cv-item--compact .cv-item__meta {
+    grid-column: 3 !important;
+    display: block !important;
+    text-align: right;
+    padding-left: 0.2rem;
+    padding-top: 0.05rem;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace !important;
+    font-size: 7pt !important;
+    color: var(--print-ink-faint) !important;
+    line-height: 1.5 !important;
+    white-space: nowrap;
+    letter-spacing: 0.01em;
+  }
+
+  /* ---------- Bullets ---------- */
+  .cv-item--experience .cv-list,
+  .cv-item--compact .cv-list,
+  .cv-item--compact .cv-sublist {
+    margin: 0.25rem 0 0 0 !important;
+    padding-left: 0.95rem !important;
+    list-style: none !important;
+  }
+
+  .cv-item--experience .cv-list li,
+  .cv-item--compact .cv-list li,
+  .cv-item--compact .cv-sublist li {
+    font-size: 9pt !important;
+    line-height: 1.5 !important;
+    margin: 0.18rem 0 !important;
+    color: var(--print-ink) !important;
+    padding: 0 0 0 0.85rem !important;
+    position: relative;
+  }
+
+  .cv-item--experience .cv-list li::before,
+  .cv-item--compact .cv-sublist li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6rem;
+    width: 3px;
+    height: 3px;
+    background: var(--print-accent);
+    border-radius: 50%;
+  }
+
+  .cv-item--compact .cv-list li {
+    list-style: none !important;
+    padding-left: 0.85rem !important;
+    position: relative;
+  }
+
+  .cv-item--compact .cv-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    width: 3px;
+    height: 3px;
+    background: var(--print-accent);
+    border-radius: 50%;
+  }
+
+  .cv-item--compact .cv-list li > span:first-child {
+    display: none !important;
+  }
+
+  /* Education compact lead */
+  .cv-item--education .cv-item__lead {
+    font-size: 9.5pt !important;
+    color: var(--print-ink) !important;
+    margin: 0 !important;
+  }
+
+  /* ---------- Impact group: align years to parent meta column ---------- */
+  .cv-item--impact .cv-item__main {
+    grid-column: 2 / -1 !important;
+    max-width: none !important;
+    margin-top: 0;
+  }
+
+  .entry-row--impact {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) var(--print-meta) !important;
+    column-gap: var(--print-gap) !important;
+    align-items: start !important;
+    row-gap: 0 !important;
+    margin-bottom: 0.4rem;
+  }
+
+  .entry-row--impact:last-child {
+    margin-bottom: 0;
+  }
+
+  .entry-row--impact .entry-main {
+    grid-column: 1 !important;
+    font-size: 9pt !important;
+    line-height: 1.5 !important;
+    color: var(--print-ink) !important;
+    padding-left: 0.85rem !important;
+    position: relative;
+  }
+
+  .entry-row--impact .entry-main::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    width: 3px;
+    height: 3px;
+    background: var(--print-accent);
+    border-radius: 50%;
+  }
+
+  .entry-row--impact .cv-entry-bullet {
+    max-width: none !important;
+    color: var(--print-ink) !important;
+  }
+
+  .entry-row--impact .cv-entry-bullet span[aria-hidden="true"] {
+    display: none !important;
+  }
+
+  .entry-row--impact .cv-entry-bullet > span:first-child {
+    text-decoration: none !important;
+  }
+
+  .entry-row--impact .entry-meta--column {
+    display: block !important;
+    grid-column: 2 !important;
+    text-align: right;
+    padding-left: 0.2rem;
+    padding-top: 0.05rem;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace !important;
+    font-size: 7pt !important;
+    color: var(--print-ink-faint) !important;
+    line-height: 1.5 !important;
+    white-space: nowrap;
+    letter-spacing: 0.01em;
+  }
+
+  /* ---------- Acronym definition list ---------- */
+  .cv-inline__content dl {
+    display: grid !important;
+    grid-template-columns: max-content minmax(0, 1fr) !important;
+    column-gap: 0.65rem;
+    row-gap: 0.18rem;
+    font-size: 8.5pt !important;
+    color: var(--print-ink-soft) !important;
+  }
+
+  .cv-inline__content dl dt {
+    font-weight: 600 !important;
+    color: var(--print-ink) !important;
+  }
+
+  .cv-inline__content dl dd {
+    margin: 0 !important;
+  }
+
+  /* ---------- Skills list ---------- */
+  .skill-list {
+    margin: 0 !important;
+    padding-left: 0.95rem !important;
+  }
+
+  .skill-list li {
+    font-size: 9pt !important;
+    line-height: 1.45 !important;
+    margin: 0.18rem 0 !important;
+    color: var(--print-ink) !important;
+  }
+
+  .skill-list li strong {
+    color: var(--print-ink) !important;
+  }
+
+  /* ---------- Page break controls ---------- */
+  /* Prevent splitting individual experience/project/education/impact items
+     across pages, but allow sections themselves to break naturally. */
+  .cv-item--experience,
+  .cv-item--compact,
+  .cv-item--impact {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Keep section headings glued to their first item.
+     Apply break-after: avoid on the rail wrapper (the grid item containing the
+     heading) so the browser keeps the heading and the next grid item together. */
+  .cv-section__rail,
+  .cv-inline__rail,
+  .cv-item__rail,
+  .cv-section h2,
+  .cv-inline h2,
+  .cv-item__rail h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Allow the masthead to flow with the first section instead of forcing a break */
+  .masthead {
+    break-after: auto;
+    page-break-after: auto;
+  }
+
+  /* ---------- Hide noisy interactive affordances ---------- */
+  .masthead__link span[aria-hidden="true"]:last-child {
+    display: none !important;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration-color: var(--print-rule) !important;
+  }
+
+  /* ---------- Strong/em styling ---------- */
+  strong, b {
+    font-weight: 600 !important;
+    color: var(--print-ink) !important;
+  }
+
+  em, i {
+    font-style: italic;
+    color: inherit !important;
   }
 }

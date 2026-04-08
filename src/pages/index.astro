@@ -42,7 +42,7 @@ import {
                   <span class="min-w-0 break-all underline decoration-[color:color-mix(in_srgb,var(--accent)_45%,transparent)] decoration-1 underline-offset-[0.16em] print:decoration-black/60">
                     {link.value}
                   </span>
-                  <span aria-hidden="true" class="shrink-0 text-[0.72em] leading-none text-[var(--accent)] print:text-slate-500">
+                  <span aria-hidden="true" class="shrink-0 text-[0.72em] leading-none text-[var(--accent)] print:hidden">
                     ↗
                   </span>
                 </span>
@@ -75,7 +75,7 @@ import {
     </InlineSection>
 
     <InlineSection title="Core Skills / Technologies">
-      <ul class="skill-list mt-0 list-disc space-y-1.5 pl-5 text-[0.94rem] leading-6 text-slate-700 marker:text-[var(--accent)] marker:text-[0.7em]">
+      <ul class="skill-list mt-0 list-disc space-y-2 print:space-y-1.5 pl-5 text-[0.94rem] leading-6 text-slate-700 marker:text-[var(--accent)] marker:text-[0.7em]">
         {skills.map((group) => (
           <li>
             <strong>{group.label}:</strong> {group.items}
@@ -85,56 +85,51 @@ import {
     </InlineSection>
 
     <InlineSection title="Acronyms">
-      <p class="m-0 max-w-[47rem] text-[0.9rem] leading-6 text-slate-500">
-        <strong>CSIR</strong> = Council for Scientific and Industrial Research,
-        <strong>CHPC</strong> = Centre for High Performance Computing,
-        <strong>SANBI</strong> = South African National Bioinformatics Institute,
-        <strong>UWC</strong> = University of the Western Cape,
-        <strong>UCT</strong> = University of Cape Town,
-        <strong>HISP</strong> = Health Information Systems Programme,
-        <strong>NICD</strong> = National Institute for Communicable Diseases.
-      </p>
+      <dl class="m-0 grid grid-cols-[max-content_minmax(0,1fr)] gap-x-3 gap-y-1 text-[0.9rem] leading-6 text-slate-600">
+        <dt class="font-semibold text-slate-700">CSIR</dt>
+        <dd class="m-0">Council for Scientific and Industrial Research</dd>
+        <dt class="font-semibold text-slate-700">CHPC</dt>
+        <dd class="m-0">Centre for High Performance Computing</dd>
+        <dt class="font-semibold text-slate-700">SANBI</dt>
+        <dd class="m-0">South African National Bioinformatics Institute</dd>
+        <dt class="font-semibold text-slate-700">UWC</dt>
+        <dd class="m-0">University of the Western Cape</dd>
+        <dt class="font-semibold text-slate-700">UCT</dt>
+        <dd class="m-0">University of Cape Town</dd>
+        <dt class="font-semibold text-slate-700">HISP</dt>
+        <dd class="m-0">Health Information Systems Programme</dd>
+        <dt class="font-semibold text-slate-700">NICD</dt>
+        <dd class="m-0">National Institute for Communicable Diseases</dd>
+      </dl>
     </InlineSection>
 
     <section class={sectionClass}>
       <div class="cv-section__rail">
         <h2 class={sectionHeadingClass}>Professional Experience</h2>
       </div>
-      <div class="cv-section__main contents">
-        {experience.map((item) => <ExperienceItem item={item} />)}
-      </div>
-      <div class="cv-section__meta hidden md:block" aria-hidden="true"></div>
+      {experience.map((item) => <ExperienceItem item={item} />)}
     </section>
 
     <section class={sectionClass}>
       <div class="cv-section__rail">
         <h2 class={sectionHeadingClass}>Selected Projects</h2>
       </div>
-      <div class="cv-section__main contents">
-        {projects.map((item) => <CompactItem item={item} variant="project" />)}
-      </div>
-      <div class="cv-section__meta hidden md:block" aria-hidden="true"></div>
+      {projects.map((item) => <CompactItem item={item} variant="project" />)}
     </section>
 
     <section class={sectionClass}>
       <div class="cv-section__rail">
         <h2 class={sectionHeadingClass}>Education</h2>
       </div>
-      <div class="cv-section__main contents">
-        {education.map((item) => <CompactItem item={item} variant="education" />)}
-      </div>
-      <div class="cv-section__meta hidden md:block" aria-hidden="true"></div>
+      {education.map((item) => <CompactItem item={item} variant="education" />)}
     </section>
 
-    <section class:list={[sectionClass, 'print:break-before-page print:mt-0']}>
+    <section class={sectionClass}>
       <div class="cv-section__rail">
         <h2 class={sectionHeadingClass}>Scholarly Impact &amp; Recognition</h2>
       </div>
-      <div class="cv-section__main contents">
-        <ImpactGroup rail="Publications" items={scholarlyImpact.publications} />
-        <ImpactGroup rail="Awards" items={scholarlyImpact.awards} />
-      </div>
-      <div class="cv-section__meta hidden md:block" aria-hidden="true"></div>
+      <ImpactGroup rail="Publications" items={scholarlyImpact.publications} />
+      <ImpactGroup rail="Awards" items={scholarlyImpact.awards} />
     </section>
   </main>
 </BaseLayout>

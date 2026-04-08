@@ -35,7 +35,6 @@ export type ImpactEntry = {
   html: string;
   meta: string;
   href?: string;
-  showMetaInline?: boolean;
 };
 
 export const profile = {
@@ -248,12 +247,10 @@ export const scholarlyImpact = {
   awards: [
     {
       meta: '2014',
-      showMetaInline: true,
       html: '<strong>First Place Overall Prize for the ISC\'14 Student Cluster Challenge</strong> – <em>International Supercomputing Conference, Leipzig, Germany</em>'
     },
     {
       meta: '2013',
-      showMetaInline: true,
       html: '<strong>First Place for the CHPC Student Cluster Competition 2013</strong> – <em>Centre for High Performance Computing, Council for Scientific and Industrial Research</em>'
     }
   ] satisfies ImpactEntry[]

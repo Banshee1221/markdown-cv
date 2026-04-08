@@ -16,7 +16,7 @@ interface Props {
 const { item } = Astro.props as Props;
 ---
 
-<article class:list={[itemClass, 'cv-item--experience']}>
+<article class:list={[itemClass, 'cv-item--experience print:break-inside-avoid']}>
   <div class="cv-item__rail md:col-start-1">
     <h3 class={experienceRailTitleClass}>{item.rail}</h3>
   </div>
@@ -25,7 +25,7 @@ const { item } = Astro.props as Props;
       {item.roles.map((role) => (
         <div class="cv-item__role-title">
           <strong class={roleTitleClass}>{role.title}</strong>
-          <div class:list={['entry-meta', metaClass, 'mt-0.5 lg:hidden']}>{role.meta}</div>
+          <div class:list={['entry-meta', metaClass, 'mt-0.5 lg:hidden print:hidden']}>{role.meta}</div>
         </div>
       ))}
     </div>
@@ -41,7 +41,7 @@ const { item } = Astro.props as Props;
       ))}
     </ul>
   </div>
-  <div class:list={['cv-item__meta', 'cv-item__meta--stacked', metaClass, 'hidden self-start space-y-1 lg:col-start-3 lg:block']}>
+  <div class:list={['cv-item__meta', 'cv-item__meta--stacked', metaClass, 'hidden self-start space-y-1 lg:col-start-3 lg:block print:col-start-3 print:block']}>
     {item.roles.map((role) => (
       <div class="entry-meta">{role.meta}</div>
     ))}
