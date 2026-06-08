@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Eugene de Beste CV</title>
+  <desc id="desc">Curriculum vitae of Eugene de Beste, infrastructure and platform engineering leader.</desc>
+  <rect width="1200" height="630" fill="#f7f4ef"/>
+  <rect x="64" y="64" width="1072" height="502" fill="#ffffff"/>
+  <rect x="64" y="64" width="14" height="502" fill="#c6593f"/>
+  <text x="132" y="155" fill="#5a6472" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="23" letter-spacing="4">CURRICULUM VITAE</text>
+  <text x="130" y="247" fill="#0f172a" font-family="DejaVu Sans, Arial, sans-serif" font-size="84" font-weight="700">Eugene de Beste</text>
+  <text x="132" y="307" fill="#314158" font-family="DejaVu Sans, Arial, sans-serif" font-size="34" font-weight="600">Infrastructure &amp; Platform Engineering Leader</text>
+  <text x="132" y="353" fill="#64748b" font-family="DejaVu Sans, Arial, sans-serif" font-size="27">Cloud platforms, reliability, automation, GPU/HPC</text>
+  <line x1="132" y1="399" x2="470" y2="399" stroke="#c6593f" stroke-width="4"/>
+  <text x="132" y="455" fill="#314158" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="25">eugene.debeste.co.za</text>
+  <text x="132" y="487" fill="#94a3b8" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="21">Cape Town, South Africa</text>
+</svg>

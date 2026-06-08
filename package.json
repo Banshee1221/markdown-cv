@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev --base /",
-    "build": "astro build --base /markdown-cv/",
+    "build": "npm run check:assets && astro build --base /markdown-cv/",
     "preview": "astro preview --base /markdown-cv/",
-    "check": "astro check"
+    "check": "npm run check:assets && astro check",
+    "check:assets": "node scripts/check-assets.mjs"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.6",
@@ -17,6 +18,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
+    "@astrojs/sitemap": "^3.7.3",
     "@tailwindcss/vite": "^4.1.13",
     "astro": "^5.13.5",
     "tailwindcss": "^4.1.13",

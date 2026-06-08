@@ -57,6 +57,17 @@ a:focus-visible {
   }
 }
 
+/* A company with multiple roles renders one row per role (company name on the
+   first). Tighten the gap above continuation roles so they read as one entry. */
+.cv-item--continuation {
+  margin-top: 0.75rem;
+}
+@media (min-width: 48rem) {
+  .cv-item--continuation {
+    margin-top: 0.55rem;
+  }
+}
+
 @page {
   size: A4;
   margin: 0.65in 0.7in 0.65in 0.7in;
@@ -71,12 +82,13 @@ a:focus-visible {
      ============================================================ */
 
   :root {
-    /* Tightened from 148/124/16 to give the main content column ~20px more
-       horizontal room. The rail is sized to fit "PROFESSIONAL EXPERIENCE" on
-       a single line at 6.5pt font; longer labels (e.g. "SCHOLARLY IMPACT &
-       RECOGNITION") still wrap to 2 balanced lines as before. */
+    /* The rail is sized to fit "PROFESSIONAL EXPERIENCE" on a single line at
+       6.5pt; longer labels (e.g. "SCHOLARLY IMPACT & RECOGNITION") wrap to 2
+       balanced lines. The meta column must hold the widest date string
+       ("Jan 2024 - Jun 2025", 19 mono chars at 7.75pt ≈ 118px) without clipping
+       at the right page margin, so it is kept at 128px. */
     --print-rail: 136px;
-    --print-meta: 116px;
+    --print-meta: 128px;
     --print-gap: 16px;
 
     /* Print ink palette mostly mirrors the on-screen --ink-* scale, but the
@@ -245,6 +257,10 @@ a:focus-visible {
   .cv-section > .cv-item {
     grid-column: 1 / -1 !important;
     grid-row: auto !important;
+  }
+
+  .cv-item--continuation {
+    margin-top: 0.3rem !important;
   }
 
   /* The first section after the masthead should sit closer to it */

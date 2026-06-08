@@ -1,0 +1,7 @@
+# Eugene de Beste CV crawler policy
+
+User-agent: *
+Allow: /
+
+Sitemap: https://eugene.debeste.co.za/markdown-cv/sitemap-index.xml
+

@@ -3,28 +3,77 @@ import '@fontsource-variable/inter';
 import '@fontsource/ibm-plex-mono/400.css';
 import '@fontsource/ibm-plex-mono/500.css';
 import '../styles/global.css';
+import { profile } from '../data/cv';
+import { SEO, absoluteImage, absoluteUrl, pageTitle } from '../data/seo';
+import { site } from '../data/site';
+import { jsonLdGraph, personSchema, websiteSchema } from '../utils/schema';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: 'website' | 'profile';
+  robots?: string;
+}
 
 const {
-  title = 'Eugene de Beste',
-  description = 'Infrastructure operations, platform engineering, and GPU cloud CV for Eugene de Beste.'
-} = Astro.props;
+  title = site.title,
+  description = site.description,
+  canonical,
+  ogImage,
+  ogType = 'profile',
+  robots = SEO.robots.index
+} = Astro.props as Props;
 
-const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : undefined;
+const formattedTitle = pageTitle(title);
+const canonicalUrl = canonical ? absoluteUrl(canonical) : absoluteUrl(Astro.url.pathname);
+const ogImageUrl = absoluteImage(ogImage);
 const baseHref = import.meta.env.BASE_URL.endsWith('/')
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
 const faviconHref = `${baseHref}favicon.svg`;
+const faviconIcoHref = `${baseHref}favicon.ico`;
+const appleTouchHref = `${baseHref}apple-touch-icon.png`;
+const relMeLinks = profile.links
+  .filter((link) => link.kind === 'linkedin' || link.kind === 'github')
+  .map((link) => link.href)
+  .filter((href): href is string => Boolean(href));
+const jsonLd = jsonLdGraph(personSchema(), websiteSchema());
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={site.lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
+    <meta name="theme-color" content={site.themeColor} />
+    <meta name="color-scheme" content="only light" />
+    <meta name="robots" content={robots} />
+    <title>{formattedTitle}</title>
     <meta name="description" content={description} />
-    {canonical && <link rel="canonical" href={canonical} />}
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hreflang={site.lang} href={canonicalUrl} />
+    <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
+    {relMeLinks.map((href) => <link rel="me" href={href} />)}
+
+    <meta property="og:title" content={formattedTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:locale" content={site.locale} />
+
+    <meta name="twitter:card" content={SEO.twitterCard} />
+    <meta name="twitter:title" content={formattedTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <link rel="icon" href={faviconIcoHref} sizes="32x32" />
     <link rel="icon" href={faviconHref} type="image/svg+xml" />
+    <link rel="apple-touch-icon" href={appleTouchHref} />
+    <script is:inline type="application/ld+json" set:html={jsonLd} />
   </head>
   <body class="bg-white text-[var(--ink)] antialiased">
     <slot />

@@ -1,0 +1,293 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import {
+  education,
+  experience,
+  profile,
+  projects,
+  scholarlyImpact,
+  skills,
+  summary
+} from '../data/cv';
+import { SEO } from '../data/seo';
+
+// Single-column, ATS-friendly application CV. Same source of truth as the
+// designed site (src/data/cv.ts), rendered as plain, text-selectable, semantic
+// HTML so applicant-tracking systems can parse it and a recruiter can scan it.
+// Print/Save-as-PDF from a LOCAL build (`make preview`) to avoid the Cloudflare
+// email-obfuscation applied on the live proxied domain.
+//
+// Per-application tailoring is expected: trim role bullets to the most relevant
+// for the target, and adjust the skills/publications emphasis.
+
+const website = profile.links.find((link) => link.kind === 'website')?.value;
+// Top 3 most role-relevant publications (recent + infrastructure-flavoured);
+// the full list lives on the web CV.
+const selectedPublications = [
+  scholarlyImpact.publications[0],
+  scholarlyImpact.publications[1],
+  scholarlyImpact.publications[3]
+].filter(Boolean);
+---
+
+<BaseLayout
+  title="Eugene de Beste CV (ATS)"
+  description="ATS-friendly single-column CV for Eugene de Beste."
+  canonical="/"
+  robots={SEO.robots.noindex}
+>
+  <main class="ats">
+    <p class="ats__hint print:hidden">
+      ATS-friendly single-column version.
+      <button type="button" onclick="window.print()">Print / Save as PDF</button>
+      For a clean email in the PDF, print from a local build.
+    </p>
+
+    <header class="ats__head">
+      <h1>{profile.name}</h1>
+      <p class="ats__title">{profile.title}</p>
+      <ul class="ats__contact">
+        {profile.links.map((link) => <li>{link.value}</li>)}
+      </ul>
+    </header>
+
+    <section class="ats__section">
+      <h2>Professional Summary</h2>
+      {summary.map((paragraph) => <p class="ats__summary" set:html={paragraph} />)}
+    </section>
+
+    <section class="ats__section">
+      <h2>Skills</h2>
+      <ul class="ats__skills">
+        {skills.map((group) => (
+          <li><strong>{group.label}:</strong> {group.items}</li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="ats__section">
+      <h2>Professional Experience</h2>
+      {experience.map((job) => (
+        <div class="ats__job">
+          <h3 class="ats__company">{job.rail}</h3>
+          {job.roles.map((role) => (
+            <div class="ats__role">
+              <p class="ats__role-head">
+                <span class="ats__role-title">{role.title}</span>
+                <span class="ats__dates">{role.meta}</span>
+              </p>
+              {role.bullets && (
+                <ul class="ats__bullets">
+                  {role.bullets.map((bullet) => <li set:html={bullet} />)}
+                </ul>
+              )}
+            </div>
+          ))}
+          {job.bullets && job.bullets.length > 0 && (
+            <ul class="ats__bullets">
+              {job.bullets.map((bullet) => <li set:html={bullet} />)}
+            </ul>
+          )}
+        </div>
+      ))}
+    </section>
+
+    <section class="ats__section">
+      <h2>Projects</h2>
+      {projects.map((project) => (
+        <div class="ats__entry">
+          <p class="ats__role-head">
+            <span class="ats__role-title">{project.rail}</span>
+            <span class="ats__dates">{project.meta}</span>
+          </p>
+          {project.bullets && (
+            <ul class="ats__bullets">
+              {project.bullets.map((bullet) => <li set:html={bullet} />)}
+            </ul>
+          )}
+        </div>
+      ))}
+    </section>
+
+    <section class="ats__section">
+      <h2>Education</h2>
+      {education.map((entry) => (
+        <div class="ats__entry">
+          <p class="ats__role-head">
+            <span><span set:html={entry.lead} />, {entry.rail}</span>
+            <span class="ats__dates">{entry.meta}</span>
+          </p>
+        </div>
+      ))}
+    </section>
+
+    <section class="ats__section">
+      <h2>Awards</h2>
+      {scholarlyImpact.awards.map((award) => (
+        <div class="ats__entry">
+          <p class="ats__role-head">
+            <span set:html={award.html} />
+            <span class="ats__dates">{award.meta}</span>
+          </p>
+        </div>
+      ))}
+    </section>
+
+    <section class="ats__section">
+      <h2>Publications</h2>
+      {selectedPublications.map((pub) => (
+        <div class="ats__entry ats__pub">
+          <p class="ats__role-head">
+            <span set:html={pub.html} />
+            <span class="ats__dates">{pub.meta}</span>
+          </p>
+        </div>
+      ))}
+      {website && <p class="ats__note">Full publication list at {website}</p>}
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .ats {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 3rem;
+    color: #111827;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .ats__hint {
+    margin: 0 0 1.5rem;
+    padding: 0.6rem 0.8rem;
+    background: #f3f4f6;
+    border-radius: 0.4rem;
+    font-size: 0.8rem;
+    color: #4b5563;
+  }
+  .ats__hint button {
+    margin: 0 0.4rem;
+    padding: 0.2rem 0.7rem;
+    border: 1px solid #9ca3af;
+    border-radius: 0.3rem;
+    background: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.78rem;
+  }
+
+  .ats__head {
+    border-bottom: 1px solid #d1d5db;
+    padding-bottom: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  .ats__head h1 {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .ats__title {
+    margin: 0.25rem 0 0;
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: #374151;
+  }
+  .ats__contact {
+    margin: 0.45rem 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.85rem;
+    color: #374151;
+  }
+  .ats__contact li {
+    margin: 0.1rem 0;
+    word-break: break-word;
+  }
+
+  .ats__section {
+    margin-top: 1.4rem;
+  }
+  .ats__section > h2 {
+    margin: 0 0 0.5rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #1f2937;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 0.2rem;
+  }
+
+  .ats__summary { margin: 0 0 0.5rem; }
+
+  .ats__skills {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .ats__skills li { margin: 0.18rem 0; }
+
+  .ats__job { margin-bottom: 1rem; }
+  .ats__company {
+    margin: 0;
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: #111827;
+  }
+  .ats__note {
+    margin: 1.1rem 0 0;
+    font-size: 0.82rem;
+    font-style: italic;
+    color: #6b7280;
+  }
+  .ats__role { margin-top: 0.5rem; }
+  .ats__entry { margin-bottom: 0.7rem; }
+  .ats__role-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    margin: 0;
+  }
+  .ats__role-head > :first-child {
+    flex: 1;
+    min-width: 0;
+  }
+  .ats__role-title {
+    font-weight: 600;
+    color: #111827;
+  }
+  .ats__dates {
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+    color: #4b5563;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .ats__bullets {
+    margin: 0.35rem 0 0;
+    padding-left: 1.2rem;
+  }
+  .ats__bullets li { margin: 0.22rem 0; }
+
+  .ats__pub { font-size: 0.88rem; }
+
+  @media print {
+    .ats {
+      max-width: none;
+      margin: 0;
+      padding: 0;
+      font-size: 10pt;
+      line-height: 1.4;
+      color: #000;
+    }
+    .ats__section { margin-top: 0.7rem; }
+    .ats__job,
+    .ats__role,
+    .ats__entry { break-inside: avoid; }
+    .ats__head h1 { font-size: 18pt; }
+  }
+</style>

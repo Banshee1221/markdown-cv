@@ -1,5 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="16" fill="#131a24"/>
-  <circle cx="32" cy="32" r="16" fill="#b14a32"/>
-  <circle cx="32" cy="32" r="7" fill="#f7f3ec"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t d">
+  <title id="t">Eugene de Beste CV favicon</title>
+  <desc id="d">A CV page with a bold E monogram; adapts to light and dark themes.</desc>
+  <style>
+    .page { fill: #0f172a; }
+    .mono { fill: #f7f4ef; }
+    @media (prefers-color-scheme: dark) {
+      .page { fill: #f7f4ef; }
+      .mono { fill: #0f172a; }
+    }
+  </style>
+  <path class="page" d="M12 6H40L52 18V58H12Z"/>
+  <path d="M40 6V18H52Z" fill="#c6593f"/>
+  <path class="mono" d="M22 24H44V31H29V34.5H40V41.5H29V45H44V52H22Z"/>
 </svg>

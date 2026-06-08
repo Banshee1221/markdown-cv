@@ -14,36 +14,83 @@ interface Props {
 }
 
 const { item } = Astro.props as Props;
+// When roles carry their own bullets, render each role as its own row: the
+// company name shows once and every role's dates use the standard responsive
+// treatment (inline under the title below lg, right-hand meta column at lg+).
+// Otherwise keep the shared-bullet layout with stacked role titles.
+const grouped = item.roles.some((role) => role.bullets && role.bullets.length > 0);
+
+const noteClass =
+  'cv-note mt-2.5 border-l-2 border-[color:rgba(198,89,63,0.18)] pl-3 text-[0.88rem] italic leading-6 text-[var(--ink-mute)] print:mt-2';
+const metaColumnClass = [
+  'cv-item__meta',
+  'cv-item__meta--stacked',
+  metaClass,
+  'hidden self-start space-y-1 lg:col-start-3 lg:block print:col-start-3 print:block'
+];
 ---
 
-<article class:list={[itemClass, 'cv-item--experience print:break-inside-avoid']}>
-  <div class="cv-item__rail md:col-start-1">
-    <h3 class={experienceRailTitleClass}>{item.rail}</h3>
-  </div>
-  <div class="cv-item__main min-w-0 max-w-[47rem] print:max-w-none md:col-start-2">
-    <div class="cv-item__roles cv-item__roles--titles space-y-2 print:space-y-1.5">
-      {item.roles.map((role) => (
+{grouped ? (
+  item.roles.map((role, index) => (
+    <article
+      class:list={[
+        itemClass,
+        'cv-item--experience print:break-inside-avoid',
+        index > 0 && 'cv-item--continuation'
+      ]}
+    >
+      <div class="cv-item__rail md:col-start-1">
+        {index === 0 && <h3 class={experienceRailTitleClass}>{item.rail}</h3>}
+      </div>
+      <div class="cv-item__main min-w-0 max-w-[47rem] print:max-w-none md:col-start-2">
         <div class="cv-item__role-title">
           <strong class={roleTitleClass}>{role.title}</strong>
           <div class:list={['entry-meta', metaClass, 'mt-0.5 lg:hidden print:hidden']}>{role.meta}</div>
         </div>
+        {index === 0 && item.note && (
+          <p class={noteClass}><em>{item.note}</em></p>
+        )}
+        <ul class:list={['cv-list', bulletListClass, bodyTextClass, 'mt-2 print:mt-1.5']}>
+          {(role.bullets ?? []).map((bullet) => (
+            <li set:html={bullet} />
+          ))}
+        </ul>
+      </div>
+      <div class:list={metaColumnClass}>
+        <div class="entry-meta">{role.meta}</div>
+      </div>
+    </article>
+  ))
+) : (
+  <article class:list={[itemClass, 'cv-item--experience print:break-inside-avoid']}>
+    <div class="cv-item__rail md:col-start-1">
+      <h3 class={experienceRailTitleClass}>{item.rail}</h3>
+    </div>
+    <div class="cv-item__main min-w-0 max-w-[47rem] print:max-w-none md:col-start-2">
+      <div class="cv-item__roles cv-item__roles--titles space-y-2 print:space-y-1.5">
+        {item.roles.map((role) => (
+          <div class="cv-item__role-title">
+            <strong class={roleTitleClass}>{role.title}</strong>
+            <div class:list={['entry-meta', metaClass, 'mt-0.5 lg:hidden print:hidden']}>{role.meta}</div>
+          </div>
+        ))}
+      </div>
+      {item.note && (
+        <p class={noteClass}><em>{item.note}</em></p>
+      )}
+      {item.intro && <p class:list={['cv-intro', bodyTextClass, 'mt-3 m-0 print:mt-2']} set:html={item.intro} />}
+      {item.bullets && (
+        <ul class:list={['cv-list', bulletListClass, bodyTextClass, 'mt-2 print:mt-1.5']}>
+          {item.bullets.map((bullet) => (
+            <li set:html={bullet} />
+          ))}
+        </ul>
+      )}
+    </div>
+    <div class:list={metaColumnClass}>
+      {item.roles.map((role) => (
+        <div class="entry-meta">{role.meta}</div>
       ))}
     </div>
-    {item.note && (
-      <p class="cv-note mt-2.5 border-l-2 border-[color:rgba(198,89,63,0.18)] pl-3 text-[0.88rem] italic leading-6 text-[var(--ink-mute)] print:mt-2">
-        <em>{item.note}</em>
-      </p>
-    )}
-    {item.intro && <p class:list={['cv-intro', bodyTextClass, 'mt-3 m-0 print:mt-2']} set:html={item.intro} />}
-    <ul class:list={['cv-list', bulletListClass, bodyTextClass, 'mt-2 print:mt-1.5']}>
-      {item.bullets.map((bullet) => (
-        <li set:html={bullet} />
-      ))}
-    </ul>
-  </div>
-  <div class:list={['cv-item__meta', 'cv-item__meta--stacked', metaClass, 'hidden self-start space-y-1 lg:col-start-3 lg:block print:col-start-3 print:block']}>
-    {item.roles.map((role) => (
-      <div class="entry-meta">{role.meta}</div>
-    ))}
-  </div>
-</article>
+  </article>
+)}
